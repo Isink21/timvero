@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="5" passed="5">
+  <reporter-output>
+  </reporter-output>
+  <suite name="All Test Suite" duration-ms="50897" started-at="2021-03-22T12:04:58 MSK" finished-at="2021-03-22T12:05:49 MSK">
+    <groups>
+    </groups>
+    <test name="C:/Users/E590-001/IdeaProjects/TestNG/src/test/java/Resources/Environments.java" duration-ms="50897" started-at="2021-03-22T12:04:58 MSK" finished-at="2021-03-22T12:05:49 MSK">
+      <class name="Create.USER">
+        <test-method status="PASS" signature="User()[pri:0, instance:Create.USER@5f8edcc5]" name="User" duration-ms="18714" started-at="2021-03-22T12:05:30 MSK" finished-at="2021-03-22T12:05:49 MSK">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- User -->
+      </class> <!-- Create.USER -->
+      <class name="Create.ROLE">
+        <test-method status="PASS" signature="Role()[pri:0, instance:Create.ROLE@6db9f5a4]" name="Role" duration-ms="15516" started-at="2021-03-22T12:05:14 MSK" finished-at="2021-03-22T12:05:30 MSK">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Role -->
+      </class> <!-- Create.ROLE -->
+      <class name="Smoke.LOGIN_and_LOGOUT">
+        <test-method status="PASS" signature="login()[pri:0, instance:Smoke.LOGIN_and_LOGOUT@117e949d]" name="login" duration-ms="6155" started-at="2021-03-22T12:04:58 MSK" finished-at="2021-03-22T12:05:04 MSK">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- login -->
+        <test-method status="PASS" signature="logout()[pri:0, instance:Smoke.LOGIN_and_LOGOUT@117e949d]" name="logout" duration-ms="10146" started-at="2021-03-22T12:05:04 MSK" finished-at="2021-03-22T12:05:14 MSK">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- logout -->
+      </class> <!-- Smoke.LOGIN_and_LOGOUT -->
+      <class name="Smoke.HTTPstatus">
+        <test-method status="PASS" signature="BrowserTestRule()[pri:0, instance:Smoke.HTTPstatus@10d68fcd]" name="BrowserTestRule" is-config="true" duration-ms="2651" started-at="2021-03-22T12:04:55 MSK" finished-at="2021-03-22T12:04:58 MSK">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- BrowserTestRule -->
+        <test-method status="PASS" signature="status()[pri:0, instance:Smoke.HTTPstatus@10d68fcd]" name="status" duration-ms="198" started-at="2021-03-22T12:04:58 MSK" finished-at="2021-03-22T12:04:58 MSK">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- status -->
+      </class> <!-- Smoke.HTTPstatus -->
+    </test> <!-- C:/Users/E590-001/IdeaProjects/TestNG/src/test/java/Resources/Environments.java -->
+  </suite> <!-- All Test Suite -->
+</testng-results>

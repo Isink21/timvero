@@ -1,0 +1,7 @@
+Smoke\HTTPstatus.class
+Create\USER.class
+Resources\RANDOM_PHONE.class
+Resources\RANDOM_EMAIL.class
+Create\ROLE.class
+Resources\RANDOM_NAME.class
+Smoke\LOGIN_and_LOGOUT.class

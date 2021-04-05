@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [All Test Suite]">
+  <test thread-count="5" name="C:/Users/E590-001/IdeaProjects/TestNG/src/test/java/Resources/Environments.java(failed)">
+    <classes>
+      <class name="Create.ROLE">
+        <methods>
+          <include name="Role"/>
+        </methods>
+      </class> <!-- Create.ROLE -->
+    </classes>
+  </test> <!-- C:/Users/E590-001/IdeaProjects/TestNG/src/test/java/Resources/Environments.java(failed) -->
+</suite> <!-- Failed suite [All Test Suite] -->
