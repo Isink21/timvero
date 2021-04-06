@@ -1,1 +1,0 @@
-{"uuid":"46fadb53-974d-4b71-82e5-c569899cf22e","name":"Default Suite","children":["a6b8df4b-7c25-48f1-9ec5-f37ff5b4ff06"],"befores":[{"name":"BrowserTestRule","status":"passed","stage":"finished","description":"","steps":[],"attachments":[],"parameters":[],"start":1616505884720,"stop":1616505887822}],"afters":[],"links":[],"start":1616505884707,"stop":1616505930805}
