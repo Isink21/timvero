@@ -5,8 +5,10 @@
         <classes>
             <class name="Smoke.HTTPstatus"></class>
             <class name="Smoke.LOGIN_and_LOGOUT"></class>
+            <!-- 
             <class name="Create.ROLE"></class>
             <class name="Create.USER"></class>
+            -->
         </classes>
     </test>
 </suite>
