@@ -21,6 +21,7 @@ public class HTTPstatus {
     public void BrowserTestRule ()
     {
         WebDriver driver;
+        System.setProperty("webdriver.chrome.driver", "D://chromedriver//chromedriver.exe");
         driver = new ChromeDriver();
         driver.quit();
         Capabilities cap = ((RemoteWebDriver) driver).getCapabilities();
