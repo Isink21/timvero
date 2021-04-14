@@ -1,5 +1,6 @@
 package Smoke;
 
+import Resources.Config;
 import com.google.common.collect.ImmutableMap;
 import io.qameta.allure.Story;
 import org.openqa.selenium.Capabilities;
@@ -39,7 +40,8 @@ public class HTTPstatus {
     @Test
     //Here is a test, which appears status code of the app
     public void status() throws Exception {
-        URL url = new URL("http://mark43-admin.timvero.xyz/");
+        String strUrl1 = Config.getUrl1();
+        URL url = new URL(strUrl1);
         HttpURLConnection httpCon = (HttpURLConnection) url.openConnection();
         if (httpCon.getResponseCode() == 200){
             System.out.println("Response code is " + httpCon.getResponseCode());

@@ -1,5 +1,6 @@
 package Smoke;
 
+import Resources.Config;
 import io.qameta.allure.Story;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
@@ -13,7 +14,8 @@ public class LOGIN_and_LOGOUT {
     @Test
     public void login() throws InterruptedException {
         WebDriver driver = new ChromeDriver();
-        driver.get("http://mark43-admin.timvero.xyz/");
+        String strUrl1 = Config.getUrl1();
+        driver.get(strUrl1);
         WebElement username = driver.findElement(By.name("username"));
         username.sendKeys("test");
         WebElement password = driver.findElement(By.name("password"));
@@ -32,7 +34,8 @@ public class LOGIN_and_LOGOUT {
     public void logout() throws InterruptedException {
 
         WebDriver driver = new ChromeDriver();
-        driver.get("http://mark43-admin.timvero.xyz/");
+        String strUrl1 = Config.getUrl1();
+        driver.get(strUrl1);
         WebElement username = driver.findElement(By.name("username"));
         username.sendKeys("test");
         WebElement password = driver.findElement(By.name("password"));
