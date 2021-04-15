@@ -1,5 +1,6 @@
 package Create;
 
+import Resources.Config;
 import Resources.RANDOM_EMAIL;
 import Resources.RANDOM_NAME;
 import Resources.RANDOM_PHONE;
@@ -15,9 +16,11 @@ public class USER {
     // Create user with admin role
     public void User() throws InterruptedException {
         //create new session
+        System.setProperty("webdriver.chrome.driver", "D://chromedriver//chromedriver.exe");
         WebDriver driver = new ChromeDriver();
+        String strUrl1 = Config.getUrl1();
+        driver.get(strUrl1);
         driver.manage().window().maximize();
-        driver.get("http://mark43-admin.timvero.xyz/");
         Thread.sleep(2000);
         WebElement username = driver.findElement(By.name("username"));
         username.sendKeys("test");
@@ -40,7 +43,7 @@ public class USER {
         email.sendKeys(RANDOM_EMAIL.randomEmail());
         WebElement btnSave = driver.findElement(By.xpath("/html[1]/body[1]/div[5]/div[1]/div[1]/form[1]/div[7]/button[1]"));
         btnSave.click();
-        Thread.sleep(8000);
+        Thread.sleep(6000);
         driver.quit();
     }
 }

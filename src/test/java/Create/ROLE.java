@@ -1,9 +1,12 @@
 package Create;
 
+import Resources.Config;
 import Resources.RANDOM_NAME;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.Test;
+
+import java.net.URL;
 
 public class ROLE {
 
@@ -11,11 +14,11 @@ public class ROLE {
     //Create Role with Admin rights
     public void Role() throws InterruptedException {
         //create new session
-        WebDriver driver;
         System.setProperty("webdriver.chrome.driver", "D://chromedriver//chromedriver.exe");
-        driver = new ChromeDriver();
+        WebDriver driver = new ChromeDriver();
+        String strUrl1 = Config.getUrl1();
+        driver.get(strUrl1);
         driver.manage().window().maximize();
-        driver.get("http://mark43-admin.timvero.xyz/");
         Thread.sleep(2000);
         WebElement username = driver.findElement(By.name("username"));
         username.sendKeys("test");
