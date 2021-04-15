@@ -11,7 +11,9 @@ public class ROLE {
     //Create Role with Admin rights
     public void Role() throws InterruptedException {
         //create new session
-        WebDriver driver = new ChromeDriver();
+        WebDriver driver;
+        System.setProperty("webdriver.chrome.driver", "D://chromedriver//chromedriver.exe");
+        driver = new ChromeDriver();
         driver.manage().window().maximize();
         driver.get("http://mark43-admin.timvero.xyz/");
         Thread.sleep(2000);
@@ -42,7 +44,7 @@ public class ROLE {
         // deleting new role
         WebElement btnDelete = driver.findElement(By.xpath("//a[.='Delete']"));
         btnDelete.click();
-        Thread.sleep(1000);
+        Thread.sleep(1500);
         WebElement confirm = driver.findElement(By.xpath("//button[@class='btn btn-success']"));
         confirm.click();
         // quit from window
