@@ -3,8 +3,8 @@
 <suite name="All Test Suite">
     <test verbose="2" preserve-order="true" name="C:/Users/E590-001/IdeaProjects/TestNG/src/test/java/Resources/Environments.java">
         <classes>
-            <!--<class name="Smoke.HTTPstatus"></class>
-            <class name="Smoke.LOGIN_and_LOGOUT"></class>-->
+            <class name="Smoke.HTTPstatus"></class>
+            <class name="Smoke.LOGIN_and_LOGOUT"></class>
             <class name="Create.ROLE"></class>
             <class name="Create.USER"></class>
         </classes>
