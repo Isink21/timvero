@@ -1,43 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="5" passed="5">
+<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="All Test Suite" duration-ms="50178" started-at="2021-04-15T15:37:44 MSK" finished-at="2021-04-15T15:38:35 MSK">
+  <suite name="All Test Suite" duration-ms="31070" started-at="2021-04-16T11:41:38 MSK" finished-at="2021-04-16T11:42:09 MSK">
     <groups>
     </groups>
-    <test name="C:/Users/E590-001/IdeaProjects/TestNG/src/test/java/Resources/Environments.java" duration-ms="50178" started-at="2021-04-15T15:37:44 MSK" finished-at="2021-04-15T15:38:35 MSK">
+    <test name="C:/Users/E590-001/IdeaProjects/TestNG/src/test/java/Resources/Environments.java" duration-ms="31070" started-at="2021-04-16T11:41:38 MSK" finished-at="2021-04-16T11:42:09 MSK">
       <class name="Create.USER">
-        <test-method status="PASS" signature="User()[pri:0, instance:Create.USER@5bfa9431]" name="User" duration-ms="17837" started-at="2021-04-15T15:38:17 MSK" finished-at="2021-04-15T15:38:35 MSK">
+        <test-method status="PASS" signature="User()[pri:0, instance:Create.USER@f8c1ddd]" name="User" duration-ms="15281" started-at="2021-04-16T11:41:53 MSK" finished-at="2021-04-16T11:42:09 MSK">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- User -->
       </class> <!-- Create.USER -->
       <class name="Create.ROLE">
-        <test-method status="PASS" signature="Role()[pri:0, instance:Create.ROLE@2fd6b6c7]" name="Role" duration-ms="16231" started-at="2021-04-15T15:38:01 MSK" finished-at="2021-04-15T15:38:17 MSK">
+        <test-method status="PASS" signature="Role()[pri:0, instance:Create.ROLE@7fc2413d]" name="Role" duration-ms="15693" started-at="2021-04-16T11:41:38 MSK" finished-at="2021-04-16T11:41:53 MSK">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Role -->
       </class> <!-- Create.ROLE -->
-      <class name="Smoke.LOGIN_and_LOGOUT">
-        <test-method status="PASS" signature="login()[pri:0, instance:Smoke.LOGIN_and_LOGOUT@184cf7cf]" name="login" duration-ms="6907" started-at="2021-04-15T15:37:45 MSK" finished-at="2021-04-15T15:37:52 MSK">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- login -->
-        <test-method status="PASS" signature="logout()[pri:0, instance:Smoke.LOGIN_and_LOGOUT@184cf7cf]" name="logout" duration-ms="8872" started-at="2021-04-15T15:37:52 MSK" finished-at="2021-04-15T15:38:01 MSK">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- logout -->
-      </class> <!-- Smoke.LOGIN_and_LOGOUT -->
-      <class name="Smoke.HTTPstatus">
-        <test-method status="PASS" signature="BrowserTestRule()[pri:0, instance:Smoke.HTTPstatus@2805c96b]" name="BrowserTestRule" is-config="true" duration-ms="2567" started-at="2021-04-15T15:37:42 MSK" finished-at="2021-04-15T15:37:44 MSK">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- BrowserTestRule -->
-        <test-method status="PASS" signature="status()[pri:0, instance:Smoke.HTTPstatus@2805c96b]" name="status" duration-ms="248" started-at="2021-04-15T15:37:44 MSK" finished-at="2021-04-15T15:37:45 MSK">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- status -->
-      </class> <!-- Smoke.HTTPstatus -->
     </test> <!-- C:/Users/E590-001/IdeaProjects/TestNG/src/test/java/Resources/Environments.java -->
   </suite> <!-- All Test Suite -->
 </testng-results>

@@ -13,6 +13,7 @@ public class LOGIN_and_LOGOUT {
     @Story(value = "LogIn")
     @Test
     public void login() throws InterruptedException {
+        System.setProperty("webdriver.chrome.driver", "D://chromedriver//chromedriver.exe");
         WebDriver driver = new ChromeDriver();
         String strUrl1 = Config.getUrl1();
         driver.get(strUrl1);
