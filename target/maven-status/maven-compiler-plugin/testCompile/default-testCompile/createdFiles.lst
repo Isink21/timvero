@@ -1,8 +1,11 @@
+Resources\useful_resources.class
 Resources\Config.class
 Smoke\HTTPstatus.class
 Create\USER.class
 Resources\RANDOM_PHONE.class
+Create\Application_Portal.class
 Resources\RANDOM_EMAIL.class
 Create\ROLE.class
 Resources\RANDOM_NAME.class
+Resources\RANDOM_ID.class
 Smoke\LOGIN_and_LOGOUT.class

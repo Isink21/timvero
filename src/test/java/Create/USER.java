@@ -4,12 +4,13 @@ import Resources.Config;
 import Resources.RANDOM_EMAIL;
 import Resources.RANDOM_NAME;
 import Resources.RANDOM_PHONE;
-import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.Test;
+
+import static com.codeborne.selenide.Selenide.open;
+import static com.codeborne.selenide.Selenide.*;
+import static com.codeborne.selenide.Condition.*;
 
 public class USER {
     @Test
@@ -18,10 +19,15 @@ public class USER {
         //create new session
         System.setProperty("webdriver.chrome.driver", "D://chromedriver//chromedriver.exe");
         WebDriver driver = new ChromeDriver();
-        String strUrl1 = Config.getUrl1();
-        driver.get(strUrl1);
+        /*String strUrl1 = Config.getUrl1();
+        driver.get(strUrl1);*/
+        driver.get("http://mark43-admin.timvero.xyz/dashboard");
         driver.manage().window().maximize();
         Thread.sleep(2000);
+        WebElement span = driver.findElement(By.xpath("//span[@class='rui-icon rui-icon-stroke-1_5 rui-selectize-select-icon']"));
+        span.click();
+        WebElement role = driver.findElement(By.xpath("//div[@data-value='1']"));
+        role.click();
         WebElement username = driver.findElement(By.name("username"));
         username.sendKeys("test");
         WebElement password = driver.findElement(By.name("password"));
