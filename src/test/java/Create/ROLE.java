@@ -43,7 +43,7 @@ public class ROLE {
         btnSave.click();
         Thread.sleep(2000);
         driver.navigate().refresh();
-        Thread.sleep(2000);
+        Thread.sleep(3000);
         // deleting new role
         WebElement btnDelete = driver.findElement(By.xpath("//a[.='Delete']"));
         btnDelete.click();

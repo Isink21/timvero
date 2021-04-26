@@ -36,7 +36,7 @@ public class Application_Portal {
         $(By.cssSelector(".Checkout div:nth-of-type(5) [xmlns='http://www.w3.org/2000/svg']")).click();
         $(By.id("react-select-5-option-4")).click();
         $(By.cssSelector(".button")).click();
-        sleep(10000);
+        sleep(6000);
 
 
         $(By.id("amount")).setValue("10000");
@@ -45,24 +45,22 @@ public class Application_Portal {
         $(By.cssSelector(".button")).click();
         $(By.xpath("//div[@class='radio-input']//span[@class='checkmark']")).click();
         $(By.cssSelector(".button")).click();
-        sleep(10000);
+        sleep(6000);
 
 
         $(By.cssSelector(".button")).click();
-        sleep(5000);
+        sleep(4000);
 
 
         $(By.id("code")).setValue("121212");
         $(By.cssSelector(".button_success")).click();
-        sleep(5000);
+        sleep(4000);
 
 
-        /*$(By.cssSelector(".ESign__default")).click();
-        $(By.cssSelector(".ESign__default")).hover();
-        $(By.cssSelector(".ESign__default")).click();*/
         SelenideElement element = $(By.cssSelector(".ESign__default"));
         actions().dragAndDropBy(element, 10, 10).perform();
         $(By.cssSelector(".button_success")).click();
-        sleep(10000);
+        sleep(5000);
+        closeWindow();
     }
 }

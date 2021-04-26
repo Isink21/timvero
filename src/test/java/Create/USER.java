@@ -8,6 +8,8 @@ import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.Test;
 
+import java.net.URL;
+
 import static com.codeborne.selenide.Selenide.open;
 import static com.codeborne.selenide.Selenide.*;
 import static com.codeborne.selenide.Condition.*;
@@ -19,15 +21,9 @@ public class USER {
         //create new session
         System.setProperty("webdriver.chrome.driver", "D://chromedriver//chromedriver.exe");
         WebDriver driver = new ChromeDriver();
-        /*String strUrl1 = Config.getUrl1();
-        driver.get(strUrl1);*/
-        driver.get("http://mark43-admin.timvero.xyz/dashboard");
-        driver.manage().window().maximize();
+        String strUrl1 = Config.getUrl1();
+        driver.get(strUrl1);
         Thread.sleep(2000);
-        WebElement span = driver.findElement(By.xpath("//span[@class='rui-icon rui-icon-stroke-1_5 rui-selectize-select-icon']"));
-        span.click();
-        WebElement role = driver.findElement(By.xpath("//div[@data-value='1']"));
-        role.click();
         WebElement username = driver.findElement(By.name("username"));
         username.sendKeys("test");
         WebElement password = driver.findElement(By.name("password"));
@@ -37,6 +33,10 @@ public class USER {
         WebElement btnCreate = driver.findElement(By.xpath("//a[contains(.,'Create')]"));
         btnCreate.click();
         Thread.sleep(500);
+        WebElement span = driver.findElement(By.cssSelector(".selectize-input"));
+        span.click();
+        WebElement role = driver.findElement(By.xpath("//div[@data-value='1']"));
+        role.click();
         WebElement login = driver.findElement(By.name("login"));
         login.sendKeys(RANDOM_NAME.randomName());
         WebElement firstName = driver.findElement(By.name("firstName"));
