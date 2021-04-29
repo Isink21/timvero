@@ -1,0 +1,989 @@
+<html xmlns="http://www.w3.org/1999/xhtml" class="is-desktop" data-theme="day"><head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>New role | Mark43 Admin</title>
+    <link rel="shortcut icon" href="/assets/img/favicon.png">
+    
+    <script>/*<![CDATA[*/
+    var homeContext = "/";
+    var sentryKey = "https://44c5dad388d14358819207c685f954c0@sentry.io/3831417";
+    /*]]>*/</script>
+    <script src="/assets/static/vendor/jquery/dist/jquery.min.js"></script>
+
+    
+    <link rel="stylesheet" href="/assets/static/css/fonts.css">
+    <link rel="stylesheet" href="/assets/static/css/vendor.css">
+    <link rel="stylesheet" href="/assets/static/css/rootui.css">
+    <link rel="stylesheet" href="/assets/static/css/rootui-night.css" media="(night)" class="rui-nightmode-link">
+
+</head>
+<body data-application-name="Mark43 Admin" data-spy="scroll" data-target=".rui-page-sidebar" data-offset="140" class="rui-navbar-autohide rui-section-lines yay-hide rui-navbar-show">
+
+<noscript class="text-danger d-flex justify-content-center">
+    You need to enable JavaScript to run this app.
+</noscript>
+<div class="rui-page-preloader" role="status">
+    <div class="rui-page-preloader-inner">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+</div>
+
+
+
+
+    <nav class="rui-navbar rui-navbar-top rui-navbar-sticky align-items-center">
+        <a href="javascript:history.back()" class="prevPage cursor-pointer ml-10 mr-5" style="display: inline-flex;">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-left rui-icon rui-icon-stroke-1_5"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+            </a><h2 class="pageName">New role</h2>
+
+        <div class="rui-navbar-content justify-content-end">
+            <div class="nav search-form justify-content-end col-4 mr-10">
+                
+
+
+    <div class="input-group search mr-15 align-items-center">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-search rui-icon rui-icon-stroke-1_5"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        <input type="search" class="form-control form-control-clean search-ready" placeholder="Type to search..." data-toggle="input" autocomplete="off" name="search">
+        <button type="button" class="btn btn-outline-secondary handleSearch handleSearch-ready">
+            Search
+        </button>
+    </div>
+
+
+
+            </div>
+            <ul class="nav rui-navbar-right">
+                <li>
+                    <a href="/dashboard">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-bell rui-icon rui-icon-stroke-1_5"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path><path d="M13.73 21a2 2 0 0 1-3.46 0"></path></svg>
+                        <span class="badge badge-danger menu-counter">
+                            <span data-name="menuCounter">185</span>
+                        </span>
+                    </a>
+                </li>
+
+                <li></li>
+                
+    <div class="dropdown dropdown-triangle rui-dropdown-triangle-ready">
+        <a class="dropdown-item rui-navbar-avatar" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <img alt="image" src="/assets/img/no_photo.jpg">
+        </a>
+
+        <ul class="dropdown-menu nav dropdown-menu-left">
+            <li>
+                <div class="d-flex flex-column">
+                    <h6 class="mb-0">test T.</h6>
+                    <span class="badge badge-info">Global Admin</span>
+                </div>
+            </li>
+            <li>
+                <div class="custom-control custom-switch dropdown-item-switch">
+                    <input type="checkbox" class="custom-control-input rui-nightmode-toggle rui-nightmode-toggle-ready" id="toggleNightMode">
+                    <label class="dropdown-item custom-control-label" for="toggleNightMode">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-moon rui-icon rui-icon-stroke-1_5"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+                        <span>Dark Mode</span>
+                        <span class="rui-dropdown-circle"></span>
+                    </label>
+                </div>
+            </li>
+            <li>
+                <a href="/logout" class="nav-link">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-log-out rui-icon rui-icon-stroke-1_5"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path><polyline points="16 17 21 12 16 7"></polyline><line x1="21" y1="12" x2="9" y2="12"></line></svg>
+                    <span>Exit</span>
+                    <span class="rui-nav-circle"></span>
+                </a>
+            </li>
+            <span class="dropdown-menu-triangle"></span>
+        <span class="dropdown-menu-triangle"></span></ul>
+    </div>
+
+                <li></li>
+            </ul>
+        </div>
+    </nav>
+
+
+
+
+
+
+    <div class="yaybar yay-fixed yay-gestures rui-yaybar yay-hide-to-small yay-shrink">
+        <div class="yay-wrap-menu">
+            <div class="yaybar-wrap">
+                <ul>
+                    <li>
+                        
+                        <a href="/dashboard">
+                            <span class="yay-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather feather-pie-chart"><path d="M21.21 15.89A10 10 0 1 1 8 2.83"></path><path d="M22 12A10 10 0 0 0 12 2v10z"></path></svg>
+                            </span>
+                            <span data-pagename="Dashboard">Dashboard</span>
+                            <span class="rui-yaybar-circle"></span>
+                        </a>
+                    </li>
+                    <li>
+                        
+                        <a href="/application">
+                            <span class="yay-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather feather-codesandbox"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="7.5 4.21 12 6.81 16.5 4.21"></polyline><polyline points="7.5 19.79 7.5 14.6 3 12"></polyline><polyline points="21 12 16.5 14.6 16.5 19.79"></polyline><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg>
+                            </span>
+                            <span data-pagename="Application">Application</span>
+                            <span class="rui-yaybar-circle"></span>
+                        </a>
+                    </li>
+                    <li>
+                        
+                        <a href="/credit">
+                            <span class="yay-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather feather-briefcase"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg>
+                            </span>
+                            <span data-pagename="Credit">Credit</span>
+                            <span class="rui-yaybar-circle"></span>
+                        </a>
+                    </li>
+                    <li>
+                        
+                        <a href="/borrower">
+                            <span class="yay-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather feather-user"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+                            </span>
+                            <span data-pagename="Borrower">Borrower</span>
+                            <span class="rui-yaybar-circle"></span>
+                        </a>
+                    </li>
+                    <li>
+                        
+                        <a href="/black-list">
+                            <span class="yay-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather feather-slash"><circle cx="12" cy="12" r="10"></circle><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"></line></svg>
+                            </span>
+                            <span data-pagename="Ban list">Ban list</span>
+                            <span class="rui-yaybar-circle"></span>
+                        </a>
+                    </li>
+                    <li>
+                        
+                        <a href="/product">
+                            <span class="yay-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather feather-tag"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7.01" y2="7"></line></svg>
+                            </span>
+                            <span data-pagename="Credit product">Credit product</span>
+                            <span class="rui-yaybar-circle"></span>
+                        </a>
+                    </li>
+                    <li class="dropdown-menu__element">
+                        
+                            <a href="#" class="yay-sub-toggle">
+                              <span class="yay-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather feather-eye"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+                              </span>
+                                                <span data-pagename="Collections">Collections</span>
+                                                <span class="rui-yaybar-circle"></span>
+                                                <span class="yay-icon-collapse">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right rui-icon rui-icon-collapse rui-icon-stroke-1_5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                              </span>
+                            </a>
+                            <ul class="yay-submenu dropdown-triangle">
+                                <li>
+                                    <a href="/campaign">
+                                        <span data-pagename="Call Campaign">Call Campaign</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/collections?type=individual">
+                                        <span data-pagename="Collection Agency">Collection Agency</span>
+                                    </a>
+                                </li>
+                            <span class="dropdown-menu-triangle"></span></ul>
+                        
+                        
+                    </li>
+                    <li class="dropdown-menu__element">
+                        
+                            <a href="#" class="yay-sub-toggle">
+                              <span class="yay-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather feather-package"><line x1="16.5" y1="9.4" x2="7.5" y2="4.21"></line><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg>
+                              </span>
+                                                <span data-pagename="Tools">Tools</span>
+                                                <span class="rui-yaybar-circle"></span>
+                                                <span class="yay-icon-collapse">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right rui-icon rui-icon-collapse rui-icon-stroke-1_5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                              </span>
+                            </a>
+                            <ul class="yay-submenu dropdown-triangle">
+                                <li>
+                                    <a href="/notification-template">
+                                        <span data-pagename="Notification templates">Notification templates</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/marketing">
+                                        <span data-pagename="Marketing Campaign">Marketing Campaign</span>
+                                    </a>
+                                </li>
+                            <span class="dropdown-menu-triangle"></span></ul>
+                        
+                        
+                    </li>
+                    <li class="dropdown-menu__element">
+                        
+                            <a href="#" class="yay-sub-toggle">
+                              <span class="yay-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather feather-globe"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+                              </span>
+                                                <span data-pagename="Business Intelligence">Business Intelligence</span>
+                                                <span class="rui-yaybar-circle"></span>
+                                                <span class="yay-icon-collapse">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right rui-icon rui-icon-collapse rui-icon-stroke-1_5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                              </span>
+                            </a>
+                            <ul class="yay-submenu dropdown-triangle">
+                                <li>
+                                    <a href="/portfolio">
+                                        <span data-pagename="Credit Portfolio">Credit Portfolio</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/bi">
+                                        <span data-pagename="KPIs">KPIs</span>
+                                    </a>
+                                </li>
+                            <span class="dropdown-menu-triangle"></span></ul>
+                        
+                        
+                    </li>
+                    <li class="dropdown-menu__element">
+                        
+                            <a href="#" class="yay-sub-toggle">
+                              <span class="yay-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather feather-shield"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+                              </span>
+                                                <span data-pagename="Security">Security</span>
+                                                <span class="rui-yaybar-circle"></span>
+                                                <span class="yay-icon-collapse">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right rui-icon rui-icon-collapse rui-icon-stroke-1_5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                              </span>
+                            </a>
+                            <ul class="yay-submenu dropdown-triangle">
+                                <li>
+                                    <a href="/role">
+                                        <span data-pagename="Roles">Roles</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/user">
+                                        <span data-pagename="Users">Users</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/audit">
+                                        <span data-pagename="Activity Log">Activity Log</span>
+                                    </a>
+                                </li>
+                            <span class="dropdown-menu-triangle"></span></ul>
+                        
+                        
+                    </li>
+                    <li>
+                        
+                        <a href="/notification">
+                            <span class="yay-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather feather-mail"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                            </span>
+                            <span data-pagename="Notifications">Notifications</span>
+                            <span class="rui-yaybar-circle"></span>
+                        </a>
+                    </li>
+                    <li class="dropdown-menu__element">
+                        
+                            <a href="#" class="yay-sub-toggle">
+                              <span class="yay-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather feather-settings"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
+                              </span>
+                                                <span data-pagename="Settings">Settings</span>
+                                                <span class="rui-yaybar-circle"></span>
+                                                <span class="yay-icon-collapse">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right rui-icon rui-icon-collapse rui-icon-stroke-1_5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                              </span>
+                            </a>
+                            <ul class="yay-submenu dropdown-triangle">
+                                <li>
+                                    <a href="/languagesettings">
+                                        <span data-pagename="Languages settings">Languages settings</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/reference-rate">
+                                        <span data-pagename="Reference Rate">Reference Rate</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/state-rule">
+                                        <span data-pagename="Regulatory and Compliance">Regulatory and Compliance</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/template">
+                                        <span data-pagename="Document templates">Document templates</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/audits">
+                                        <span data-pagename="Company audits">Company audits</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/field-mapping">
+                                        <span data-pagename="Field mapping">Field mapping</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/process-definition">
+                                        <span data-pagename="Decision Tree">Decision Tree</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/dynamic-enum">
+                                        <span data-pagename="Dynamic enumerations">Dynamic enumerations</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/systemSettings">
+                                        <span data-pagename="System Settings">System Settings</span>
+                                    </a>
+                                </li>
+                            <span class="dropdown-menu-triangle"></span></ul>
+                        
+                        
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+    <div class="rui-yaybar-bg"></div>
+    <div class="rui-navbar rui-navbar-mobile">
+        <div class="rui-navbar-head">
+            <div class="d-flex align-items-center">
+                <button class="rui-yaybar-toggle rui-yaybar-toggle-inverse yay-toggle" type="button" aria-label="Toggle side navigation">
+                    <span></span>
+                </button>
+                <h2 class="pageName">New role</h2>
+            </div>
+            <a href="/dashboard" style="margin: 0 10px 0 auto">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-bell rui-icon rui-icon-stroke-1_5"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path><path d="M13.73 21a2 2 0 0 1-3.46 0"></path></svg>
+                <span class="badge badge-danger menu-counter">
+                    <span data-name="menuCounter">185</span>
+                </span>
+            </a>
+            
+    <div class="dropdown dropdown-triangle rui-dropdown-triangle-ready">
+        <a class="dropdown-item rui-navbar-avatar" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <img alt="image" src="/assets/img/no_photo.jpg">
+        </a>
+
+        <ul class="dropdown-menu nav dropdown-menu-left">
+            <li>
+                <div class="d-flex flex-column">
+                    <h6 class="mb-0">test T.</h6>
+                    <span class="badge badge-info">Global Admin</span>
+                </div>
+            </li>
+            <li>
+                <div class="custom-control custom-switch dropdown-item-switch">
+                    <input type="checkbox" class="custom-control-input rui-nightmode-toggle rui-nightmode-toggle-ready" id="toggleNightMode">
+                    <label class="dropdown-item custom-control-label" for="toggleNightMode">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-moon rui-icon rui-icon-stroke-1_5"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+                        <span>Dark Mode</span>
+                        <span class="rui-dropdown-circle"></span>
+                    </label>
+                </div>
+            </li>
+            <li>
+                <a href="/logout" class="nav-link">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-log-out rui-icon rui-icon-stroke-1_5"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path><polyline points="16 17 21 12 16 7"></polyline><line x1="21" y1="12" x2="9" y2="12"></line></svg>
+                    <span>Exit</span>
+                    <span class="rui-nav-circle"></span>
+                </a>
+            </li>
+            <span class="dropdown-menu-triangle"></span>
+        <span class="dropdown-menu-triangle"></span></ul>
+    </div>
+
+        </div>
+    </div>
+
+
+
+
+
+<div class="rui-page content-wrap">
+    <div class="rui-page-content">
+        <div class="pumpkin-container">
+            
+    <form id="userRoleForm" method="post" action="/role/" autocomplete="off" role="form" class="form-submit-ready" novalidate="novalidate">
+        <input type="hidden" id="id" name="id" value="">
+        
+        <div class="form-group">
+            
+    <div data-id="name" class="form-group">
+        <label for="name">Name</label>
+
+        <input type="text" class="form-control show-popover v-required v-name" id="name" autocomplete="off" data-html="true" maxlength="256" name="name" value="">
+    </div>
+
+            
+    <div data-id="description" class="form-group">
+        <label for="description">Description</label>
+
+        <input type="text" class="form-control show-popover v-name" id="description" autocomplete="off" data-html="true" maxlength="256" name="description" value="">
+    </div>
+
+            
+    <div class="form-group custom-control custom-checkbox">
+        <input type="checkbox" class="custom-control-input" id="god" name="god" value="true"><input type="hidden" name="_god" value="on">
+        <label for="god" class="custom-control-label">God Admin</label>
+    </div>
+
+            
+    <div class="form-group">
+        <label for="startPage">Start page</label>
+
+        <div class="rui-selectize rui-selectize-ready">
+            
+            <select class="form-control rui-selectize-element rui-selectize-select selectized" id="startPage" name="startPage" tabindex="-1" style="display: none;"><option value="" selected="selected"></option></select><div class="selectize-control form-control rui-selectize-element rui-selectize-select single"><div class="selectize-input items not-full has-options rui-selectize-select-icon"><input type="text" autocomplete="off" tabindex="" placeholder="Select values" style="width: 82px;"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-down rui-icon rui-icon-stroke-1_5 rui-selectize-select-icon"><polyline points="6 9 12 15 18 9"></polyline></svg></div><div class="selectize-dropdown single form-control rui-selectize-element rui-selectize-select" style="display: none;"><div class="selectize-dropdown-content"></div></div></div>
+            <script>
+                /*<![CDATA[*/
+                //init office selector
+                $('#' + "startPage".replace(/([.*+?^=!:${}()|\[\]\/\\])/g, '\\$1')).prop('selectedIndex', -1);
+                /*]]>*/
+            </script>
+        </div>
+    </div>
+
+        </div>
+        <div class="app_toggled app_toggled-ready" data-toggle-id="god" data-show-if="false">
+            <h3>Available actions</h3>
+            
+                <div class="mb-10 mt-20">
+                    <h4 role="button" href="#Security" aria-expanded="false" data-toggle="collapse" aria-controls="Security">Security</h4>
+                    <div id="Security" class="collapse">
+                        <div class="d-flex align-items-center mb-20">
+                            <button class="btn btn-default" type="button" data-target="Security" onclick="handleSelect(event)">
+                                <span class="text-1">
+                                    Select All
+                                </span>
+                            </button>
+                            <button class="btn btn-default ml-5" type="button" data-target="Security" onclick="handleDeselect(event)">
+                                <span class="text-1">
+                                    Deselect All
+                                </span>
+                            </button>
+                        </div>
+                        <div data-for="Security" class="permissions__wrap">
+                            <div>
+                                <input class="no-validate" type="checkbox" name="permissions" value="USER_ROLE_VIEW">
+                                <label>View User Role</label>
+                            </div>
+                            <div>
+                                <input class="no-validate" type="checkbox" name="permissions" value="USER_ROLE_EDIT">
+                                <label>Edit User Role</label>
+                            </div>
+                            <div>
+                                <input class="no-validate" type="checkbox" name="permissions" value="USER_VIEW">
+                                <label>View User</label>
+                            </div>
+                            <div>
+                                <input class="no-validate" type="checkbox" name="permissions" value="USER_EDIT">
+                                <label>Edit User</label>
+                            </div>
+                            <div>
+                                <input class="no-validate" type="checkbox" name="permissions" value="USER_ACCOUNT_ACTION_VIEW">
+                                <label>View User Account Action</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="mb-10 mt-20">
+                    <h4 role="button" href="#Application" aria-expanded="false" data-toggle="collapse" aria-controls="Application">Application</h4>
+                    <div id="Application" class="collapse">
+                        <div class="d-flex align-items-center mb-20">
+                            <button class="btn btn-default" type="button" data-target="Application" onclick="handleSelect(event)">
+                                <span class="text-1">
+                                    Select All
+                                </span>
+                            </button>
+                            <button class="btn btn-default ml-5" type="button" data-target="Application" onclick="handleDeselect(event)">
+                                <span class="text-1">
+                                    Deselect All
+                                </span>
+                            </button>
+                        </div>
+                        <div data-for="Application" class="permissions__wrap">
+                            <div>
+                                <input class="no-validate" type="checkbox" name="permissions" value="APPLICATION_VIEW">
+                                <label>Veiw Application</label>
+                            </div>
+                            <div>
+                                <input class="no-validate" type="checkbox" name="permissions" value="APPLICATION_EDIT">
+                                <label>Edit Application</label>
+                            </div>
+                            <div>
+                                <input class="no-validate" type="checkbox" name="permissions" value="APPLICATION_VALIDATE">
+                                <label>Validate Application</label>
+                            </div>
+                            <div>
+                                <input class="no-validate" type="checkbox" name="permissions" value="APPLICATION_SUBMIT">
+                                <label>Submit Application</label>
+                            </div>
+                            <div>
+                                <input class="no-validate" type="checkbox" name="permissions" value="APPLICATION_APPROVE">
+                                <label>Approve Application</label>
+                            </div>
+                            <div>
+                                <input class="no-validate" type="checkbox" name="permissions" value="APPLICATION_COMMENT_ADD">
+                                <label>Add Application Comment</label>
+                            </div>
+                            <div>
+                                <input class="no-validate" type="checkbox" name="permissions" value="APPLICATION_REQUEST_DOCUMENTS">
+                                <label>Request Additional Docs</label>
+                            </div>
+                            <div>
+                                <input class="no-validate" type="checkbox" name="permissions" value="APPLICATION_DECLINE">
+                                <label>Decline Application</label>
+                            </div>
+                            <div>
+                                <input class="no-validate" type="checkbox" name="permissions" value="APPLICATION_EDIT_COLLATERAL">
+                                <label>Application Edit Collateral</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="mb-10 mt-20">
+                    <h4 role="button" href="#Settings" aria-expanded="false" data-toggle="collapse" aria-controls="Settings">Settings</h4>
+                    <div id="Settings" class="collapse">
+                        <div class="d-flex align-items-center mb-20">
+                            <button class="btn btn-default" type="button" data-target="Settings" onclick="handleSelect(event)">
+                                <span class="text-1">
+                                    Select All
+                                </span>
+                            </button>
+                            <button class="btn btn-default ml-5" type="button" data-target="Settings" onclick="handleDeselect(event)">
+                                <span class="text-1">
+                                    Deselect All
+                                </span>
+                            </button>
+                        </div>
+                        <div data-for="Settings" class="permissions__wrap">
+                            <div>
+                                <input class="no-validate" type="checkbox" name="permissions" value="SYSTEM_CONTROL">
+                                <label>System Control</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="mb-10 mt-20">
+                    <h4 role="button" href="#Dashboard" aria-expanded="false" data-toggle="collapse" aria-controls="Dashboard">Dashboard</h4>
+                    <div id="Dashboard" class="collapse">
+                        <div class="d-flex align-items-center mb-20">
+                            <button class="btn btn-default" type="button" data-target="Dashboard" onclick="handleSelect(event)">
+                                <span class="text-1">
+                                    Select All
+                                </span>
+                            </button>
+                            <button class="btn btn-default ml-5" type="button" data-target="Dashboard" onclick="handleDeselect(event)">
+                                <span class="text-1">
+                                    Deselect All
+                                </span>
+                            </button>
+                        </div>
+                        <div data-for="Dashboard" class="permissions__wrap">
+                            <div>
+                                <input class="no-validate" type="checkbox" name="permissions" value="DASHBOARD_VIEW">
+                                <label>View Dashboard</label>
+                            </div>
+                            
+                            <div>
+                                <input class="no-validate" type="checkbox" name="permissions" value="VIEW_PASTDUE_APP">
+                                <label>View Pastdue Application</label>
+                            </div>
+                            <div>
+                                <input class="no-validate" type="checkbox" name="permissions" value="VIEW_APPROVED_APP">
+                                <label>View Approved Application</label>
+                            </div>
+                            <div>
+                                <input class="no-validate" type="checkbox" name="permissions" value="ALL_APPLICATION_COUNTER_VIEW">
+                                <label>All Applications Counter View</label>
+                            </div>
+                            <div>
+                                <input class="no-validate" type="checkbox" name="permissions" value="APPLICATIONS_FOR_MANUAL_REVIEW_COUNTER_VIEW">
+                                <label>Applications For Manual Review Counter View</label>
+                            </div>
+                            <div>
+                                <input class="no-validate" type="checkbox" name="permissions" value="APPLICATIONS_THAT_REQUIRE_AT_ACTION_COUNTER_VIEW">
+                                <label>Applications That Require At Action Counter View</label>
+                            </div>
+                            <div>
+                                <input class="no-validate" type="checkbox" name="permissions" value="COLLATERAL_NEED_EVALUATION_COUNTER_VIEW">
+                                <label>Collateral Need Evaluation Counter View</label>
+                            </div>
+                            <div>
+                                <input class="no-validate" type="checkbox" name="permissions" value="OVERPAID_LOANS_COUNTER_VIEW">
+                                <label>Overpaid Loans Counter View</label>
+                            </div>
+                            <div>
+                                <input class="no-validate" type="checkbox" name="permissions" value="LOANS_THIS_WEEK_COUNTER_VIEW">
+                                <label>Loans This Week Counter View</label>
+                            </div>
+                            <div>
+                                <input class="no-validate" type="checkbox" name="permissions" value="LOANS_THIS_MONTH_COUNTER_VIEW">
+                                <label>Loans This Month Counter View</label>
+                            </div>
+                            <div>
+                                <input class="no-validate" type="checkbox" name="permissions" value="VIEW_ACTIVITY_LIST">
+                                <label>View Activity List</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="mb-10 mt-20">
+                    <h4 role="button" href="#OtherActions" aria-expanded="false" data-toggle="collapse" aria-controls="OtherActions">Other Actions</h4>
+                    <div id="OtherActions" class="collapse">
+                        <div class="d-flex align-items-center mb-20">
+                            <button class="btn btn-default" type="button" data-target="OtherActions" onclick="handleSelect(event)">
+                                <span class="text-1">
+                                    Select All
+                                </span>
+                            </button>
+                            <button class="btn btn-default ml-5" type="button" data-target="OtherActions" onclick="handleDeselect(event)">
+                                <span class="text-1">
+                                    Deselect All
+                                </span>
+                            </button>
+                        </div>
+                        <div data-for="OtherActions" class="permissions__wrap">
+                            <div>
+                                <input class="no-validate" type="checkbox" name="permissions" value="REPORT_VIEW">
+                                <label>View Report</label>
+                            </div>
+                            <div>
+                                <input class="no-validate" type="checkbox" name="permissions" value="DOCUMENT_TEMPLATE_VIEW">
+                                <label>View Document Template</label>
+                            </div>
+                            <div>
+                                <input class="no-validate" type="checkbox" name="permissions" value="DOCUMENT_TEMPLATE_EDIT">
+                                <label>Edit Document Template</label>
+                            </div>
+                            <div>
+                                <input class="no-validate" type="checkbox" name="permissions" value="NOTIFICATION_VIEW">
+                                <label>View Notification</label>
+                            </div>
+                            <div>
+                                <input class="no-validate" type="checkbox" name="permissions" value="NOTIFICATION_TEMPLATE_VIEW">
+                                <label>View Notification Template</label>
+                            </div>
+                            <div>
+                                <input class="no-validate" type="checkbox" name="permissions" value="NOTIFICATION_TEMPLATE_EDIT">
+                                <label>Edit Notification Template</label>
+                            </div>
+                            <div>
+                                <input class="no-validate" type="checkbox" name="permissions" value="CAMPAIGN_VIEW">
+                                <label>View Campaign</label>
+                            </div>
+                            <div>
+                                <input class="no-validate" type="checkbox" name="permissions" value="CAMPAIGN_EDIT">
+                                <label>Edit Campaign</label>
+                            </div>
+                            <div>
+                                <input class="no-validate" type="checkbox" name="permissions" value="CREDIT_PRODUCT_VIEW">
+                                <label>View Credit Product</label>
+                            </div>
+                            <div>
+                                <input class="no-validate" type="checkbox" name="permissions" value="CREDIT_PRODUCT_EDIT">
+                                <label>Edit Credit Product</label>
+                            </div>
+                            <div>
+                                <input class="no-validate" type="checkbox" name="permissions" value="STATE_RULE_VIEW">
+                                <label>View State Rule</label>
+                            </div>
+                            <div>
+                                <input class="no-validate" type="checkbox" name="permissions" value="STATE_RULE_EDIT">
+                                <label>Edit State Rule</label>
+                            </div>
+                            <div>
+                                <input class="no-validate" type="checkbox" name="permissions" value="MARKETING_CAMPAIGN_VIEW">
+                                <label>View Marketing Campaign</label>
+                            </div>
+                            <div>
+                                <input class="no-validate" type="checkbox" name="permissions" value="MARKETING_CAMPAIGN_EDIT">
+                                <label>Edit Marketing Campaign</label>
+                            </div>
+                            <div>
+                                <input class="no-validate" type="checkbox" name="permissions" value="BLACK_LIST_VIEW">
+                                <label>View Ban List</label>
+                            </div>
+                            <div>
+                                <input class="no-validate" type="checkbox" name="permissions" value="BLACK_LIST_EDIT">
+                                <label>Edit Ban List</label>
+                            </div>
+                            <div>
+                                <input class="no-validate" type="checkbox" name="permissions" value="REFERENCE_RATE_VIEW">
+                                <label>View Reference Rate</label>
+                            </div>
+                            <div>
+                                <input class="no-validate" type="checkbox" name="permissions" value="REFERENCE_RATE_EDIT">
+                                <label>Edit Reference Rate</label>
+                            </div>
+                            <div>
+                                <input class="no-validate" type="checkbox" name="permissions" value="CREDIT_PORTFOLIO_VIEW">
+                                <label>View Credit Portfolio</label>
+                            </div>
+                            <div>
+                                <input class="no-validate" type="checkbox" name="permissions" value="CREDIT_PORTFOLIO_EDIT">
+                                <label>Edit  Credit Portfolio</label>
+                            </div>
+                            <div>
+                                <input class="no-validate" type="checkbox" name="permissions" value="ZOHO_VIEW">
+                                <label>View ZOHO</label>
+                            </div>
+                            <div>
+                                <input class="no-validate" type="checkbox" name="permissions" value="PROCESS_VALIDATION_PROFILE_VIEW">
+                                <label>View Process Validation Profile</label>
+                            </div>
+                            <div>
+                                <input class="no-validate" type="checkbox" name="permissions" value="PROCESS_VALIDATION_PROFILE_EDIT">
+                                <label>Edit  Process Validation Profile</label>
+                            </div>
+                            <div>
+                                <input class="no-validate" type="checkbox" name="permissions" value="PROCESS_DEFINITION_VIEW">
+                                <label>View Process Definition</label>
+                            </div>
+                            <div>
+                                <input class="no-validate" type="checkbox" name="permissions" value="PROCESS_DEFINITION_EDIT">
+                                <label>Edit Process Definition</label>
+                            </div>
+                            <div>
+                                <input class="no-validate" type="checkbox" name="permissions" value="DYNAMIC_ENUM_VIEW">
+                                <label>View Dynamic Enum</label>
+                            </div>
+                            <div>
+                                <input class="no-validate" type="checkbox" name="permissions" value="DYNAMIC_ENUM_EDIT">
+                                <label>Edit Dynamic Enum</label>
+                            </div>
+                            <div>
+                                <input class="no-validate" type="checkbox" name="permissions" value="FIELD_MAPPING_VIEW">
+                                <label>View Field Mapping</label>
+                            </div>
+                            <div>
+                                <input class="no-validate" type="checkbox" name="permissions" value="FIELD_MAPPING_EDIT">
+                                <label>Edit Field Mapping</label>
+                            </div>
+                            <div>
+                                <input class="no-validate" type="checkbox" name="permissions" value="BI_VIEW">
+                                <label>View BI</label>
+                            </div>
+                            <div>
+                                <input class="no-validate" type="checkbox" name="permissions" value="BORROWER_VIEW">
+                                <label>View Borrower</label>
+                            </div>
+                            <div>
+                                <input class="no-validate" type="checkbox" name="permissions" value="BORROWER_EDIT">
+                                <label>Edit Borrower</label>
+                            </div>
+                            <div>
+                                <input class="no-validate" type="checkbox" name="permissions" value="COLLATERAL_VIEW">
+                                <label>View Collateral</label>
+                            </div>
+                            <div>
+                                <input class="no-validate" type="checkbox" name="permissions" value="COLLATERAL_EVALUATE">
+                                <label>Evaluate Collateral</label>
+                            </div>
+                            <div>
+                                <input class="no-validate" type="checkbox" name="permissions" value="CREDIT_VIEW">
+                                <label>View Credit</label>
+                            </div>
+                            <div>
+                                <input class="no-validate" type="checkbox" name="permissions" value="CREDIT_PAYMENT_EDIT">
+                                <label>Edit Credit Payment</label>
+                            </div>
+                            <div>
+                                <input class="no-validate" type="checkbox" name="permissions" value="CREDIT_PAYMENT_VIEW">
+                                <label>View Credit Payment</label>
+                            </div>
+                            <div>
+                                <input class="no-validate" type="checkbox" name="permissions" value="CREDIT_PAYMENT_ADD">
+                                <label>Add Credit Payment</label>
+                            </div>
+                            <div>
+                                <input class="no-validate" type="checkbox" name="permissions" value="CREDIT_PAYMENT_REFUND">
+                                <label>Refund Credit Payment</label>
+                            </div>
+                            <div>
+                                <input class="no-validate" type="checkbox" name="permissions" value="DOCUMENT_VIEW">
+                                <label>View Document</label>
+                            </div>
+                            <div>
+                                <input class="no-validate" type="checkbox" name="permissions" value="AUDIT_VIEW">
+                                <label>View Audit</label>
+                            </div>
+                            <div>
+                                <input class="no-validate" type="checkbox" name="permissions" value="AUDIT_EDIT">
+                                <label>Edit Audit</label>
+                            </div>
+                            <div>
+                                <input class="no-validate" type="checkbox" name="permissions" value="SEND2COLLECTIONS_VIEW">
+                                <label>View Sent To Collections</label>
+                            </div>
+                            <div>
+                                <input class="no-validate" type="checkbox" name="permissions" value="SENT2COLLECTIONS_ACTION">
+                                <label>Sent To Collections Action</label>
+                            </div>
+                            <div>
+                                <input class="no-validate" type="checkbox" name="permissions" value="VIEW_LOAN_COUNTER">
+                                <label>View Loan Counter</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            
+        </div>
+
+        
+        <div>
+            <button type="submit" class="btn btn-success">Save</button>
+            <a class="btn btn-grey-1" href="/role">Cancel</a>
+        </div>
+    </form>
+
+    
+    
+
+
+    <script>
+        function handleSelect(e) {
+            const target = $(e.currentTarget).data('target');
+            $(`[data-for=${target}] input[type=checkbox], input[data-target=${target}]`).prop('checked', true);
+        }
+
+        function handleDeselect(e) {
+            const target = $(e.currentTarget).data('target');
+            $(`[data-for=${target}] input[type=checkbox], input[data-target=${target}]`).prop('checked', false);
+        }
+    </script>
+
+    
+    <script async="">
+        let pageName = "New role";
+        $('.pageName').text(pageName);
+        let TITLE = $('body').data('application-name');
+        let title = null;
+        document.title = title ? `${title} | ${TITLE} ` : `${pageName} | ${TITLE}`;
+    </script>
+
+
+        </div>
+    </div>
+    
+</div>
+
+<div class="rui-toast-container"></div>
+
+
+<div id="campaign-control-panel" style="position: fixed; bottom: 0; z-index: 999999; width: 100%; height: 60px; background-color: #89ff90; display: none; padding-top: 10px; box-shadow: 0 1px 1px -1px rgba(0, 0, 0, 0.34), 0 0 6px 0 rgba(0, 0, 0, 0.14)" data-context="/">
+    <table class="w-100">
+        <tbody><tr>
+            <td class="pull-left pl-10">
+                <button class="btn btn-primary task-action task-action-pause" style="height: 40px" data-action="/campaign/task/pause">
+                    <span class="glyphicon glyphicon-pause"></span> pause
+                </button>
+                <button class="btn btn-primary task-action task-action-start" style="height: 40px" data-action="/campaign/task/start">
+                    <span class="glyphicon glyphicon-play"></span> start
+                </button>
+                <button class="btn btn-primary task-action" style="height: 40px" data-action="/campaign/task/stop">
+                    <span class="glyphicon glyphicon-remove-circle"></span> quit
+                </button>
+            </td>
+            <td style="text-align: center" class="campaign-name"></td>
+            <td style="text-align: center" class="total-progress"></td>
+            <td style="text-align: center" class="campaign-timer timer"></td>
+            <td style="text-align: center; font-size: 15px" class="task-name"></td>
+            <td style="text-align: center; font-size: 15px">on task (
+                <timer class="task-timer timer"></timer>
+                )
+            </td>
+            <td style="text-align: center; font-size: 15px" class="task-status"></td>
+            <td style="padding-right: 10px;" class="pull-right">
+                <button id="completeTask" class="btn btn-primary task-action" style="height: 40px" data-action="/campaign/task/complete">
+                    <span class="glyphicon glyphicon-ok-sign"></span> complete &amp; next
+                </button>
+                <div class="btn-group dropup">
+                    <button style="height: 40px" data-action="/campaign/task/startNext" class="btn btn-primary dropdown-toggle task-action" type="button">
+                        <span class="glyphicon glyphicon-forward" id="startNextTask"></span> skip
+                    </button>
+                </div>
+            </td>
+        </tr>
+    </tbody></table>
+    <div class="overlay-element campaign-overlay"></div>
+
+    <script>
+        const $controlPanel = $('#campaign-control-panel');
+
+        $controlPanel.find('.task-action').click(function () {
+            const taskId = $controlPanel.data('task-id');
+            const url = $(this).data('action');
+            $controlPanel.find('.campaign-overlay').show();
+            $.ajax({
+                data: {taskId: taskId},
+                type: 'POST',
+                url: url,
+                success: handleCampaignAction
+            });
+        });
+    </script>
+</div>
+
+
+
+    <script defer="" src="/assets/static/js/vendor.js"></script>
+    <script defer="" src="/assets/static/js/index.js"></script>
+    <script src="/assets/static/js/forms.js" defer=""></script><script defer="" src="/assets/static/js/rootui.js"></script>
+
+
+
+
+<div id="deleteComfirm" class="modal fade rui-page-additional-modal" tabindex="-1" role="dialog" aria-hidden="true" aria-labelledby="confirmdeleteComfirm">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <form action="/role/null/delete" method="post" class="valid modal-form form-submit-ready" novalidate="novalidate">
+                    <div class="modal-header">
+                        <h4 class="modal-title" id="confirmdeleteComfirm">Confirm role deletion</h4>
+                        <button type="button" class="close" data-dismiss="modal">
+                            <span aria-hidden="true">×</span>
+                            <span class="sr-only">Close</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">Are you sure you want to delete null role?</div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn" data-dismiss="modal">Close</button>
+                        <button type="submit" class="btn btn-success">Delete</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div></body></html>

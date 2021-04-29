@@ -3,54 +3,42 @@ package Create;
 import Resources.Config;
 import Resources.RANDOM_NAME;
 import org.openqa.selenium.*;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.Test;
 
-import java.net.URL;
+import static com.codeborne.selenide.Selenide.*;
+import static java.lang.Thread.sleep;
 
 public class ROLE {
 
     @Test
     //Create Role with Admin rights
     public void Role() throws InterruptedException {
-        //create new session
-        System.setProperty("webdriver.chrome.driver", "D://chromedriver//chromedriver.exe");
-        WebDriver driver = new ChromeDriver();
-        String strUrl1 = Config.getUrl1();
-        driver.get(strUrl1);
-        driver.manage().window().maximize();
-        Thread.sleep(2000);
-        WebElement username = driver.findElement(By.name("username"));
-        username.sendKeys("test");
-        WebElement password = driver.findElement(By.name("password"));
-        password.sendKeys("1234" + Keys.ENTER);
-        Thread.sleep(2500);
+
+        //create new session and login
+        open(Config.getUrl1());
+        $(By.xpath("//form[@id='login']//input[@name='username']")).setValue("test");
+        $(By.cssSelector("[placeholder='Password']")).setValue("1234").pressEnter();
+        sleep(1500);
+
         // move to "new role" page and create role
-        driver.get("http://mark43-admin.timvero.xyz/role/new");
-        WebElement name = driver.findElement(By.id("name"));
-        name.sendKeys(RANDOM_NAME.randomName());
-        WebElement description = driver.findElement(By.id("description"));
-        description.sendKeys(RANDOM_NAME.randomName());
-        WebElement checkbox = driver.findElement(By.id("god"));
-        JavascriptExecutor executor = (JavascriptExecutor)driver;
-        executor.executeScript("arguments[0].click();", checkbox);
-        WebElement startPage = driver.findElement(By.xpath("/html[1]/body[1]/div[5]/div[1]/div[1]/form[1]/div[1]/div[4]/div[1]/div[1]/div[1]"));
-        startPage.click();
-        Thread.sleep(500);
-        WebElement dashboard = driver.findElement(By.xpath("/html[1]/body[1]/div[5]/div[1]/div[1]/form[1]/div[1]/div[4]/div[1]/div[1]/div[2]/div[1]/div[1]"));
-        dashboard.click();
-        WebElement btnSave = driver.findElement(By.cssSelector("form#userRoleForm .btn-success"));
-        btnSave.click();
-        Thread.sleep(2000);
-        driver.navigate().refresh();
-        Thread.sleep(3000);
+        open("http://mark43-admin.timvero.xyz/role/new");
+        $(By.id("name")).sendKeys(RANDOM_NAME.randomName());
+        $(By.id("description")).sendKeys(RANDOM_NAME.randomName());
+        $(By.cssSelector("[for='god']")).click();
+        $(By.xpath("/html[1]/body[1]/div[5]/div[1]/div[1]/form[1]/div[1]/div[4]/div[1]/div[1]/div[1]")).click();
+        sleep(500);
+        $(By.xpath("/html[1]/body[1]/div[5]/div[1]/div[1]/form[1]/div[1]/div[4]/div[1]/div[1]/div[2]/div[1]/div[1]")).click();
+        $(By.cssSelector("form#userRoleForm .btn-success")).click();
+        sleep(5000);
+        refresh();
+        sleep(1000);
+
         // deleting new role
-        WebElement btnDelete = driver.findElement(By.xpath("//a[.='Delete']"));
-        btnDelete.click();
-        Thread.sleep(1500);
-        WebElement confirm = driver.findElement(By.xpath("//button[@class='btn btn-success']"));
-        confirm.click();
+        $(By.xpath("//a[.='Delete']")).click();
+        sleep(1500);
+        $(By.xpath("//button[@class='btn btn-success']")).click();
+
         // quit from window
-        driver.quit();
+        closeWindow();
     }
 }

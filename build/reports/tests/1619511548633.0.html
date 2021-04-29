@@ -1,0 +1,1636 @@
+<html xmlns="http://www.w3.org/1999/xhtml" class="is-desktop" data-theme="day"><head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Dashboard | Mark43 Admin</title>
+    <link rel="shortcut icon" href="/assets/img/favicon.png">
+    
+    <script>/*<![CDATA[*/
+    var homeContext = "/";
+    var sentryKey = "https://44c5dad388d14358819207c685f954c0@sentry.io/3831417";
+    /*]]>*/</script>
+    <script src="/assets/static/vendor/jquery/dist/jquery.min.js"></script>
+
+    
+    <link rel="stylesheet" href="/assets/static/css/fonts.css">
+    <link rel="stylesheet" href="/assets/static/css/vendor.css">
+    <link rel="stylesheet" href="/assets/static/css/rootui.css">
+    <link rel="stylesheet" href="/assets/static/css/rootui-night.css" media="(night)" class="rui-nightmode-link">
+
+<style>.MuiPaper-elevation1{box-shadow:none !important}.Legend{padding:0;margin:0;text-align:center}.Legend__item{display:inline-flex;margin-right:18px;align-items:center}.Legend__itemBlock{display:inline-block;width:8px;height:8px;margin:0 4px 0 0}
+</style><style data-jss="" data-meta="MuiGrid">
+.MuiGrid-container {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+}
+.MuiGrid-item {
+  margin: 0;
+  box-sizing: border-box;
+}
+.MuiGrid-zeroMinWidth {
+  min-width: 0;
+}
+.MuiGrid-direction-xs-column {
+  flex-direction: column;
+}
+.MuiGrid-direction-xs-column-reverse {
+  flex-direction: column-reverse;
+}
+.MuiGrid-direction-xs-row-reverse {
+  flex-direction: row-reverse;
+}
+.MuiGrid-wrap-xs-nowrap {
+  flex-wrap: nowrap;
+}
+.MuiGrid-wrap-xs-wrap-reverse {
+  flex-wrap: wrap-reverse;
+}
+.MuiGrid-align-items-xs-center {
+  align-items: center;
+}
+.MuiGrid-align-items-xs-flex-start {
+  align-items: flex-start;
+}
+.MuiGrid-align-items-xs-flex-end {
+  align-items: flex-end;
+}
+.MuiGrid-align-items-xs-baseline {
+  align-items: baseline;
+}
+.MuiGrid-align-content-xs-center {
+  align-content: center;
+}
+.MuiGrid-align-content-xs-flex-start {
+  align-content: flex-start;
+}
+.MuiGrid-align-content-xs-flex-end {
+  align-content: flex-end;
+}
+.MuiGrid-align-content-xs-space-between {
+  align-content: space-between;
+}
+.MuiGrid-align-content-xs-space-around {
+  align-content: space-around;
+}
+.MuiGrid-justify-xs-center {
+  justify-content: center;
+}
+.MuiGrid-justify-xs-flex-end {
+  justify-content: flex-end;
+}
+.MuiGrid-justify-xs-space-between {
+  justify-content: space-between;
+}
+.MuiGrid-justify-xs-space-around {
+  justify-content: space-around;
+}
+.MuiGrid-justify-xs-space-evenly {
+  justify-content: space-evenly;
+}
+.MuiGrid-spacing-xs-1 {
+  width: calc(100% + 8px);
+  margin: -4px;
+}
+.MuiGrid-spacing-xs-1 > .MuiGrid-item {
+  padding: 4px;
+}
+.MuiGrid-spacing-xs-2 {
+  width: calc(100% + 16px);
+  margin: -8px;
+}
+.MuiGrid-spacing-xs-2 > .MuiGrid-item {
+  padding: 8px;
+}
+.MuiGrid-spacing-xs-3 {
+  width: calc(100% + 24px);
+  margin: -12px;
+}
+.MuiGrid-spacing-xs-3 > .MuiGrid-item {
+  padding: 12px;
+}
+.MuiGrid-spacing-xs-4 {
+  width: calc(100% + 32px);
+  margin: -16px;
+}
+.MuiGrid-spacing-xs-4 > .MuiGrid-item {
+  padding: 16px;
+}
+.MuiGrid-spacing-xs-5 {
+  width: calc(100% + 40px);
+  margin: -20px;
+}
+.MuiGrid-spacing-xs-5 > .MuiGrid-item {
+  padding: 20px;
+}
+.MuiGrid-spacing-xs-6 {
+  width: calc(100% + 48px);
+  margin: -24px;
+}
+.MuiGrid-spacing-xs-6 > .MuiGrid-item {
+  padding: 24px;
+}
+.MuiGrid-spacing-xs-7 {
+  width: calc(100% + 56px);
+  margin: -28px;
+}
+.MuiGrid-spacing-xs-7 > .MuiGrid-item {
+  padding: 28px;
+}
+.MuiGrid-spacing-xs-8 {
+  width: calc(100% + 64px);
+  margin: -32px;
+}
+.MuiGrid-spacing-xs-8 > .MuiGrid-item {
+  padding: 32px;
+}
+.MuiGrid-spacing-xs-9 {
+  width: calc(100% + 72px);
+  margin: -36px;
+}
+.MuiGrid-spacing-xs-9 > .MuiGrid-item {
+  padding: 36px;
+}
+.MuiGrid-spacing-xs-10 {
+  width: calc(100% + 80px);
+  margin: -40px;
+}
+.MuiGrid-spacing-xs-10 > .MuiGrid-item {
+  padding: 40px;
+}
+.MuiGrid-grid-xs-auto {
+  flex-grow: 0;
+  max-width: none;
+  flex-basis: auto;
+}
+.MuiGrid-grid-xs-true {
+  flex-grow: 1;
+  max-width: 100%;
+  flex-basis: 0;
+}
+.MuiGrid-grid-xs-1 {
+  flex-grow: 0;
+  max-width: 8.333333%;
+  flex-basis: 8.333333%;
+}
+.MuiGrid-grid-xs-2 {
+  flex-grow: 0;
+  max-width: 16.666667%;
+  flex-basis: 16.666667%;
+}
+.MuiGrid-grid-xs-3 {
+  flex-grow: 0;
+  max-width: 25%;
+  flex-basis: 25%;
+}
+.MuiGrid-grid-xs-4 {
+  flex-grow: 0;
+  max-width: 33.333333%;
+  flex-basis: 33.333333%;
+}
+.MuiGrid-grid-xs-5 {
+  flex-grow: 0;
+  max-width: 41.666667%;
+  flex-basis: 41.666667%;
+}
+.MuiGrid-grid-xs-6 {
+  flex-grow: 0;
+  max-width: 50%;
+  flex-basis: 50%;
+}
+.MuiGrid-grid-xs-7 {
+  flex-grow: 0;
+  max-width: 58.333333%;
+  flex-basis: 58.333333%;
+}
+.MuiGrid-grid-xs-8 {
+  flex-grow: 0;
+  max-width: 66.666667%;
+  flex-basis: 66.666667%;
+}
+.MuiGrid-grid-xs-9 {
+  flex-grow: 0;
+  max-width: 75%;
+  flex-basis: 75%;
+}
+.MuiGrid-grid-xs-10 {
+  flex-grow: 0;
+  max-width: 83.333333%;
+  flex-basis: 83.333333%;
+}
+.MuiGrid-grid-xs-11 {
+  flex-grow: 0;
+  max-width: 91.666667%;
+  flex-basis: 91.666667%;
+}
+.MuiGrid-grid-xs-12 {
+  flex-grow: 0;
+  max-width: 100%;
+  flex-basis: 100%;
+}
+@media (min-width:600px) {
+  .MuiGrid-grid-sm-auto {
+    flex-grow: 0;
+    max-width: none;
+    flex-basis: auto;
+  }
+  .MuiGrid-grid-sm-true {
+    flex-grow: 1;
+    max-width: 100%;
+    flex-basis: 0;
+  }
+  .MuiGrid-grid-sm-1 {
+    flex-grow: 0;
+    max-width: 8.333333%;
+    flex-basis: 8.333333%;
+  }
+  .MuiGrid-grid-sm-2 {
+    flex-grow: 0;
+    max-width: 16.666667%;
+    flex-basis: 16.666667%;
+  }
+  .MuiGrid-grid-sm-3 {
+    flex-grow: 0;
+    max-width: 25%;
+    flex-basis: 25%;
+  }
+  .MuiGrid-grid-sm-4 {
+    flex-grow: 0;
+    max-width: 33.333333%;
+    flex-basis: 33.333333%;
+  }
+  .MuiGrid-grid-sm-5 {
+    flex-grow: 0;
+    max-width: 41.666667%;
+    flex-basis: 41.666667%;
+  }
+  .MuiGrid-grid-sm-6 {
+    flex-grow: 0;
+    max-width: 50%;
+    flex-basis: 50%;
+  }
+  .MuiGrid-grid-sm-7 {
+    flex-grow: 0;
+    max-width: 58.333333%;
+    flex-basis: 58.333333%;
+  }
+  .MuiGrid-grid-sm-8 {
+    flex-grow: 0;
+    max-width: 66.666667%;
+    flex-basis: 66.666667%;
+  }
+  .MuiGrid-grid-sm-9 {
+    flex-grow: 0;
+    max-width: 75%;
+    flex-basis: 75%;
+  }
+  .MuiGrid-grid-sm-10 {
+    flex-grow: 0;
+    max-width: 83.333333%;
+    flex-basis: 83.333333%;
+  }
+  .MuiGrid-grid-sm-11 {
+    flex-grow: 0;
+    max-width: 91.666667%;
+    flex-basis: 91.666667%;
+  }
+  .MuiGrid-grid-sm-12 {
+    flex-grow: 0;
+    max-width: 100%;
+    flex-basis: 100%;
+  }
+}
+@media (min-width:960px) {
+  .MuiGrid-grid-md-auto {
+    flex-grow: 0;
+    max-width: none;
+    flex-basis: auto;
+  }
+  .MuiGrid-grid-md-true {
+    flex-grow: 1;
+    max-width: 100%;
+    flex-basis: 0;
+  }
+  .MuiGrid-grid-md-1 {
+    flex-grow: 0;
+    max-width: 8.333333%;
+    flex-basis: 8.333333%;
+  }
+  .MuiGrid-grid-md-2 {
+    flex-grow: 0;
+    max-width: 16.666667%;
+    flex-basis: 16.666667%;
+  }
+  .MuiGrid-grid-md-3 {
+    flex-grow: 0;
+    max-width: 25%;
+    flex-basis: 25%;
+  }
+  .MuiGrid-grid-md-4 {
+    flex-grow: 0;
+    max-width: 33.333333%;
+    flex-basis: 33.333333%;
+  }
+  .MuiGrid-grid-md-5 {
+    flex-grow: 0;
+    max-width: 41.666667%;
+    flex-basis: 41.666667%;
+  }
+  .MuiGrid-grid-md-6 {
+    flex-grow: 0;
+    max-width: 50%;
+    flex-basis: 50%;
+  }
+  .MuiGrid-grid-md-7 {
+    flex-grow: 0;
+    max-width: 58.333333%;
+    flex-basis: 58.333333%;
+  }
+  .MuiGrid-grid-md-8 {
+    flex-grow: 0;
+    max-width: 66.666667%;
+    flex-basis: 66.666667%;
+  }
+  .MuiGrid-grid-md-9 {
+    flex-grow: 0;
+    max-width: 75%;
+    flex-basis: 75%;
+  }
+  .MuiGrid-grid-md-10 {
+    flex-grow: 0;
+    max-width: 83.333333%;
+    flex-basis: 83.333333%;
+  }
+  .MuiGrid-grid-md-11 {
+    flex-grow: 0;
+    max-width: 91.666667%;
+    flex-basis: 91.666667%;
+  }
+  .MuiGrid-grid-md-12 {
+    flex-grow: 0;
+    max-width: 100%;
+    flex-basis: 100%;
+  }
+}
+@media (min-width:1280px) {
+  .MuiGrid-grid-lg-auto {
+    flex-grow: 0;
+    max-width: none;
+    flex-basis: auto;
+  }
+  .MuiGrid-grid-lg-true {
+    flex-grow: 1;
+    max-width: 100%;
+    flex-basis: 0;
+  }
+  .MuiGrid-grid-lg-1 {
+    flex-grow: 0;
+    max-width: 8.333333%;
+    flex-basis: 8.333333%;
+  }
+  .MuiGrid-grid-lg-2 {
+    flex-grow: 0;
+    max-width: 16.666667%;
+    flex-basis: 16.666667%;
+  }
+  .MuiGrid-grid-lg-3 {
+    flex-grow: 0;
+    max-width: 25%;
+    flex-basis: 25%;
+  }
+  .MuiGrid-grid-lg-4 {
+    flex-grow: 0;
+    max-width: 33.333333%;
+    flex-basis: 33.333333%;
+  }
+  .MuiGrid-grid-lg-5 {
+    flex-grow: 0;
+    max-width: 41.666667%;
+    flex-basis: 41.666667%;
+  }
+  .MuiGrid-grid-lg-6 {
+    flex-grow: 0;
+    max-width: 50%;
+    flex-basis: 50%;
+  }
+  .MuiGrid-grid-lg-7 {
+    flex-grow: 0;
+    max-width: 58.333333%;
+    flex-basis: 58.333333%;
+  }
+  .MuiGrid-grid-lg-8 {
+    flex-grow: 0;
+    max-width: 66.666667%;
+    flex-basis: 66.666667%;
+  }
+  .MuiGrid-grid-lg-9 {
+    flex-grow: 0;
+    max-width: 75%;
+    flex-basis: 75%;
+  }
+  .MuiGrid-grid-lg-10 {
+    flex-grow: 0;
+    max-width: 83.333333%;
+    flex-basis: 83.333333%;
+  }
+  .MuiGrid-grid-lg-11 {
+    flex-grow: 0;
+    max-width: 91.666667%;
+    flex-basis: 91.666667%;
+  }
+  .MuiGrid-grid-lg-12 {
+    flex-grow: 0;
+    max-width: 100%;
+    flex-basis: 100%;
+  }
+}
+@media (min-width:1920px) {
+  .MuiGrid-grid-xl-auto {
+    flex-grow: 0;
+    max-width: none;
+    flex-basis: auto;
+  }
+  .MuiGrid-grid-xl-true {
+    flex-grow: 1;
+    max-width: 100%;
+    flex-basis: 0;
+  }
+  .MuiGrid-grid-xl-1 {
+    flex-grow: 0;
+    max-width: 8.333333%;
+    flex-basis: 8.333333%;
+  }
+  .MuiGrid-grid-xl-2 {
+    flex-grow: 0;
+    max-width: 16.666667%;
+    flex-basis: 16.666667%;
+  }
+  .MuiGrid-grid-xl-3 {
+    flex-grow: 0;
+    max-width: 25%;
+    flex-basis: 25%;
+  }
+  .MuiGrid-grid-xl-4 {
+    flex-grow: 0;
+    max-width: 33.333333%;
+    flex-basis: 33.333333%;
+  }
+  .MuiGrid-grid-xl-5 {
+    flex-grow: 0;
+    max-width: 41.666667%;
+    flex-basis: 41.666667%;
+  }
+  .MuiGrid-grid-xl-6 {
+    flex-grow: 0;
+    max-width: 50%;
+    flex-basis: 50%;
+  }
+  .MuiGrid-grid-xl-7 {
+    flex-grow: 0;
+    max-width: 58.333333%;
+    flex-basis: 58.333333%;
+  }
+  .MuiGrid-grid-xl-8 {
+    flex-grow: 0;
+    max-width: 66.666667%;
+    flex-basis: 66.666667%;
+  }
+  .MuiGrid-grid-xl-9 {
+    flex-grow: 0;
+    max-width: 75%;
+    flex-basis: 75%;
+  }
+  .MuiGrid-grid-xl-10 {
+    flex-grow: 0;
+    max-width: 83.333333%;
+    flex-basis: 83.333333%;
+  }
+  .MuiGrid-grid-xl-11 {
+    flex-grow: 0;
+    max-width: 91.666667%;
+    flex-basis: 91.666667%;
+  }
+  .MuiGrid-grid-xl-12 {
+    flex-grow: 0;
+    max-width: 100%;
+    flex-basis: 100%;
+  }
+}
+</style><style data-jss="" data-meta="MuiTypography">
+.MuiTypography-root {
+  margin: 0;
+}
+.MuiTypography-body2 {
+  font-size: 0.875rem;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-weight: 400;
+  line-height: 1.43;
+  letter-spacing: 0.01071em;
+}
+.MuiTypography-body1 {
+  font-size: 1rem;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-weight: 400;
+  line-height: 1.5;
+  letter-spacing: 0.00938em;
+}
+.MuiTypography-caption {
+  font-size: 0.75rem;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-weight: 400;
+  line-height: 1.66;
+  letter-spacing: 0.03333em;
+}
+.MuiTypography-button {
+  font-size: 0.875rem;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-weight: 500;
+  line-height: 1.75;
+  letter-spacing: 0.02857em;
+  text-transform: uppercase;
+}
+.MuiTypography-h1 {
+  font-size: 6rem;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-weight: 300;
+  line-height: 1.167;
+  letter-spacing: -0.01562em;
+}
+.MuiTypography-h2 {
+  font-size: 3.75rem;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-weight: 300;
+  line-height: 1.2;
+  letter-spacing: -0.00833em;
+}
+.MuiTypography-h3 {
+  font-size: 3rem;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-weight: 400;
+  line-height: 1.167;
+  letter-spacing: 0em;
+}
+.MuiTypography-h4 {
+  font-size: 2.125rem;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-weight: 400;
+  line-height: 1.235;
+  letter-spacing: 0.00735em;
+}
+.MuiTypography-h5 {
+  font-size: 1.5rem;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-weight: 400;
+  line-height: 1.334;
+  letter-spacing: 0em;
+}
+.MuiTypography-h6 {
+  font-size: 1.25rem;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-weight: 500;
+  line-height: 1.6;
+  letter-spacing: 0.0075em;
+}
+.MuiTypography-subtitle1 {
+  font-size: 1rem;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-weight: 400;
+  line-height: 1.75;
+  letter-spacing: 0.00938em;
+}
+.MuiTypography-subtitle2 {
+  font-size: 0.875rem;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-weight: 500;
+  line-height: 1.57;
+  letter-spacing: 0.00714em;
+}
+.MuiTypography-overline {
+  font-size: 0.75rem;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-weight: 400;
+  line-height: 2.66;
+  letter-spacing: 0.08333em;
+  text-transform: uppercase;
+}
+.MuiTypography-srOnly {
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+}
+.MuiTypography-alignLeft {
+  text-align: left;
+}
+.MuiTypography-alignCenter {
+  text-align: center;
+}
+.MuiTypography-alignRight {
+  text-align: right;
+}
+.MuiTypography-alignJustify {
+  text-align: justify;
+}
+.MuiTypography-noWrap {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.MuiTypography-gutterBottom {
+  margin-bottom: 0.35em;
+}
+.MuiTypography-paragraph {
+  margin-bottom: 16px;
+}
+.MuiTypography-colorInherit {
+  color: inherit;
+}
+.MuiTypography-colorPrimary {
+  color: #3f51b5;
+}
+.MuiTypography-colorSecondary {
+  color: #f50057;
+}
+.MuiTypography-colorTextPrimary {
+  color: rgba(0, 0, 0, 0.87);
+}
+.MuiTypography-colorTextSecondary {
+  color: rgba(0, 0, 0, 0.54);
+}
+.MuiTypography-colorError {
+  color: #f44336;
+}
+.MuiTypography-displayInline {
+  display: inline;
+}
+.MuiTypography-displayBlock {
+  display: block;
+}
+</style><style data-jss="" data-meta="MuiPaper">
+.MuiPaper-root {
+  color: rgba(0, 0, 0, 0.87);
+  transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  background-color: #fff;
+}
+.MuiPaper-rounded {
+  border-radius: 4px;
+}
+.MuiPaper-outlined {
+  border: 1px solid rgba(0, 0, 0, 0.12);
+}
+.MuiPaper-elevation0 {
+  box-shadow: none;
+}
+.MuiPaper-elevation1 {
+  box-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);
+}
+.MuiPaper-elevation2 {
+  box-shadow: 0px 3px 1px -2px rgba(0,0,0,0.2),0px 2px 2px 0px rgba(0,0,0,0.14),0px 1px 5px 0px rgba(0,0,0,0.12);
+}
+.MuiPaper-elevation3 {
+  box-shadow: 0px 3px 3px -2px rgba(0,0,0,0.2),0px 3px 4px 0px rgba(0,0,0,0.14),0px 1px 8px 0px rgba(0,0,0,0.12);
+}
+.MuiPaper-elevation4 {
+  box-shadow: 0px 2px 4px -1px rgba(0,0,0,0.2),0px 4px 5px 0px rgba(0,0,0,0.14),0px 1px 10px 0px rgba(0,0,0,0.12);
+}
+.MuiPaper-elevation5 {
+  box-shadow: 0px 3px 5px -1px rgba(0,0,0,0.2),0px 5px 8px 0px rgba(0,0,0,0.14),0px 1px 14px 0px rgba(0,0,0,0.12);
+}
+.MuiPaper-elevation6 {
+  box-shadow: 0px 3px 5px -1px rgba(0,0,0,0.2),0px 6px 10px 0px rgba(0,0,0,0.14),0px 1px 18px 0px rgba(0,0,0,0.12);
+}
+.MuiPaper-elevation7 {
+  box-shadow: 0px 4px 5px -2px rgba(0,0,0,0.2),0px 7px 10px 1px rgba(0,0,0,0.14),0px 2px 16px 1px rgba(0,0,0,0.12);
+}
+.MuiPaper-elevation8 {
+  box-shadow: 0px 5px 5px -3px rgba(0,0,0,0.2),0px 8px 10px 1px rgba(0,0,0,0.14),0px 3px 14px 2px rgba(0,0,0,0.12);
+}
+.MuiPaper-elevation9 {
+  box-shadow: 0px 5px 6px -3px rgba(0,0,0,0.2),0px 9px 12px 1px rgba(0,0,0,0.14),0px 3px 16px 2px rgba(0,0,0,0.12);
+}
+.MuiPaper-elevation10 {
+  box-shadow: 0px 6px 6px -3px rgba(0,0,0,0.2),0px 10px 14px 1px rgba(0,0,0,0.14),0px 4px 18px 3px rgba(0,0,0,0.12);
+}
+.MuiPaper-elevation11 {
+  box-shadow: 0px 6px 7px -4px rgba(0,0,0,0.2),0px 11px 15px 1px rgba(0,0,0,0.14),0px 4px 20px 3px rgba(0,0,0,0.12);
+}
+.MuiPaper-elevation12 {
+  box-shadow: 0px 7px 8px -4px rgba(0,0,0,0.2),0px 12px 17px 2px rgba(0,0,0,0.14),0px 5px 22px 4px rgba(0,0,0,0.12);
+}
+.MuiPaper-elevation13 {
+  box-shadow: 0px 7px 8px -4px rgba(0,0,0,0.2),0px 13px 19px 2px rgba(0,0,0,0.14),0px 5px 24px 4px rgba(0,0,0,0.12);
+}
+.MuiPaper-elevation14 {
+  box-shadow: 0px 7px 9px -4px rgba(0,0,0,0.2),0px 14px 21px 2px rgba(0,0,0,0.14),0px 5px 26px 4px rgba(0,0,0,0.12);
+}
+.MuiPaper-elevation15 {
+  box-shadow: 0px 8px 9px -5px rgba(0,0,0,0.2),0px 15px 22px 2px rgba(0,0,0,0.14),0px 6px 28px 5px rgba(0,0,0,0.12);
+}
+.MuiPaper-elevation16 {
+  box-shadow: 0px 8px 10px -5px rgba(0,0,0,0.2),0px 16px 24px 2px rgba(0,0,0,0.14),0px 6px 30px 5px rgba(0,0,0,0.12);
+}
+.MuiPaper-elevation17 {
+  box-shadow: 0px 8px 11px -5px rgba(0,0,0,0.2),0px 17px 26px 2px rgba(0,0,0,0.14),0px 6px 32px 5px rgba(0,0,0,0.12);
+}
+.MuiPaper-elevation18 {
+  box-shadow: 0px 9px 11px -5px rgba(0,0,0,0.2),0px 18px 28px 2px rgba(0,0,0,0.14),0px 7px 34px 6px rgba(0,0,0,0.12);
+}
+.MuiPaper-elevation19 {
+  box-shadow: 0px 9px 12px -6px rgba(0,0,0,0.2),0px 19px 29px 2px rgba(0,0,0,0.14),0px 7px 36px 6px rgba(0,0,0,0.12);
+}
+.MuiPaper-elevation20 {
+  box-shadow: 0px 10px 13px -6px rgba(0,0,0,0.2),0px 20px 31px 3px rgba(0,0,0,0.14),0px 8px 38px 7px rgba(0,0,0,0.12);
+}
+.MuiPaper-elevation21 {
+  box-shadow: 0px 10px 13px -6px rgba(0,0,0,0.2),0px 21px 33px 3px rgba(0,0,0,0.14),0px 8px 40px 7px rgba(0,0,0,0.12);
+}
+.MuiPaper-elevation22 {
+  box-shadow: 0px 10px 14px -6px rgba(0,0,0,0.2),0px 22px 35px 3px rgba(0,0,0,0.14),0px 8px 42px 7px rgba(0,0,0,0.12);
+}
+.MuiPaper-elevation23 {
+  box-shadow: 0px 11px 14px -7px rgba(0,0,0,0.2),0px 23px 36px 3px rgba(0,0,0,0.14),0px 9px 44px 8px rgba(0,0,0,0.12);
+}
+.MuiPaper-elevation24 {
+  box-shadow: 0px 11px 15px -7px rgba(0,0,0,0.2),0px 24px 38px 3px rgba(0,0,0,0.14),0px 9px 46px 8px rgba(0,0,0,0.12);
+}
+</style><style data-jss="" data-meta="MuiCard">
+.MuiCard-root {
+  overflow: hidden;
+}
+</style><style data-jss="" data-meta="MuiCardContent">
+.MuiCardContent-root {
+  padding: 16px;
+}
+.MuiCardContent-root:last-child {
+  padding-bottom: 24px;
+}
+</style><style data-jss="" data-meta="makeStyles">
+.jss1 {
+  flex-grow: 1;
+}
+</style></head>
+<body data-application-name="Mark43 Admin" data-spy="scroll" data-target=".rui-page-sidebar" data-offset="140" class="rui-navbar-autohide rui-section-lines yay-hide rui-navbar-show">
+
+<noscript class="text-danger d-flex justify-content-center">
+    You need to enable JavaScript to run this app.
+</noscript>
+<div class="rui-page-preloader" role="status">
+    <div class="rui-page-preloader-inner">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+</div>
+
+
+
+
+    <nav class="rui-navbar rui-navbar-top rui-navbar-sticky align-items-center">
+        <h2 class="pageName">Dashboard</h2>
+
+        <div class="rui-navbar-content justify-content-end">
+            <div class="nav search-form justify-content-end col-4 mr-10">
+                
+
+
+    <div class="input-group search mr-15 align-items-center">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-search rui-icon rui-icon-stroke-1_5"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        <input type="search" class="form-control form-control-clean search-ready" placeholder="Type to search..." data-toggle="input" autocomplete="off" name="search">
+        <button type="button" class="btn btn-outline-secondary handleSearch handleSearch-ready">
+            Search
+        </button>
+    </div>
+
+
+
+            </div>
+            <ul class="nav rui-navbar-right">
+                <li>
+                    <a href="/dashboard">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-bell rui-icon rui-icon-stroke-1_5"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path><path d="M13.73 21a2 2 0 0 1-3.46 0"></path></svg>
+                        <span class="badge badge-danger menu-counter">
+                            <span data-name="menuCounter">184</span>
+                        </span>
+                    </a>
+                </li>
+
+                <li></li>
+                
+    <div class="dropdown dropdown-triangle rui-dropdown-triangle-ready">
+        <a class="dropdown-item rui-navbar-avatar" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <img alt="image" src="/assets/img/no_photo.jpg">
+        </a>
+
+        <ul class="dropdown-menu nav dropdown-menu-left">
+            <li>
+                <div class="d-flex flex-column">
+                    <h6 class="mb-0">test T.</h6>
+                    <span class="badge badge-info">Global Admin</span>
+                </div>
+            </li>
+            <li>
+                <div class="custom-control custom-switch dropdown-item-switch">
+                    <input type="checkbox" class="custom-control-input rui-nightmode-toggle rui-nightmode-toggle-ready" id="toggleNightMode">
+                    <label class="dropdown-item custom-control-label" for="toggleNightMode">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-moon rui-icon rui-icon-stroke-1_5"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+                        <span>Dark Mode</span>
+                        <span class="rui-dropdown-circle"></span>
+                    </label>
+                </div>
+            </li>
+            <li>
+                <a href="/logout" class="nav-link">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-log-out rui-icon rui-icon-stroke-1_5"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path><polyline points="16 17 21 12 16 7"></polyline><line x1="21" y1="12" x2="9" y2="12"></line></svg>
+                    <span>Exit</span>
+                    <span class="rui-nav-circle"></span>
+                </a>
+            </li>
+            <span class="dropdown-menu-triangle"></span>
+        <span class="dropdown-menu-triangle"></span></ul>
+    </div>
+
+                <li></li>
+            </ul>
+        </div>
+    </nav>
+
+
+
+
+
+
+    <div class="yaybar yay-fixed yay-gestures rui-yaybar yay-hide-to-small yay-shrink">
+        <div class="yay-wrap-menu">
+            <div class="yaybar-wrap">
+                <ul>
+                    <li class="yay-item-active">
+                        
+                        <a href="/dashboard">
+                            <span class="yay-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather feather-pie-chart"><path d="M21.21 15.89A10 10 0 1 1 8 2.83"></path><path d="M22 12A10 10 0 0 0 12 2v10z"></path></svg>
+                            </span>
+                            <span data-pagename="Dashboard">Dashboard</span>
+                            <span class="rui-yaybar-circle"></span>
+                        </a>
+                    </li>
+                    <li>
+                        
+                        <a href="/application">
+                            <span class="yay-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather feather-codesandbox"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="7.5 4.21 12 6.81 16.5 4.21"></polyline><polyline points="7.5 19.79 7.5 14.6 3 12"></polyline><polyline points="21 12 16.5 14.6 16.5 19.79"></polyline><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg>
+                            </span>
+                            <span data-pagename="Application">Application</span>
+                            <span class="rui-yaybar-circle"></span>
+                        </a>
+                    </li>
+                    <li>
+                        
+                        <a href="/credit">
+                            <span class="yay-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather feather-briefcase"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg>
+                            </span>
+                            <span data-pagename="Credit">Credit</span>
+                            <span class="rui-yaybar-circle"></span>
+                        </a>
+                    </li>
+                    <li>
+                        
+                        <a href="/borrower">
+                            <span class="yay-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather feather-user"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+                            </span>
+                            <span data-pagename="Borrower">Borrower</span>
+                            <span class="rui-yaybar-circle"></span>
+                        </a>
+                    </li>
+                    <li>
+                        
+                        <a href="/black-list">
+                            <span class="yay-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather feather-slash"><circle cx="12" cy="12" r="10"></circle><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"></line></svg>
+                            </span>
+                            <span data-pagename="Ban list">Ban list</span>
+                            <span class="rui-yaybar-circle"></span>
+                        </a>
+                    </li>
+                    <li>
+                        
+                        <a href="/product">
+                            <span class="yay-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather feather-tag"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7.01" y2="7"></line></svg>
+                            </span>
+                            <span data-pagename="Credit product">Credit product</span>
+                            <span class="rui-yaybar-circle"></span>
+                        </a>
+                    </li>
+                    <li class="dropdown-menu__element">
+                        
+                            <a href="#" class="yay-sub-toggle">
+                              <span class="yay-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather feather-eye"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+                              </span>
+                                                <span data-pagename="Collections">Collections</span>
+                                                <span class="rui-yaybar-circle"></span>
+                                                <span class="yay-icon-collapse">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right rui-icon rui-icon-collapse rui-icon-stroke-1_5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                              </span>
+                            </a>
+                            <ul class="yay-submenu dropdown-triangle">
+                                <li>
+                                    <a href="/campaign">
+                                        <span data-pagename="Call Campaign">Call Campaign</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/collections?type=individual">
+                                        <span data-pagename="Collection Agency">Collection Agency</span>
+                                    </a>
+                                </li>
+                            <span class="dropdown-menu-triangle"></span></ul>
+                        
+                        
+                    </li>
+                    <li class="dropdown-menu__element">
+                        
+                            <a href="#" class="yay-sub-toggle">
+                              <span class="yay-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather feather-package"><line x1="16.5" y1="9.4" x2="7.5" y2="4.21"></line><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg>
+                              </span>
+                                                <span data-pagename="Tools">Tools</span>
+                                                <span class="rui-yaybar-circle"></span>
+                                                <span class="yay-icon-collapse">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right rui-icon rui-icon-collapse rui-icon-stroke-1_5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                              </span>
+                            </a>
+                            <ul class="yay-submenu dropdown-triangle">
+                                <li>
+                                    <a href="/notification-template">
+                                        <span data-pagename="Notification templates">Notification templates</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/marketing">
+                                        <span data-pagename="Marketing Campaign">Marketing Campaign</span>
+                                    </a>
+                                </li>
+                            <span class="dropdown-menu-triangle"></span></ul>
+                        
+                        
+                    </li>
+                    <li class="dropdown-menu__element">
+                        
+                            <a href="#" class="yay-sub-toggle">
+                              <span class="yay-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather feather-globe"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+                              </span>
+                                                <span data-pagename="Business Intelligence">Business Intelligence</span>
+                                                <span class="rui-yaybar-circle"></span>
+                                                <span class="yay-icon-collapse">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right rui-icon rui-icon-collapse rui-icon-stroke-1_5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                              </span>
+                            </a>
+                            <ul class="yay-submenu dropdown-triangle">
+                                <li>
+                                    <a href="/portfolio">
+                                        <span data-pagename="Credit Portfolio">Credit Portfolio</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/bi">
+                                        <span data-pagename="KPIs">KPIs</span>
+                                    </a>
+                                </li>
+                            <span class="dropdown-menu-triangle"></span></ul>
+                        
+                        
+                    </li>
+                    <li class="dropdown-menu__element">
+                        
+                            <a href="#" class="yay-sub-toggle">
+                              <span class="yay-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather feather-shield"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+                              </span>
+                                                <span data-pagename="Security">Security</span>
+                                                <span class="rui-yaybar-circle"></span>
+                                                <span class="yay-icon-collapse">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right rui-icon rui-icon-collapse rui-icon-stroke-1_5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                              </span>
+                            </a>
+                            <ul class="yay-submenu dropdown-triangle">
+                                <li>
+                                    <a href="/role">
+                                        <span data-pagename="Roles">Roles</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/user">
+                                        <span data-pagename="Users">Users</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/audit">
+                                        <span data-pagename="Activity Log">Activity Log</span>
+                                    </a>
+                                </li>
+                            <span class="dropdown-menu-triangle"></span></ul>
+                        
+                        
+                    </li>
+                    <li>
+                        
+                        <a href="/notification">
+                            <span class="yay-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather feather-mail"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                            </span>
+                            <span data-pagename="Notifications">Notifications</span>
+                            <span class="rui-yaybar-circle"></span>
+                        </a>
+                    </li>
+                    <li class="dropdown-menu__element">
+                        
+                            <a href="#" class="yay-sub-toggle">
+                              <span class="yay-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather feather-settings"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
+                              </span>
+                                                <span data-pagename="Settings">Settings</span>
+                                                <span class="rui-yaybar-circle"></span>
+                                                <span class="yay-icon-collapse">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right rui-icon rui-icon-collapse rui-icon-stroke-1_5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                              </span>
+                            </a>
+                            <ul class="yay-submenu dropdown-triangle">
+                                <li>
+                                    <a href="/languagesettings">
+                                        <span data-pagename="Languages settings">Languages settings</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/reference-rate">
+                                        <span data-pagename="Reference Rate">Reference Rate</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/state-rule">
+                                        <span data-pagename="Regulatory and Compliance">Regulatory and Compliance</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/template">
+                                        <span data-pagename="Document templates">Document templates</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/audits">
+                                        <span data-pagename="Company audits">Company audits</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/field-mapping">
+                                        <span data-pagename="Field mapping">Field mapping</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/process-definition">
+                                        <span data-pagename="Decision Tree">Decision Tree</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/dynamic-enum">
+                                        <span data-pagename="Dynamic enumerations">Dynamic enumerations</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/systemSettings">
+                                        <span data-pagename="System Settings">System Settings</span>
+                                    </a>
+                                </li>
+                            <span class="dropdown-menu-triangle"></span></ul>
+                        
+                        
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+    <div class="rui-yaybar-bg"></div>
+    <div class="rui-navbar rui-navbar-mobile">
+        <div class="rui-navbar-head">
+            <div class="d-flex align-items-center">
+                <button class="rui-yaybar-toggle rui-yaybar-toggle-inverse yay-toggle" type="button" aria-label="Toggle side navigation">
+                    <span></span>
+                </button>
+                <h2 class="pageName">Dashboard</h2>
+            </div>
+            <a href="/dashboard" style="margin: 0 10px 0 auto">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-bell rui-icon rui-icon-stroke-1_5"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path><path d="M13.73 21a2 2 0 0 1-3.46 0"></path></svg>
+                <span class="badge badge-danger menu-counter">
+                    <span data-name="menuCounter">184</span>
+                </span>
+            </a>
+            
+    <div class="dropdown dropdown-triangle rui-dropdown-triangle-ready">
+        <a class="dropdown-item rui-navbar-avatar" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <img alt="image" src="/assets/img/no_photo.jpg">
+        </a>
+
+        <ul class="dropdown-menu nav dropdown-menu-left">
+            <li>
+                <div class="d-flex flex-column">
+                    <h6 class="mb-0">test T.</h6>
+                    <span class="badge badge-info">Global Admin</span>
+                </div>
+            </li>
+            <li>
+                <div class="custom-control custom-switch dropdown-item-switch">
+                    <input type="checkbox" class="custom-control-input rui-nightmode-toggle rui-nightmode-toggle-ready" id="toggleNightMode">
+                    <label class="dropdown-item custom-control-label" for="toggleNightMode">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-moon rui-icon rui-icon-stroke-1_5"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+                        <span>Dark Mode</span>
+                        <span class="rui-dropdown-circle"></span>
+                    </label>
+                </div>
+            </li>
+            <li>
+                <a href="/logout" class="nav-link">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-log-out rui-icon rui-icon-stroke-1_5"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path><polyline points="16 17 21 12 16 7"></polyline><line x1="21" y1="12" x2="9" y2="12"></line></svg>
+                    <span>Exit</span>
+                    <span class="rui-nav-circle"></span>
+                </a>
+            </li>
+            <span class="dropdown-menu-triangle"></span>
+        <span class="dropdown-menu-triangle"></span></ul>
+    </div>
+
+        </div>
+    </div>
+
+
+
+
+
+<div class="rui-page content-wrap">
+    <div class="rui-page-content">
+        <div class="pumpkin-container">
+            
+    <div>
+        <h2>Welcome <span>test</span>,&nbsp;your activities for today</h2>
+        <div class="markDashboard__grid">
+            <div class="markDashboard__counterItem">
+                
+    <div class="markDashboard__counterCard">
+        <div class="markDashboard__counterCardTitle">
+            <h4 class="text-1 m-0 d-inline mr-5">All Applications</h4>
+            <span class="badge badge-brand counter counter-ready">
+                <span class="text-light" data-name="allApplication">183</span>
+            </span>
+        </div>
+        <button class="btn border-0 pr-0">
+            <span class="text-1">View All</span>
+        </button>
+    </div>
+
+                <section data-for-counter="allApplication" data-counter-url="/counter/allApplication?count=2" class="fragment-loaded"><section class="table-responsive table-responsive-md_small">
+        <table class="table table-horizontal-border">
+            <thead>
+            <tr role="row">
+                <th class="text-right w-5">Id</th>
+                <th>Date</th>
+                <th>Client</th>
+                <th>Status</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr href="/application/405" role="row" class="clickable">
+                <td>405</td>
+                <td>4/26/21, 9:45:19 AM UTC</td>
+                <td>fkzgv</td>
+                <td>
+                    <span class="badge" style="background-color: #b391b5">
+                        <span>Pending contract signature</span>
+                    </span>
+                </td>
+            </tr>
+            <tr href="/application/216" role="row" class="clickable">
+                <td>216</td>
+                <td>3/4/21, 7:44:10 AM UTC</td>
+                <td>NewApplicationTest</td>
+                <td>
+                    <span class="badge" style="background-color: #f39d40">
+                        <span>Manual approval</span>
+                    </span>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </section></section>
+            </div>
+            <div class="markDashboard__counterItem">
+                
+    <div class="markDashboard__counterCard">
+        <div class="markDashboard__counterCardTitle">
+            <h4 class="text-1 m-0 d-inline mr-5">New applications for manual review</h4>
+            <span class="badge badge-brand counter counter-ready">
+                <span class="text-light" data-name="applicationForManualReview">44</span>
+            </span>
+        </div>
+        <button class="btn border-0 pr-0">
+            <span class="text-1">View All</span>
+        </button>
+    </div>
+
+                <section data-for-counter="applicationForManualReview" data-counter-url="/counter/applicationForManualReview?count=2" class="fragment-loaded"><section class="table-responsive table-responsive-md_small">
+        <table class="table table-horizontal-border">
+            <thead>
+            <tr role="row">
+                <th class="text-right w-5">Id</th>
+                <th>Date</th>
+                <th>Client</th>
+                <th>Status</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr href="/application/216" role="row" class="clickable">
+                <td>216</td>
+                <td>3/4/21, 7:44:10 AM UTC</td>
+                <td>NewApplicationTest</td>
+                <td>
+                    <span class="badge" style="background-color: #f39d40">
+                        <span>Manual approval</span>
+                    </span>
+                </td>
+            </tr>
+            <tr href="/application/375" role="row" class="clickable">
+                <td>375</td>
+                <td>4/19/21, 9:48:29 AM UTC</td>
+                <td>SergeyAlexetovich</td>
+                <td>
+                    <span class="badge" style="background-color: #f39d40">
+                        <span>Manual approval</span>
+                    </span>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </section></section>
+            </div>
+            <div class="markDashboard__counterItem">
+                
+    <div class="markDashboard__counterCard">
+        <div class="markDashboard__counterCardTitle">
+            <h4 class="text-1 m-0 d-inline mr-5">Applications that require an action</h4>
+            <span class="badge badge-brand counter counter-ready">
+                <span class="text-light" data-name="applicationThatRequireAnAction">85</span>
+            </span>
+        </div>
+        <button class="btn border-0 pr-0">
+            <span class="text-1">View All</span>
+        </button>
+    </div>
+
+                <section data-for-counter="applicationThatRequireAnAction" data-counter-url="/counter/applicationThatRequireAnAction?count=2" class="fragment-loaded"><section class="table-responsive table-responsive-md_small">
+        <table class="table table-horizontal-border">
+            <thead>
+            <tr role="row">
+                <th class="text-right w-5">Id</th>
+                <th>Date</th>
+                <th>Client</th>
+                <th>Status</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr href="/application/394" role="row" class="clickable">
+                <td>394</td>
+                <td>4/23/21, 7:42:22 AM UTC</td>
+                <td>fkzgv</td>
+                <td>
+                    <span class="badge" style="background-color: #caba83">
+                        <span>In underwriting</span>
+                    </span>
+                </td>
+            </tr>
+            <tr href="/application/393" role="row" class="clickable">
+                <td>393</td>
+                <td>4/23/21, 7:37:20 AM UTC</td>
+                <td>fkzgv</td>
+                <td>
+                    <span class="badge" style="background-color: #caba83">
+                        <span>In underwriting</span>
+                    </span>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </section></section>
+            </div>
+
+            <div class="markDashboard__counterItem">
+                
+    <div class="markDashboard__counterCard">
+        <div class="markDashboard__counterCardTitle">
+            <h4 class="text-1 m-0 d-inline mr-5">Collaterals awaiting evaluation</h4>
+            <span class="badge badge-brand counter counter-ready">
+                <span class="text-light" data-name="collateralNeedEvaluation">5</span>
+            </span>
+        </div>
+        <button class="btn border-0 pr-0">
+            <span class="text-1">View All</span>
+        </button>
+    </div>
+
+                <section data-for-counter="collateralNeedEvaluation" data-counter-url="/counter/collateralNeedEvaluation?count=2" class="fragment-loaded"><section class="table-responsive table-responsive-md_small">
+        <table class="table table-horizontal-border">
+            <thead>
+            <tr role="row">
+                <th class="w-5">Id</th>
+                <th>Type</th>
+                <th>Value</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr href="/collateral/107" role="row" class="clickable">
+                <td>107</td>
+                <td>
+                    <span class="badge" style="background-color: #caba83">
+                        <span>Property</span>
+                    </span>
+                </td>
+                <td>USD 1000.00</td>
+            </tr>
+            <tr href="/collateral/85" role="row" class="clickable">
+                <td>85</td>
+                <td>
+                    <span class="badge" style="background-color: #b391b5">
+                        <span>Auto</span>
+                    </span>
+                </td>
+                <td>USD 123.00</td>
+            </tr>
+            </tbody>
+        </table>
+    </section></section>
+            </div>
+
+            <div class="markDashboard__counterItem">
+                
+    <div class="markDashboard__counterCard">
+        <div class="markDashboard__counterCardTitle">
+            <h4 class="text-1 m-0 d-inline mr-5">Overpaid loans</h4>
+            <span class="badge badge-brand counter counter-ready">
+                <span class="text-light" data-name="overpaidCredit">1</span>
+            </span>
+        </div>
+        <button class="btn border-0 pr-0">
+            <span class="text-1">View All</span>
+        </button>
+    </div>
+
+                <section data-for-counter="overpaidCredit" data-counter-url="/counter/overpaidCredit?count=2" class="fragment-loaded"><section class="table-responsive table-responsive-md_small">
+        <table class="table table-horizontal-border">
+            <thead>
+            <tr role="row">
+                <th class="text-right w-5">Id</th>
+                <th>Client</th>
+                <th>Credit Product</th>
+                <th>Status</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr href="/credit/295" role="row" class="clickable">
+                <td class="text-right">295</td>
+                <td>Quia quia optio rer</td>
+                <td>Auto Annuity B AutoAnnuB</td>
+                <td>
+                    <span class="badge" style="background-color: PAID">
+                    <span>Paid Off</span>
+                </span>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </section></section>
+            </div>
+            <div class="markDashboard__counterItem">
+                
+    <div class="markDashboard__counterCard">
+        <div class="markDashboard__counterCardTitle">
+            <h4 class="text-1 m-0 d-inline mr-5">Loans This Week</h4>
+            <span class="badge badge-brand counter counter-ready">
+                <span class="text-light" data-name="newLoansWeekly">11</span>
+            </span>
+        </div>
+        <button class="btn border-0 pr-0">
+            <span class="text-1">View All</span>
+        </button>
+    </div>
+
+                <section data-for-counter="newLoansWeekly" data-counter-url="/counter/newLoansWeekly?count=2" class="fragment-loaded"><section class="table-responsive table-responsive-md_small">
+        <table class="table table-horizontal-border">
+            <thead>
+            <tr role="row">
+                <th class="text-right w-5">Id</th>
+                <th>Client</th>
+                <th>Credit Product</th>
+                <th>Status</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr href="/credit/407" role="row" class="clickable">
+                <td class="text-right">407</td>
+                <td>fkzgv</td>
+                <td>Auto Annuity B AutoAnnuB</td>
+                <td>
+                    <span class="badge" style="background-color: ACTIVE">
+                    <span>Active</span>
+                </span>
+                </td>
+            </tr>
+            <tr href="/credit/406" role="row" class="clickable">
+                <td class="text-right">406</td>
+                <td>fkzgv</td>
+                <td>Auto Annuity B AutoAnnuB</td>
+                <td>
+                    <span class="badge" style="background-color: ACTIVE">
+                    <span>Active</span>
+                </span>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </section></section>
+            </div>
+            <div class="markDashboard__counterItem">
+                
+    <div class="markDashboard__counterCard">
+        <div class="markDashboard__counterCardTitle">
+            <h4 class="text-1 m-0 d-inline mr-5">Loans This Month</h4>
+            <span class="badge badge-brand counter counter-ready">
+                <span class="text-light" data-name="newLoansMonthly">28</span>
+            </span>
+        </div>
+        <button class="btn border-0 pr-0">
+            <span class="text-1">View All</span>
+        </button>
+    </div>
+
+                <section data-for-counter="newLoansMonthly" data-counter-url="/counter/newLoansMonthly?count=2" class="fragment-loaded"><section class="table-responsive table-responsive-md_small">
+        <table class="table table-horizontal-border">
+            <thead>
+            <tr role="row">
+                <th class="text-right w-5">Id</th>
+                <th>Client</th>
+                <th>Credit Product</th>
+                <th>Status</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr href="/credit/407" role="row" class="clickable">
+                <td class="text-right">407</td>
+                <td>fkzgv</td>
+                <td>Auto Annuity B AutoAnnuB</td>
+                <td>
+                    <span class="badge" style="background-color: ACTIVE">
+                    <span>Active</span>
+                </span>
+                </td>
+            </tr>
+            <tr href="/credit/406" role="row" class="clickable">
+                <td class="text-right">406</td>
+                <td>fkzgv</td>
+                <td>Auto Annuity B AutoAnnuB</td>
+                <td>
+                    <span class="badge" style="background-color: ACTIVE">
+                    <span>Active</span>
+                </span>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </section></section>
+            </div>
+        </div>
+    </div>
+    <h3 class="mt-30"><u>System Performance at a Glance</u></h3>
+    <div id="cubeJsContainer"><div class="jss1"><div><div class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-3 MuiGrid-align-items-xs-flex-start MuiGrid-justify-xs-space-around" style="padding: 24px;"><div class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-lg-6"><div class="MuiPaper-root MuiCard-root MuiPaper-elevation1 MuiPaper-rounded"><div class="MuiCardContent-root"><p class="MuiTypography-root MuiTypography-body1 MuiTypography-colorTextSecondary MuiTypography-gutterBottom">Product Type Structure</p><div id="undefined" class="recharts-responsive-container" style="width: 100%; height: 350px;"><div class="recharts-wrapper" style="position: relative; cursor: default; width: 558px; height: 350px;"><svg class="recharts-surface" width="558" height="350" viewBox="0 0 558 350" version="1.1"><defs><clipPath id="recharts1-clip"><rect x="65" y="5" height="286.3999996185303" width="488"></rect></clipPath></defs><g class="recharts-layer recharts-cartesian-axis recharts-xAxis xAxis"><line orientation="bottom" width="488" height="30" type="category" x="65" y="291.3999996185303" class="recharts-cartesian-axis-line" stroke="#666" fill="none" x1="65" y1="291.3999996185303" x2="553" y2="291.3999996185303"></line><g class="recharts-cartesian-axis-ticks"><g class="recharts-layer recharts-cartesian-axis-tick"><line orientation="bottom" width="488" height="30" type="category" x="65" y="291.3999996185303" class="recharts-cartesian-axis-tick-line" stroke="#666" fill="none" x1="95.5" y1="297.3999996185303" x2="95.5" y2="291.3999996185303"></line><text orientation="bottom" width="488" height="30" type="category" x="95.5" y="299.3999996185303" stroke="none" fill="#666" class="recharts-text recharts-cartesian-axis-tick-value" text-anchor="middle"><tspan x="95.5" dy="0.71em">01.08</tspan></text></g><g class="recharts-layer recharts-cartesian-axis-tick"><line orientation="bottom" width="488" height="30" type="category" x="65" y="291.3999996185303" class="recharts-cartesian-axis-tick-line" stroke="#666" fill="none" x1="156.5" y1="297.3999996185303" x2="156.5" y2="291.3999996185303"></line><text orientation="bottom" width="488" height="30" type="category" x="156.5" y="299.3999996185303" stroke="none" fill="#666" class="recharts-text recharts-cartesian-axis-tick-value" text-anchor="middle"><tspan x="156.5" dy="0.71em">01.09</tspan></text></g><g class="recharts-layer recharts-cartesian-axis-tick"><line orientation="bottom" width="488" height="30" type="category" x="65" y="291.3999996185303" class="recharts-cartesian-axis-tick-line" stroke="#666" fill="none" x1="217.5" y1="297.3999996185303" x2="217.5" y2="291.3999996185303"></line><text orientation="bottom" width="488" height="30" type="category" x="217.5" y="299.3999996185303" stroke="none" fill="#666" class="recharts-text recharts-cartesian-axis-tick-value" text-anchor="middle"><tspan x="217.5" dy="0.71em">01.10</tspan></text></g><g class="recharts-layer recharts-cartesian-axis-tick"><line orientation="bottom" width="488" height="30" type="category" x="65" y="291.3999996185303" class="recharts-cartesian-axis-tick-line" stroke="#666" fill="none" x1="278.5" y1="297.3999996185303" x2="278.5" y2="291.3999996185303"></line><text orientation="bottom" width="488" height="30" type="category" x="278.5" y="299.3999996185303" stroke="none" fill="#666" class="recharts-text recharts-cartesian-axis-tick-value" text-anchor="middle"><tspan x="278.5" dy="0.71em">01.11</tspan></text></g><g class="recharts-layer recharts-cartesian-axis-tick"><line orientation="bottom" width="488" height="30" type="category" x="65" y="291.3999996185303" class="recharts-cartesian-axis-tick-line" stroke="#666" fill="none" x1="339.5" y1="297.3999996185303" x2="339.5" y2="291.3999996185303"></line><text orientation="bottom" width="488" height="30" type="category" x="339.5" y="299.3999996185303" stroke="none" fill="#666" class="recharts-text recharts-cartesian-axis-tick-value" text-anchor="middle"><tspan x="339.5" dy="0.71em">01.12</tspan></text></g><g class="recharts-layer recharts-cartesian-axis-tick"><line orientation="bottom" width="488" height="30" type="category" x="65" y="291.3999996185303" class="recharts-cartesian-axis-tick-line" stroke="#666" fill="none" x1="400.5" y1="297.3999996185303" x2="400.5" y2="291.3999996185303"></line><text orientation="bottom" width="488" height="30" type="category" x="400.5" y="299.3999996185303" stroke="none" fill="#666" class="recharts-text recharts-cartesian-axis-tick-value" text-anchor="middle"><tspan x="400.5" dy="0.71em">01.01</tspan></text></g><g class="recharts-layer recharts-cartesian-axis-tick"><line orientation="bottom" width="488" height="30" type="category" x="65" y="291.3999996185303" class="recharts-cartesian-axis-tick-line" stroke="#666" fill="none" x1="461.5" y1="297.3999996185303" x2="461.5" y2="291.3999996185303"></line><text orientation="bottom" width="488" height="30" type="category" x="461.5" y="299.3999996185303" stroke="none" fill="#666" class="recharts-text recharts-cartesian-axis-tick-value" text-anchor="middle"><tspan x="461.5" dy="0.71em">01.02</tspan></text></g><g class="recharts-layer recharts-cartesian-axis-tick"><line orientation="bottom" width="488" height="30" type="category" x="65" y="291.3999996185303" class="recharts-cartesian-axis-tick-line" stroke="#666" fill="none" x1="522.5" y1="297.3999996185303" x2="522.5" y2="291.3999996185303"></line><text orientation="bottom" width="488" height="30" type="category" x="522.5" y="299.3999996185303" stroke="none" fill="#666" class="recharts-text recharts-cartesian-axis-tick-value" text-anchor="middle"><tspan x="522.5" dy="0.71em">01.03</tspan></text></g></g></g><g class="recharts-layer recharts-cartesian-axis recharts-yAxis yAxis"><line orientation="left" width="60" height="286.3999996185303" type="number" x="5" y="5" class="recharts-cartesian-axis-line" stroke="#666" fill="none" x1="65" y1="5" x2="65" y2="291.3999996185303"></line><g class="recharts-cartesian-axis-ticks"><g class="recharts-layer recharts-cartesian-axis-tick"><line orientation="left" width="60" height="286.3999996185303" type="number" x="5" y="5" class="recharts-cartesian-axis-tick-line" stroke="#666" fill="none" x1="59" y1="291.3999996185303" x2="65" y2="291.3999996185303"></line><text orientation="left" width="60" height="286.3999996185303" type="number" x="57" y="291.3999996185303" stroke="none" fill="#666" class="recharts-text recharts-cartesian-axis-tick-value" text-anchor="end"><tspan x="57" dy="0.355em">0</tspan></text></g><g class="recharts-layer recharts-cartesian-axis-tick"><line orientation="left" width="60" height="286.3999996185303" type="number" x="5" y="5" class="recharts-cartesian-axis-tick-line" stroke="#666" fill="none" x1="59" y1="223.5499997138977" x2="65" y2="223.5499997138977"></line><text orientation="left" width="60" height="286.3999996185303" type="number" x="57" y="223.5499997138977" stroke="none" fill="#666" class="recharts-text recharts-cartesian-axis-tick-value" text-anchor="end"><tspan x="57" dy="0.355em">200000</tspan></text></g><g class="recharts-layer recharts-cartesian-axis-tick"><line orientation="left" width="60" height="286.3999996185303" type="number" x="5" y="5" class="recharts-cartesian-axis-tick-line" stroke="#666" fill="none" x1="59" y1="155.69999980926514" x2="65" y2="155.69999980926514"></line><text orientation="left" width="60" height="286.3999996185303" type="number" x="57" y="155.69999980926514" stroke="none" fill="#666" class="recharts-text recharts-cartesian-axis-tick-value" text-anchor="end"><tspan x="57" dy="0.355em">400000</tspan></text></g><g class="recharts-layer recharts-cartesian-axis-tick"><line orientation="left" width="60" height="286.3999996185303" type="number" x="5" y="5" class="recharts-cartesian-axis-tick-line" stroke="#666" fill="none" x1="59" y1="87.84999990463257" x2="65" y2="87.84999990463257"></line><text orientation="left" width="60" height="286.3999996185303" type="number" x="57" y="87.84999990463257" stroke="none" fill="#666" class="recharts-text recharts-cartesian-axis-tick-value" text-anchor="end"><tspan x="57" dy="0.355em">600000</tspan></text></g><g class="recharts-layer recharts-cartesian-axis-tick"><line orientation="left" width="60" height="286.3999996185303" type="number" x="5" y="5" class="recharts-cartesian-axis-tick-line" stroke="#666" fill="none" x1="59" y1="20" x2="65" y2="20"></line><text orientation="left" width="60" height="286.3999996185303" type="number" x="57" y="20" stroke="none" fill="#666" class="recharts-text recharts-cartesian-axis-tick-value" text-anchor="end"><tspan x="57" dy="0.355em">800000</tspan></text></g></g></g><g class="recharts-layer recharts-bar"><g class="recharts-layer recharts-bar-rectangles"><g class="recharts-layer recharts-bar-rectangle"><path name="AUTO, Credit Amount" fill="#8783d8" width="48" height="40.20112494349482" x="71.1" y="251.19887467503546" radius="0" class="recharts-rectangle" d="M 71.1,251.19887467503546 h 48 v 40.20112494349482 h -48 Z"></path></g><g class="recharts-layer recharts-bar-rectangle"><path name="AUTO, Credit Amount" fill="#8783d8" width="48" height="40.20112494349482" x="132.1" y="251.19887467503546" radius="0" class="recharts-rectangle" d="M 132.1,251.19887467503546 h 48 v 40.20112494349482 h -48 Z"></path></g><g class="recharts-layer recharts-bar-rectangle"><path name="AUTO, Credit Amount" fill="#8783d8" width="48" height="53.09262492537496" x="193.1" y="238.3073746931553" radius="0" class="recharts-rectangle" d="M 193.1,238.3073746931553 h 48 v 53.09262492537496 h -48 Z"></path></g><g class="recharts-layer recharts-bar-rectangle"><path name="AUTO, Credit Amount" fill="#8783d8" width="48" height="56.48512492060661" x="254.1" y="234.91487469792366" radius="0" class="recharts-rectangle" d="M 254.1,234.91487469792366 h 48 v 56.48512492060661 h -48 Z"></path></g><g class="recharts-layer recharts-bar-rectangle"><path name="AUTO, Credit Amount" fill="#8783d8" width="48" height="56.48512492060661" x="315.1" y="234.91487469792366" radius="0" class="recharts-rectangle" d="M 315.1,234.91487469792366 h 48 v 56.48512492060661 h -48 Z"></path></g><g class="recharts-layer recharts-bar-rectangle"><path name="AUTO, Credit Amount" fill="#8783d8" width="48" height="56.90375942001819" x="376.1" y="234.49624019851208" radius="0" class="recharts-rectangle" d="M 376.1,234.49624019851208 h 48 v 56.90375942001819 h -48 Z"></path></g><g class="recharts-layer recharts-bar-rectangle"><path name="AUTO, Credit Amount" fill="#8783d8" width="48" height="57.088989919757864" x="437.1" y="234.3110096987724" radius="0" class="recharts-rectangle" d="M 437.1,234.3110096987724 h 48 v 57.088989919757864 h -48 Z"></path></g><g class="recharts-layer recharts-bar-rectangle"><path name="AUTO, Credit Amount" fill="#8783d8" width="48" height="163.71424701988937" x="498.1" y="127.6857525986409" radius="0" class="recharts-rectangle" d="M 498.1,127.6857525986409 h 48 v 163.71424701988937 h -48 Z"></path></g></g></g><g class="recharts-layer recharts-bar"><g class="recharts-layer recharts-bar-rectangles"><g class="recharts-layer recharts-bar-rectangle"><path name="PERSONAL, Credit Amount" fill="#5d3e79" width="48" height="19.846124972104974" x="71.1" y="231.35274970293048" radius="0" class="recharts-rectangle" d="M 71.1,231.35274970293048 h 48 v 19.846124972104974 h -48 Z"></path></g><g class="recharts-layer recharts-bar-rectangle"><path name="PERSONAL, Credit Amount" fill="#5d3e79" width="48" height="25.6472999639511" x="132.1" y="225.55157471108436" radius="0" class="recharts-rectangle" d="M 132.1,225.55157471108436 h 48 v 25.6472999639511 h -48 Z"></path></g><g class="recharts-layer recharts-bar-rectangle"><path name="PERSONAL, Credit Amount" fill="#5d3e79" width="48" height="28.191674960374854" x="193.1" y="210.11569973278046" radius="0" class="recharts-rectangle" d="M 193.1,210.11569973278046 h 48 v 28.191674960374854 h -48 Z"></path></g><g class="recharts-layer recharts-bar-rectangle"><path name="PERSONAL, Credit Amount" fill="#5d3e79" width="48" height="28.191674960374854" x="254.1" y="206.7231997375488" radius="0" class="recharts-rectangle" d="M 254.1,206.7231997375488 h 48 v 28.191674960374854 h -48 Z"></path></g><g class="recharts-layer recharts-bar-rectangle"><path name="PERSONAL, Credit Amount" fill="#5d3e79" width="48" height="28.530924959898016" x="315.1" y="206.38394973802565" radius="0" class="recharts-rectangle" d="M 315.1,206.38394973802565 h 48 v 28.530924959898016 h -48 Z"></path></g><g class="recharts-layer recharts-bar-rectangle"><path name="PERSONAL, Credit Amount" fill="#5d3e79" width="48" height="28.530924959898016" x="376.1" y="205.96531523861407" radius="0" class="recharts-rectangle" d="M 376.1,205.96531523861407 h 48 v 28.530924959898016 h -48 Z"></path></g><g class="recharts-layer recharts-bar-rectangle"><path name="PERSONAL, Credit Amount" fill="#5d3e79" width="48" height="28.53092495989796" x="437.1" y="205.78008473887445" radius="0" class="recharts-rectangle" d="M 437.1,205.78008473887445 h 48 v 28.53092495989796 h -48 Z"></path></g><g class="recharts-layer recharts-bar-rectangle"><path name="PERSONAL, Credit Amount" fill="#5d3e79" width="48" height="28.53092495989796" x="498.1" y="99.15482763874294" radius="0" class="recharts-rectangle" d="M 498.1,99.15482763874294 h 48 v 28.53092495989796 h -48 Z"></path></g></g></g><g class="recharts-layer recharts-bar"><g class="recharts-layer recharts-bar-rectangles"><g class="recharts-layer recharts-bar-rectangle"><path name="MORTGAGE, Credit Amount" fill="#7ca5db" width="48" height="10.177499985694908" x="71.1" y="221.17524971723557" radius="0" class="recharts-rectangle" d="M 71.1,221.17524971723557 h 48 v 10.177499985694908 h -48 Z"></path></g><g class="recharts-layer recharts-bar-rectangle"><path name="MORTGAGE, Credit Amount" fill="#7ca5db" width="48" height="16.962499976158142" x="132.1" y="208.5890747349262" radius="0" class="recharts-rectangle" d="M 132.1,208.5890747349262 h 48 v 16.962499976158142 h -48 Z"></path></g><g class="recharts-layer recharts-bar-rectangle"><path name="MORTGAGE, Credit Amount" fill="#7ca5db" width="48" height="16.962499976158142" x="193.1" y="193.1531997566223" radius="0" class="recharts-rectangle" d="M 193.1,193.1531997566223 h 48 v 16.962499976158142 h -48 Z"></path></g><g class="recharts-layer recharts-bar-rectangle"><path name="MORTGAGE, Credit Amount" fill="#7ca5db" width="48" height="16.962499976158142" x="254.1" y="189.76069976139067" radius="0" class="recharts-rectangle" d="M 254.1,189.76069976139067 h 48 v 16.962499976158142 h -48 Z"></path></g><g class="recharts-layer recharts-bar-rectangle"><path name="MORTGAGE, Credit Amount" fill="#7ca5db" width="48" height="16.962499976158142" x="315.1" y="189.4214497618675" radius="0" class="recharts-rectangle" d="M 315.1,189.4214497618675 h 48 v 16.962499976158142 h -48 Z"></path></g><g class="recharts-layer recharts-bar-rectangle"><path name="MORTGAGE, Credit Amount" fill="#7ca5db" width="48" height="16.962499976158142" x="376.1" y="189.00281526245593" radius="0" class="recharts-rectangle" d="M 376.1,189.00281526245593 h 48 v 16.962499976158142 h -48 Z"></path></g><g class="recharts-layer recharts-bar-rectangle"><path name="MORTGAGE, Credit Amount" fill="#7ca5db" width="48" height="16.962499976158142" x="437.1" y="188.8175847627163" radius="0" class="recharts-rectangle" d="M 437.1,188.8175847627163 h 48 v 16.962499976158142 h -48 Z"></path></g><g class="recharts-layer recharts-bar-rectangle"><path name="MORTGAGE, Credit Amount" fill="#7ca5db" width="48" height="16.962499976158142" x="498.1" y="82.1923276625848" radius="0" class="recharts-rectangle" d="M 498.1,82.1923276625848 h 48 v 16.962499976158142 h -48 Z"></path></g></g></g></svg><div class="recharts-legend-wrapper" style="position: absolute; width: 548px; height: auto; left: 5px; bottom: 5px;"><ul class="recharts-default-legend Legend"><li class="recharts-legend-item legend-item-0 Legend__item"><span class="Legend__itemBlock" style="background-color: rgb(135, 131, 216);"></span><span class="recharts-legend-item-text" style="color: rgb(135, 131, 216);">AUTO</span></li><li class="recharts-legend-item legend-item-0 Legend__item"><span class="Legend__itemBlock" style="background-color: rgb(93, 62, 121);"></span><span class="recharts-legend-item-text" style="color: rgb(93, 62, 121);">PERSONAL</span></li><li class="recharts-legend-item legend-item-0 Legend__item"><span class="Legend__itemBlock" style="background-color: rgb(124, 165, 219);"></span><span class="recharts-legend-item-text" style="color: rgb(124, 165, 219);">MORTGAGE</span></li></ul></div><div class="recharts-tooltip-wrapper recharts-tooltip-wrapper-right recharts-tooltip-wrapper-bottom" style="pointer-events: none; visibility: hidden; position: absolute; top: 0px; left: 0px; transform: translate(105.5px, 10px);"><ul class="recharts-default-toolip" style="display: flex; flex-flow: column; justify-content: center; padding: 10px 20px; background-color: white;"></ul></div></div><div></div></div></div></div></div><div class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-lg-6"><div class="MuiPaper-root MuiCard-root MuiPaper-elevation1 MuiPaper-rounded"><div class="MuiCardContent-root"><p class="MuiTypography-root MuiTypography-body1 MuiTypography-colorTextSecondary MuiTypography-gutterBottom">Borrower Type Structure</p><div id="undefined" class="recharts-responsive-container" style="width: 100%; height: 350px;"><div class="recharts-wrapper" style="position: relative; cursor: default; width: 558px; height: 350px;"><svg cx="50%" cy="50%" class="recharts-surface" width="558" height="350" viewBox="0 0 558 350" version="1.1"><defs><clipPath id="recharts7-clip"><rect x="5" y="5" height="316.79999923706055" width="548"></rect></clipPath></defs><g class="recharts-layer recharts-pie"><g class="recharts-layer recharts-pie-sector"><path name="INDIVIDUAL" fill="#8783d8" stroke="#fff" cx="279" cy="163.39999961853027" x="INDIVIDUAL" class="recharts-sector" d="M 405.7199996948242,163.39999961853027
+    A 126.71999969482422,126.71999969482422,0,
+    1,0,
+    400.94544839423907,197.85672521142766
+  L 279,163.39999961853027 Z"></path></g><g class="recharts-layer recharts-pie-sector"><path name="BUSINESS" fill="#5d3e79" stroke="#fff" cx="279" cy="163.39999961853027" x="BUSINESS" class="recharts-sector" d="M 400.94544839423907,197.85672521142766
+    A 126.71999969482422,126.71999969482422,0,
+    0,0,
+    405.7199996948242,163.3999996185303
+  L 279,163.39999961853027 Z"></path></g></g></svg><div class="recharts-legend-wrapper" style="position: absolute; width: 548px; height: auto; left: 5px; bottom: 5px;"><ul class="recharts-default-legend" style="padding: 0px; margin: 0px; text-align: center;"><li class="recharts-legend-item legend-item-0" style="display: inline-block; margin-right: 10px;"><svg class="recharts-surface" width="14" height="14" viewBox="0 0 32 32" version="1.1" style="display: inline-block; vertical-align: middle; margin-right: 4px;"><path stroke="none" fill="#8783d8" d="M0,4h32v24h-32z" class="recharts-legend-icon"></path></svg><span class="recharts-legend-item-text" style="color: rgb(135, 131, 216);">INDIVIDUAL</span></li><li class="recharts-legend-item legend-item-1" style="display: inline-block; margin-right: 10px;"><svg class="recharts-surface" width="14" height="14" viewBox="0 0 32 32" version="1.1" style="display: inline-block; vertical-align: middle; margin-right: 4px;"><path stroke="none" fill="#5d3e79" d="M0,4h32v24h-32z" class="recharts-legend-icon"></path></svg><span class="recharts-legend-item-text" style="color: rgb(93, 62, 121);">BUSINESS</span></li></ul></div><div class="recharts-tooltip-wrapper recharts-tooltip-wrapper-right recharts-tooltip-wrapper-bottom" style="pointer-events: none; visibility: hidden; position: absolute; top: 0px; left: 0px; transform: translate(10px, 10px);"><div class="recharts-default-tooltip" style="margin: 0px; padding: 10px; background-color: rgb(255, 255, 255); border: 1px solid rgb(204, 204, 204); white-space: nowrap;"><p class="recharts-tooltip-label" style="margin: 0px;"></p></div></div></div><div></div></div></div></div></div><div class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-lg-6"><div class="MuiPaper-root MuiCard-root MuiPaper-elevation1 MuiPaper-rounded"><div class="MuiCardContent-root"><p class="MuiTypography-root MuiTypography-body1 MuiTypography-colorTextSecondary MuiTypography-gutterBottom">Overdue Dynamics</p><div id="undefined" class="recharts-responsive-container" style="width: 100%; height: 350px;"><div class="recharts-wrapper" style="position: relative; cursor: default; width: 558px; height: 350px;"><svg class="recharts-surface" width="558" height="350" viewBox="0 0 558 350" version="1.1"><defs><clipPath id="recharts9-clip"><rect x="65" y="5" height="286.3999996185303" width="488"></rect></clipPath></defs><g class="recharts-layer recharts-cartesian-axis recharts-xAxis xAxis"><line orientation="bottom" width="488" height="30" type="category" x="65" y="291.3999996185303" class="recharts-cartesian-axis-line" stroke="#666" fill="none" x1="65" y1="291.3999996185303" x2="553" y2="291.3999996185303"></line><g class="recharts-cartesian-axis-ticks"><g class="recharts-layer recharts-cartesian-axis-tick"><line orientation="bottom" width="488" height="30" type="category" x="65" y="291.3999996185303" class="recharts-cartesian-axis-tick-line" stroke="#666" fill="none" x1="74.95918367346938" y1="297.3999996185303" x2="74.95918367346938" y2="291.3999996185303"></line><text orientation="bottom" width="488" height="30" type="category" x="74.95918367346938" y="299.3999996185303" stroke="none" fill="#666" class="recharts-text recharts-cartesian-axis-tick-value" text-anchor="middle"><tspan x="74.95918367346938" dy="0.71em">11.12</tspan></text></g><g class="recharts-layer recharts-cartesian-axis-tick"><line orientation="bottom" width="488" height="30" type="category" x="65" y="291.3999996185303" class="recharts-cartesian-axis-tick-line" stroke="#666" fill="none" x1="113.8" y1="297.3999996185303" x2="113.8" y2="291.3999996185303"></line><text orientation="bottom" width="488" height="30" type="category" x="113.8" y="299.3999996185303" stroke="none" fill="#666" class="recharts-text recharts-cartesian-axis-tick-value" text-anchor="middle"><tspan x="113.8" dy="0.71em">19.01</tspan></text></g><g class="recharts-layer recharts-cartesian-axis-tick"><line orientation="bottom" width="488" height="30" type="category" x="65" y="291.3999996185303" class="recharts-cartesian-axis-tick-line" stroke="#666" fill="none" x1="152.64081632653063" y1="297.3999996185303" x2="152.64081632653063" y2="291.3999996185303"></line><text orientation="bottom" width="488" height="30" type="category" x="152.64081632653063" y="299.3999996185303" stroke="none" fill="#666" class="recharts-text recharts-cartesian-axis-tick-value" text-anchor="middle"><tspan x="152.64081632653063" dy="0.71em">27.02</tspan></text></g><g class="recharts-layer recharts-cartesian-axis-tick"><line orientation="bottom" width="488" height="30" type="category" x="65" y="291.3999996185303" class="recharts-cartesian-axis-tick-line" stroke="#666" fill="none" x1="191.4816326530612" y1="297.3999996185303" x2="191.4816326530612" y2="291.3999996185303"></line><text orientation="bottom" width="488" height="30" type="category" x="191.4816326530612" y="299.3999996185303" stroke="none" fill="#666" class="recharts-text recharts-cartesian-axis-tick-value" text-anchor="middle"><tspan x="191.4816326530612" dy="0.71em">06.04</tspan></text></g><g class="recharts-layer recharts-cartesian-axis-tick"><line orientation="bottom" width="488" height="30" type="category" x="65" y="291.3999996185303" class="recharts-cartesian-axis-tick-line" stroke="#666" fill="none" x1="230.32244897959183" y1="297.3999996185303" x2="230.32244897959183" y2="291.3999996185303"></line><text orientation="bottom" width="488" height="30" type="category" x="230.32244897959183" y="299.3999996185303" stroke="none" fill="#666" class="recharts-text recharts-cartesian-axis-tick-value" text-anchor="middle"><tspan x="230.32244897959183" dy="0.71em">15.05</tspan></text></g><g class="recharts-layer recharts-cartesian-axis-tick"><line orientation="bottom" width="488" height="30" type="category" x="65" y="291.3999996185303" class="recharts-cartesian-axis-tick-line" stroke="#666" fill="none" x1="269.1632653061224" y1="297.3999996185303" x2="269.1632653061224" y2="291.3999996185303"></line><text orientation="bottom" width="488" height="30" type="category" x="269.1632653061224" y="299.3999996185303" stroke="none" fill="#666" class="recharts-text recharts-cartesian-axis-tick-value" text-anchor="middle"><tspan x="269.1632653061224" dy="0.71em">23.06</tspan></text></g><g class="recharts-layer recharts-cartesian-axis-tick"><line orientation="bottom" width="488" height="30" type="category" x="65" y="291.3999996185303" class="recharts-cartesian-axis-tick-line" stroke="#666" fill="none" x1="308.0040816326531" y1="297.3999996185303" x2="308.0040816326531" y2="291.3999996185303"></line><text orientation="bottom" width="488" height="30" type="category" x="308.0040816326531" y="299.3999996185303" stroke="none" fill="#666" class="recharts-text recharts-cartesian-axis-tick-value" text-anchor="middle"><tspan x="308.0040816326531" dy="0.71em">01.08</tspan></text></g><g class="recharts-layer recharts-cartesian-axis-tick"><line orientation="bottom" width="488" height="30" type="category" x="65" y="291.3999996185303" class="recharts-cartesian-axis-tick-line" stroke="#666" fill="none" x1="346.84489795918364" y1="297.3999996185303" x2="346.84489795918364" y2="291.3999996185303"></line><text orientation="bottom" width="488" height="30" type="category" x="346.84489795918364" y="299.3999996185303" stroke="none" fill="#666" class="recharts-text recharts-cartesian-axis-tick-value" text-anchor="middle"><tspan x="346.84489795918364" dy="0.71em">09.09</tspan></text></g><g class="recharts-layer recharts-cartesian-axis-tick"><line orientation="bottom" width="488" height="30" type="category" x="65" y="291.3999996185303" class="recharts-cartesian-axis-tick-line" stroke="#666" fill="none" x1="385.68571428571425" y1="297.3999996185303" x2="385.68571428571425" y2="291.3999996185303"></line><text orientation="bottom" width="488" height="30" type="category" x="385.68571428571425" y="299.3999996185303" stroke="none" fill="#666" class="recharts-text recharts-cartesian-axis-tick-value" text-anchor="middle"><tspan x="385.68571428571425" dy="0.71em">18.10</tspan></text></g><g class="recharts-layer recharts-cartesian-axis-tick"><line orientation="bottom" width="488" height="30" type="category" x="65" y="291.3999996185303" class="recharts-cartesian-axis-tick-line" stroke="#666" fill="none" x1="424.52653061224487" y1="297.3999996185303" x2="424.52653061224487" y2="291.3999996185303"></line><text orientation="bottom" width="488" height="30" type="category" x="424.52653061224487" y="299.3999996185303" stroke="none" fill="#666" class="recharts-text recharts-cartesian-axis-tick-value" text-anchor="middle"><tspan x="424.52653061224487" dy="0.71em">26.11</tspan></text></g><g class="recharts-layer recharts-cartesian-axis-tick"><line orientation="bottom" width="488" height="30" type="category" x="65" y="291.3999996185303" class="recharts-cartesian-axis-tick-line" stroke="#666" fill="none" x1="463.3673469387755" y1="297.3999996185303" x2="463.3673469387755" y2="291.3999996185303"></line><text orientation="bottom" width="488" height="30" type="category" x="463.3673469387755" y="299.3999996185303" stroke="none" fill="#666" class="recharts-text recharts-cartesian-axis-tick-value" text-anchor="middle"><tspan x="463.3673469387755" dy="0.71em">04.01</tspan></text></g><g class="recharts-layer recharts-cartesian-axis-tick"><line orientation="bottom" width="488" height="30" type="category" x="65" y="291.3999996185303" class="recharts-cartesian-axis-tick-line" stroke="#666" fill="none" x1="502.2081632653061" y1="297.3999996185303" x2="502.2081632653061" y2="291.3999996185303"></line><text orientation="bottom" width="488" height="30" type="category" x="502.2081632653061" y="299.3999996185303" stroke="none" fill="#666" class="recharts-text recharts-cartesian-axis-tick-value" text-anchor="middle"><tspan x="502.2081632653061" dy="0.71em">12.02</tspan></text></g><g class="recharts-layer recharts-cartesian-axis-tick"><line orientation="bottom" width="488" height="30" type="category" x="65" y="291.3999996185303" class="recharts-cartesian-axis-tick-line" stroke="#666" fill="none" x1="553" y1="297.3999996185303" x2="553" y2="291.3999996185303"></line><text orientation="bottom" width="488" height="30" type="category" x="541.3999996185303" y="299.3999996185303" stroke="none" fill="#666" class="recharts-text recharts-cartesian-axis-tick-value" text-anchor="middle"><tspan x="541.3999996185303" dy="0.71em">04.04</tspan></text></g></g></g><g class="recharts-layer recharts-cartesian-axis recharts-yAxis yAxis"><line orientation="left" width="60" height="286.3999996185303" type="number" x="5" y="5" class="recharts-cartesian-axis-line" stroke="#666" fill="none" x1="65" y1="5" x2="65" y2="291.3999996185303"></line><g class="recharts-cartesian-axis-ticks"><g class="recharts-layer recharts-cartesian-axis-tick"><line orientation="left" width="60" height="286.3999996185303" type="number" x="5" y="5" class="recharts-cartesian-axis-tick-line" stroke="#666" fill="none" x1="59" y1="291.3999996185303" x2="65" y2="291.3999996185303"></line><text orientation="left" width="60" height="286.3999996185303" type="number" x="57" y="291.3999996185303" stroke="none" fill="#666" class="recharts-text recharts-cartesian-axis-tick-value" text-anchor="end"><tspan x="57" dy="0.355em">0</tspan></text></g><g class="recharts-layer recharts-cartesian-axis-tick"><line orientation="left" width="60" height="286.3999996185303" type="number" x="5" y="5" class="recharts-cartesian-axis-tick-line" stroke="#666" fill="none" x1="59" y1="223.5499997138977" x2="65" y2="223.5499997138977"></line><text orientation="left" width="60" height="286.3999996185303" type="number" x="57" y="223.5499997138977" stroke="none" fill="#666" class="recharts-text recharts-cartesian-axis-tick-value" text-anchor="end"><tspan x="57" dy="0.355em">4500</tspan></text></g><g class="recharts-layer recharts-cartesian-axis-tick"><line orientation="left" width="60" height="286.3999996185303" type="number" x="5" y="5" class="recharts-cartesian-axis-tick-line" stroke="#666" fill="none" x1="59" y1="155.69999980926514" x2="65" y2="155.69999980926514"></line><text orientation="left" width="60" height="286.3999996185303" type="number" x="57" y="155.69999980926514" stroke="none" fill="#666" class="recharts-text recharts-cartesian-axis-tick-value" text-anchor="end"><tspan x="57" dy="0.355em">9000</tspan></text></g><g class="recharts-layer recharts-cartesian-axis-tick"><line orientation="left" width="60" height="286.3999996185303" type="number" x="5" y="5" class="recharts-cartesian-axis-tick-line" stroke="#666" fill="none" x1="59" y1="87.84999990463257" x2="65" y2="87.84999990463257"></line><text orientation="left" width="60" height="286.3999996185303" type="number" x="57" y="87.84999990463257" stroke="none" fill="#666" class="recharts-text recharts-cartesian-axis-tick-value" text-anchor="end"><tspan x="57" dy="0.355em">13500</tspan></text></g><g class="recharts-layer recharts-cartesian-axis-tick"><line orientation="left" width="60" height="286.3999996185303" type="number" x="5" y="5" class="recharts-cartesian-axis-tick-line" stroke="#666" fill="none" x1="59" y1="20" x2="65" y2="20"></line><text orientation="left" width="60" height="286.3999996185303" type="number" x="57" y="20" stroke="none" fill="#666" class="recharts-text recharts-cartesian-axis-tick-value" text-anchor="end"><tspan x="57" dy="0.355em">18000</tspan></text></g></g></g><g class="recharts-layer recharts-area"><g class="recharts-layer"><path name="Credit Snapshot State Past Due Amount" fill="#8783d8" fill-opacity="0.6" points="[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object]" width="488" height="286.3999996185303" type="linear" stroke="none" class="recharts-curve recharts-area-area" d="M65,291.3999996185303L65.99591836734695,291.3999996185303L66.99183673469388,291.3999996185303L67.98775510204082,291.3999996185303L68.98367346938775,291.3999996185303L69.9795918367347,291.3999996185303L70.97551020408163,291.3999996185303L71.97142857142858,291.3999996185303L72.9673469387755,291.3999996185303L73.96326530612245,291.3999996185303L74.95918367346938,291.3999996185303L75.95510204081633,291.3999996185303L76.95102040816326,291.3999996185303L77.9469387755102,291.3999996185303L78.94285714285715,291.3999996185303L79.93877551020408,291.3999996185303L80.93469387755101,291.3999996185303L81.93061224489796,291.3999996185303L82.9265306122449,291.3999996185303L83.92244897959183,291.3999996185303L84.91836734693877,291.3999996185303L85.91428571428571,291.3999996185303L86.91020408163266,291.3999996185303L87.90612244897959,291.3999996185303L88.90204081632653,291.3999996185303L89.89795918367346,291.3999996185303L90.89387755102041,291.3999996185303L91.88979591836734,291.3999996185303L92.88571428571429,291.3999996185303L93.88163265306122,291.3999996185303L94.87755102040816,291.3999996185303L95.87346938775511,291.3999996185303L96.86938775510204,291.3999996185303L97.86530612244897,291.3999996185303L98.86122448979592,291.3999996185303L99.85714285714286,291.3999996185303L100.85306122448979,291.3999996185303L101.84897959183672,291.3999996185303L102.84489795918367,291.3999996185303L103.84081632653061,291.3999996185303L104.83673469387755,291.3999996185303L105.83265306122449,291.3999996185303L106.82857142857142,291.3999996185303L107.82448979591837,291.3999996185303L108.82040816326531,291.3999996185303L109.81632653061224,291.3999996185303L110.81224489795918,291.3999996185303L111.80816326530612,291.3999996185303L112.80408163265307,291.3999996185303L113.8,291.3999996185303L114.79591836734693,291.3999996185303L115.79183673469387,291.3999996185303L116.78775510204082,291.3999996185303L117.78367346938775,291.3999996185303L118.77959183673468,291.3999996185303L119.77551020408163,291.3999996185303L120.77142857142857,291.3999996185303L121.76734693877552,291.3999996185303L122.76326530612245,291.3999996185303L123.75918367346938,291.3999996185303L124.75510204081633,291.3999996185303L125.75102040816327,291.3999996185303L126.7469387755102,291.3999996185303L127.74285714285713,283.9883671845033L128.73877551020408,283.9883671845033L129.73469387755102,283.9883671845033L130.73061224489794,283.9883671845033L131.72653061224491,283.9883671845033L132.72244897959183,283.9883671845033L133.71836734693878,283.9883671845033L134.71428571428572,283.9883671845033L135.71020408163264,283.9883671845033L136.70612244897958,283.3992784075536L137.70204081632653,283.3992784075536L138.69795918367345,283.3992784075536L139.69387755102042,283.3992784075536L140.68979591836734,283.3992784075536L141.68571428571428,283.3992784075536L142.68163265306123,283.3992784075536L143.67755102040815,283.3992784075536L144.6734693877551,283.3992784075536L145.66938775510204,283.3992784075536L146.66530612244898,283.3992784075536L147.66122448979593,283.3992784075536L148.65714285714284,283.3992784075536L149.6530612244898,283.3992784075536L150.64897959183673,283.3992784075536L151.64489795918365,283.3992784075536L152.64081632653063,283.3992784075536L153.63673469387754,283.3992784075536L154.6326530612245,283.3992784075536L155.62857142857143,283.3992784075536L156.62448979591835,275.92582708472463L157.6204081632653,275.92582708472463L158.61632653061224,275.92582708472463L159.61224489795916,275.92582708472463L160.60816326530613,275.92582708472463L161.60408163265305,275.92582708472463L162.6,275.92582708472463L163.59591836734694,275.92582708472463L164.59183673469386,275.92582708472463L165.58775510204083,272.7442652003076L166.58367346938775,272.7442652003076L167.5795918367347,272.7442652003076L168.57551020408164,272.7442652003076L169.57142857142856,272.7442652003076L170.5673469387755,272.7442652003076L171.56326530612245,272.7442652003076L172.55918367346936,272.7442652003076L173.55510204081634,272.7442652003076L174.55102040816325,272.7442652003076L175.5469387755102,270.7877727586132L176.54285714285714,270.7877727586132L177.53877551020406,270.7877727586132L178.53469387755104,270.7877727586132L179.53061224489795,270.7877727586132L180.5265306122449,270.7877727586132L181.52244897959184,270.7877727586132L182.51836734693876,270.7877727586132L183.5142857142857,270.7877727586132L184.51020408163265,270.7877727586132L185.50612244897957,270.7877727586132L186.50204081632654,270.7877727586132L187.49795918367346,263.2522009914271L188.4938775510204,263.2522009914271L189.48979591836735,263.2522009914271L190.48571428571427,257.25260244430433L191.4816326530612,257.25260244430433L192.47755102040816,257.25260244430433L193.4734693877551,257.25260244430433L194.46938775510205,257.25260244430433L195.46530612244896,257.25260244430433L196.4612244897959,253.01559611692642L197.45714285714286,253.01559611692642L198.4530612244898,253.01559611692642L199.44897959183672,253.01559611692642L200.44489795918366,253.01559611692642L201.4408163265306,253.01559611692642L202.43673469387755,253.01559611692642L203.43265306122447,253.01559611692642L204.42857142857142,253.01559611692642L205.42448979591836,253.01559611692642L206.4204081632653,251.03950256414836L207.41632653061222,251.03950256414836L208.41224489795917,251.03950256414836L209.40816326530611,251.03950256414836L210.40408163265306,251.03950256414836L211.4,251.03950256414836L212.39591836734692,251.03950256414836L213.39183673469387,251.03950256414836L214.3877551020408,251.03950256414836L215.38367346938776,251.03950256414836L216.37959183673468,251.03950256414836L217.37551020408162,239.56591680249744L218.37142857142857,239.56591680249744L219.3673469387755,239.56591680249744L220.36326530612243,233.51626003322284L221.35918367346937,233.51626003322284L222.35510204081632,233.51626003322284L223.35102040816327,228.59396870680808L224.34693877551018,228.59396870680808L225.34285714285713,228.59396870680808L226.33877551020407,224.31549849059954L227.33469387755102,224.31549849059954L228.33061224489796,224.31549849059954L229.32653061224488,224.31549849059954L230.32244897959183,224.31549849059954L231.31836734693877,224.31549849059954L232.31428571428572,224.31549849059954L233.31020408163263,224.31549849059954L234.30612244897958,224.31549849059954L235.30204081632652,224.31549849059954L236.29795918367347,222.3196530489604L237.2938775510204,222.3196530489604L238.28979591836733,222.3196530489604L239.28571428571428,222.3196530489604L240.28163265306122,222.3196530489604L241.27755102040817,222.3196530489604L242.27346938775509,222.3196530489604L243.26938775510203,222.3196530489604L244.26530612244898,222.3196530489604L245.26122448979592,222.3196530489604L246.25714285714284,222.3196530489604L247.25306122448978,222.3196530489604L248.24897959183673,206.82633173740388L249.24489795918367,206.82633173740388L250.2408163265306,206.82633173740388L251.23673469387754,200.72631519042227L252.23265306122448,198.30512563826983L253.22857142857143,198.30512563826983L254.22448979591834,193.3418227563572L255.2204081632653,193.3418227563572L256.21632653061226,193.3418227563572L257.2122448979592,189.02158709576287L258.2081632653061,189.02158709576287L259.204081632653,189.02158709576287L260.2,189.02158709576287L261.19591836734696,189.02158709576287L262.1918367346939,189.02158709576287L263.1877551020408,189.02158709576287L264.1836734693877,189.02158709576287L265.1795918367347,189.02158709576287L266.17551020408166,189.02158709576287L267.1714285714286,187.00583898748505L268.1673469387755,187.00583898748505L269.1632653061224,187.00583898748505L270.1591836734694,187.00583898748505L271.1551020408163,187.00583898748505L272.1510204081633,187.00583898748505L273.1469387755102,187.00583898748505L274.1428571428571,187.00583898748505L275.1387755102041,187.00583898748505L276.134693877551,187.00583898748505L277.130612244898,187.00583898748505L278.1265306122449,141.02464794100337L279.1224489795918,141.02464794100337L280.1183673469387,141.02464794100337L281.1142857142857,134.87381928298208L282.1102040816327,132.51354395296627L283.1061224489796,132.51354395296627L284.1020408163265,123.92735263170135L285.0979591836734,123.92735263170135L286.0938775510204,123.92735263170135L287.0897959183674,119.56489919338864L288.0857142857143,119.56489919338864L289.0816326530612,119.56489919338864L290.0775510204081,119.56489919338864L291.0734693877551,119.56489919338864L292.06938775510207,119.56489919338864L293.065306122449,119.56489919338864L294.0612244897959,119.56489919338864L295.0571428571428,119.56489919338864L296.0530612244898,119.56489919338864L297.0489795918367,117.52894686291694L298.0448979591837,117.52894686291694L299.0408163265306,117.52894686291694L300.0367346938775,117.52894686291694L301.03265306122444,117.52894686291694L302.0285714285714,117.52894686291694L303.0244897959184,117.52894686291694L304.0204081632653,117.52894686291694L305.0163265306122,117.52894686291694L306.01224489795914,117.52894686291694L307.0081632653061,117.52894686291694L308.0040816326531,119.03672463857544L309,64.94760938126775L309.9959183673469,64.94760938126775L310.99183673469383,64.94760938126775L311.9877551020408,58.74551627887405L312.9836734693878,56.36548905999716L313.9795918367347,56.36548905999716L314.9755102040816,47.493573850244964L315.97142857142853,47.493573850244964L316.9673469387755,38.43032164076166L317.9632653061224,34.025348869175396L318.9591836734694,34.025348869175396L319.9551020408163,34.025348869175396L320.95102040816323,34.025348869175396L321.9469387755102,34.025348869175396L322.9428571428571,34.025348869175396L323.9387755102041,34.025348869175396L324.934693877551,34.025348869175396L325.93061224489793,34.025348869175396L326.9265306122449,34.025348869175396L327.9224489795918,30.678082207213528L328.91836734693874,30.678082207213528L329.9142857142857,30.678082207213528L330.9102040816326,30.678082207213528L331.9061224489796,72.56218870389833L332.9020408163265,88.28800934846134L333.89795918367344,93.32187623027482L334.8938775510204,128.87030051364263L335.8897959183673,128.87030051364263L336.8857142857143,128.87030051364263L337.8816326530612,128.87030051364263L338.87755102040813,170.88950389902647L339.8734693877551,137.85740994545512L340.869387755102,175.897286225321L341.86530612244894,178.0202373334482L342.8612244897959,178.0202373334482L343.85714285714283,178.0202373334482L344.8530612244898,178.0202373334482L345.8489795918367,179.14941210963886L346.84489795918364,264.8086799892394L347.8408163265306,277.18331374962384L348.83673469387753,277.18331374962384L349.83265306122445,277.18331374962384L350.8285714285714,277.18331374962384L351.82448979591834,277.18331374962384L352.8204081632653,277.18331374962384L353.81632653061223,276.88175819449214L354.81224489795915,276.88175819449214L355.8081632653061,276.88175819449214L356.80408163265304,276.88175819449214L357.8,276.88175819449214L358.7959183673469,276.88175819449214L359.79183673469385,276.88175819449214L360.7877551020408,276.88175819449214L361.78367346938774,276.88175819449214L362.77959183673465,276.63041163928983L363.7755102040816,276.63041163928983L364.77142857142854,276.63041163928983L365.7673469387755,276.63041163928983L366.76326530612243,276.63041163928983L367.75918367346935,276.63041163928983L368.7551020408163,276.88175819449214L369.75102040816324,266.75130087539776L370.7469387755102,266.75130087539776L371.74285714285713,266.75130087539776L372.73877551020405,266.75130087539776L373.734693877551,271.2233697580009L374.73061224489794,271.2233697580009L375.72653061224486,271.2233697580009L376.72244897959183,272.90047097786584L377.71836734693875,272.90047097786584L378.7142857142857,267.7497513184389L379.71020408163264,267.7497513184389L380.70612244897956,267.7497513184389L381.70204081632653,267.7497513184389L382.69795918367345,269.98578575974045L383.69387755102036,269.6842302046087L384.68979591836734,269.6842302046087L385.68571428571425,269.6842302046087L386.68163265306123,269.6842302046087L387.67755102040815,269.6842302046087L388.67346938775506,269.6842302046087L389.66938775510204,269.6842302046087L390.66530612244895,269.6842302046087L391.6612244897959,269.6842302046087L392.65714285714284,269.6842302046087L393.65306122448976,269.6842302046087L394.64897959183673,269.6842302046087L395.64489795918365,269.6842302046087L396.64081632653057,269.6842302046087L397.63673469387754,269.6842302046087L398.63265306122446,269.6842302046087L399.62857142857143,269.6842302046087L400.62448979591835,266.73275520875717L401.62040816326527,266.73275520875717L402.61632653061224,266.73275520875717L403.61224489795916,266.73275520875717L404.60816326530613,266.73275520875717L405.60408163265305,266.73275520875717L406.59999999999997,266.73275520875717L407.59591836734694,266.73275520875717L408.59183673469386,266.73275520875717L409.5877551020408,260.7681371060297L410.58367346938775,260.7681371060297L411.57959183673466,260.7681371060297L412.57551020408164,260.7681371060297L413.57142857142856,260.7681371060297L414.5673469387755,260.46658155089807L415.56326530612245,260.12326055138055L416.55918367346936,260.12326055138055L417.55510204081634,260.46658155089807L418.55102040816325,264.43143398976963L419.54693877551017,264.43143398976963L420.54285714285714,264.43143398976963L421.53877551020406,264.43143398976963L422.534693877551,264.43143398976963L423.53061224489795,264.43143398976963L424.52653061224487,262.4610699925391L425.52244897959184,262.4610699925391L426.51836734693876,262.4610699925391L427.5142857142857,262.4610699925391L428.51020408163265,262.4610699925391L429.50612244897957,262.4610699925391L430.5020408163265,258.2812084428586L431.49795918367346,258.30427744282616L432.4938775510204,258.30427744282616L433.48979591836735,258.30427744282616L434.48571428571427,256.2953143345388L435.4816326530612,256.2953143345388L436.47755102040816,256.2953143345388L437.4734693877551,256.2953143345388L438.46938775510205,256.2953143345388L439.46530612244896,254.25740189295877L440.4612244897959,254.25740189295877L441.45714285714286,254.25740189295877L442.4530612244898,254.25740189295877L443.4489795918367,253.62911089384184L444.44489795918366,253.32755533871017L445.4408163265306,252.55391456201977L446.43673469387755,252.55391456201977L447.43265306122447,252.55391456201977L448.4285714285714,252.55391456201977L449.42448979591836,252.55391456201977L450.4204081632653,252.55391456201977L451.41632653061225,252.55391456201977L452.41224489795917,252.55391456201977L453.4081632653061,252.38549578447868L454.40408163265306,252.38549578447868L455.4,252.38549578447868L456.3959183673469,252.38549578447868L457.39183673469387,252.38549578447868L458.3877551020408,252.38549578447868L459.38367346938776,252.38549578447868L460.3795918367347,252.38549578447868L461.3755102040816,248.1620594570817L462.37142857142857,246.1986312376192L463.3673469387755,246.1986312376192L464.36326530612246,246.1986312376192L465.3591836734694,244.17293179602197L466.3551020408163,244.17293179602197L467.35102040816327,244.17293179602197L468.3469387755102,244.17293179602197L469.3428571428571,244.17293179602197L470.3387755102041,242.1146643544706L471.334693877551,242.1146643544706L472.33061224489796,241.94473779915384L473.3265306122449,241.94473779915384L474.3224489795918,241.31644680003697L475.31836734693877,241.01489124490527L476.3142857142857,239.15745980307156L477.3102040816326,239.15745980307156L478.3061224489796,239.15745980307156L479.3020408163265,239.15745980307156L480.29795918367347,239.15745980307156L481.2938775510204,239.15745980307156L482.2897959183673,239.15745980307156L483.2857142857143,239.15745980307156L484.2816326530612,238.90611324786926L485.27755102040817,260.20890232903804L486.2734693877551,260.20890232903804L487.269387755102,260.20890232903804L488.265306122449,260.20890232903804L489.2612244897959,260.20890232903804L490.2571428571428,260.20890232903804L491.2530612244898,260.20890232903804L492.2489795918367,257.75906499914805L493.2448979591837,255.77920200193088L494.2408163265306,255.77920200193088L495.2367346938775,255.77920200193088L496.2326530612245,253.73661544924633L497.2285714285714,253.73661544924633L498.2244897959184,253.85723767129898L499.2204081632653,253.85723767129898L500.2163265306122,253.85723767129898L501.2122448979592,253.03489567245484L502.2081632653061,253.03489567245484L503.204081632653,252.91427345040216L504.2,252.91427345040216L505.1959183673469,265.71138654352615L506.1918367346939,269.22722276080657L507.1877551020408,267.36210165231705L508.1836734693877,271.02901720271853L509.1795918367347,271.02901720271853L510.1755102040816,271.4487825354619L511.1714285714286,271.4487825354619L512.1673469387755,271.4487825354619L513.1632653061224,271.4487825354619L514.1591836734694,271.4487825354619L515.1551020408162,272.79160942246335L516.1510204081633,272.79160942246335L517.1469387755102,274.2993871981218L518.1428571428571,274.2993871981218L519.1387755102041,274.2993871981218L520.134693877551,277.7838616376686L521.130612244898,277.7838616376686L522.1265306122449,277.7838616376686L523.1224489795918,277.7838616376686L524.1183673469387,277.7838616376686L525.1142857142856,277.7838616376686L526.1102040816327,277.7838616376686L527.1061224489796,277.7838616376686L528.1020408163265,277.7838616376686L529.0979591836734,275.6841303072866L530.0938775510203,275.6841303072866L531.0897959183674,275.3905659743659L532.0857142857143,282.02478818726325L533.0816326530612,290.81588650824017L534.0775510204081,290.81588650824017L535.073469387755,290.81588650824017L536.0693877551021,290.81588650824017L537.0653061224489,290.81588650824017L538.0612244897959,290.81588650824017L539.0571428571428,290.81588650824017L540.0530612244897,290.81588650824017L541.0489795918368,290.81588650824017L542.0448979591836,291.3999996185303L543.0408163265306,291.3999996185303L544.0367346938775,291.3999996185303L545.0326530612244,291.3999996185303L546.0285714285715,291.3999996185303L547.0244897959183,291.3999996185303L548.0204081632653,291.3999996185303L549.0163265306122,291.3999996185303L550.0122448979591,291.3999996185303L551.0081632653062,291.3999996185303L552.004081632653,291.3999996185303L553,291.3999996185303L553,291.3999996185303L552.004081632653,291.3999996185303L551.0081632653062,291.3999996185303L550.0122448979591,291.3999996185303L549.0163265306122,291.3999996185303L548.0204081632653,291.3999996185303L547.0244897959183,291.3999996185303L546.0285714285715,291.3999996185303L545.0326530612244,291.3999996185303L544.0367346938775,291.3999996185303L543.0408163265306,291.3999996185303L542.0448979591836,291.3999996185303L541.0489795918368,291.3999996185303L540.0530612244897,291.3999996185303L539.0571428571428,291.3999996185303L538.0612244897959,291.3999996185303L537.0653061224489,291.3999996185303L536.0693877551021,291.3999996185303L535.073469387755,291.3999996185303L534.0775510204081,291.3999996185303L533.0816326530612,291.3999996185303L532.0857142857143,291.3999996185303L531.0897959183674,291.3999996185303L530.0938775510203,291.3999996185303L529.0979591836734,291.3999996185303L528.1020408163265,291.3999996185303L527.1061224489796,291.3999996185303L526.1102040816327,291.3999996185303L525.1142857142856,291.3999996185303L524.1183673469387,291.3999996185303L523.1224489795918,291.3999996185303L522.1265306122449,291.3999996185303L521.130612244898,291.3999996185303L520.134693877551,291.3999996185303L519.1387755102041,291.3999996185303L518.1428571428571,291.3999996185303L517.1469387755102,291.3999996185303L516.1510204081633,291.3999996185303L515.1551020408162,291.3999996185303L514.1591836734694,291.3999996185303L513.1632653061224,291.3999996185303L512.1673469387755,291.3999996185303L511.1714285714286,291.3999996185303L510.1755102040816,291.3999996185303L509.1795918367347,291.3999996185303L508.1836734693877,291.3999996185303L507.1877551020408,291.3999996185303L506.1918367346939,291.3999996185303L505.1959183673469,291.3999996185303L504.2,291.3999996185303L503.204081632653,291.3999996185303L502.2081632653061,291.3999996185303L501.2122448979592,291.3999996185303L500.2163265306122,291.3999996185303L499.2204081632653,291.3999996185303L498.2244897959184,291.3999996185303L497.2285714285714,291.3999996185303L496.2326530612245,291.3999996185303L495.2367346938775,291.3999996185303L494.2408163265306,291.3999996185303L493.2448979591837,291.3999996185303L492.2489795918367,291.3999996185303L491.2530612244898,291.3999996185303L490.2571428571428,291.3999996185303L489.2612244897959,291.3999996185303L488.265306122449,291.3999996185303L487.269387755102,291.3999996185303L486.2734693877551,291.3999996185303L485.27755102040817,291.3999996185303L484.2816326530612,291.3999996185303L483.2857142857143,291.3999996185303L482.2897959183673,291.3999996185303L481.2938775510204,291.3999996185303L480.29795918367347,291.3999996185303L479.3020408163265,291.3999996185303L478.3061224489796,291.3999996185303L477.3102040816326,291.3999996185303L476.3142857142857,291.3999996185303L475.31836734693877,291.3999996185303L474.3224489795918,291.3999996185303L473.3265306122449,291.3999996185303L472.33061224489796,291.3999996185303L471.334693877551,291.3999996185303L470.3387755102041,291.3999996185303L469.3428571428571,291.3999996185303L468.3469387755102,291.3999996185303L467.35102040816327,291.3999996185303L466.3551020408163,291.3999996185303L465.3591836734694,291.3999996185303L464.36326530612246,291.3999996185303L463.3673469387755,291.3999996185303L462.37142857142857,291.3999996185303L461.3755102040816,291.3999996185303L460.3795918367347,291.3999996185303L459.38367346938776,291.3999996185303L458.3877551020408,291.3999996185303L457.39183673469387,291.3999996185303L456.3959183673469,291.3999996185303L455.4,291.3999996185303L454.40408163265306,291.3999996185303L453.4081632653061,291.3999996185303L452.41224489795917,291.3999996185303L451.41632653061225,291.3999996185303L450.4204081632653,291.3999996185303L449.42448979591836,291.3999996185303L448.4285714285714,291.3999996185303L447.43265306122447,291.3999996185303L446.43673469387755,291.3999996185303L445.4408163265306,291.3999996185303L444.44489795918366,291.3999996185303L443.4489795918367,291.3999996185303L442.4530612244898,291.3999996185303L441.45714285714286,291.3999996185303L440.4612244897959,291.3999996185303L439.46530612244896,291.3999996185303L438.46938775510205,291.3999996185303L437.4734693877551,291.3999996185303L436.47755102040816,291.3999996185303L435.4816326530612,291.3999996185303L434.48571428571427,291.3999996185303L433.48979591836735,291.3999996185303L432.4938775510204,291.3999996185303L431.49795918367346,291.3999996185303L430.5020408163265,291.3999996185303L429.50612244897957,291.3999996185303L428.51020408163265,291.3999996185303L427.5142857142857,291.3999996185303L426.51836734693876,291.3999996185303L425.52244897959184,291.3999996185303L424.52653061224487,291.3999996185303L423.53061224489795,291.3999996185303L422.534693877551,291.3999996185303L421.53877551020406,291.3999996185303L420.54285714285714,291.3999996185303L419.54693877551017,291.3999996185303L418.55102040816325,291.3999996185303L417.55510204081634,291.3999996185303L416.55918367346936,291.3999996185303L415.56326530612245,291.3999996185303L414.5673469387755,291.3999996185303L413.57142857142856,291.3999996185303L412.57551020408164,291.3999996185303L411.57959183673466,291.3999996185303L410.58367346938775,291.3999996185303L409.5877551020408,291.3999996185303L408.59183673469386,291.3999996185303L407.59591836734694,291.3999996185303L406.59999999999997,291.3999996185303L405.60408163265305,291.3999996185303L404.60816326530613,291.3999996185303L403.61224489795916,291.3999996185303L402.61632653061224,291.3999996185303L401.62040816326527,291.3999996185303L400.62448979591835,291.3999996185303L399.62857142857143,291.3999996185303L398.63265306122446,291.3999996185303L397.63673469387754,291.3999996185303L396.64081632653057,291.3999996185303L395.64489795918365,291.3999996185303L394.64897959183673,291.3999996185303L393.65306122448976,291.3999996185303L392.65714285714284,291.3999996185303L391.6612244897959,291.3999996185303L390.66530612244895,291.3999996185303L389.66938775510204,291.3999996185303L388.67346938775506,291.3999996185303L387.67755102040815,291.3999996185303L386.68163265306123,291.3999996185303L385.68571428571425,291.3999996185303L384.68979591836734,291.3999996185303L383.69387755102036,291.3999996185303L382.69795918367345,291.3999996185303L381.70204081632653,291.3999996185303L380.70612244897956,291.3999996185303L379.71020408163264,291.3999996185303L378.7142857142857,291.3999996185303L377.71836734693875,291.3999996185303L376.72244897959183,291.3999996185303L375.72653061224486,291.3999996185303L374.73061224489794,291.3999996185303L373.734693877551,291.3999996185303L372.73877551020405,291.3999996185303L371.74285714285713,291.3999996185303L370.7469387755102,291.3999996185303L369.75102040816324,291.3999996185303L368.7551020408163,291.3999996185303L367.75918367346935,291.3999996185303L366.76326530612243,291.3999996185303L365.7673469387755,291.3999996185303L364.77142857142854,291.3999996185303L363.7755102040816,291.3999996185303L362.77959183673465,291.3999996185303L361.78367346938774,291.3999996185303L360.7877551020408,291.3999996185303L359.79183673469385,291.3999996185303L358.7959183673469,291.3999996185303L357.8,291.3999996185303L356.80408163265304,291.3999996185303L355.8081632653061,291.3999996185303L354.81224489795915,291.3999996185303L353.81632653061223,291.3999996185303L352.8204081632653,291.3999996185303L351.82448979591834,291.3999996185303L350.8285714285714,291.3999996185303L349.83265306122445,291.3999996185303L348.83673469387753,291.3999996185303L347.8408163265306,291.3999996185303L346.84489795918364,291.3999996185303L345.8489795918367,291.3999996185303L344.8530612244898,291.3999996185303L343.85714285714283,291.3999996185303L342.8612244897959,291.3999996185303L341.86530612244894,291.3999996185303L340.869387755102,291.3999996185303L339.8734693877551,291.3999996185303L338.87755102040813,291.3999996185303L337.8816326530612,291.3999996185303L336.8857142857143,291.3999996185303L335.8897959183673,291.3999996185303L334.8938775510204,291.3999996185303L333.89795918367344,291.3999996185303L332.9020408163265,291.3999996185303L331.9061224489796,291.3999996185303L330.9102040816326,291.3999996185303L329.9142857142857,291.3999996185303L328.91836734693874,291.3999996185303L327.9224489795918,291.3999996185303L326.9265306122449,291.3999996185303L325.93061224489793,291.3999996185303L324.934693877551,291.3999996185303L323.9387755102041,291.3999996185303L322.9428571428571,291.3999996185303L321.9469387755102,291.3999996185303L320.95102040816323,291.3999996185303L319.9551020408163,291.3999996185303L318.9591836734694,291.3999996185303L317.9632653061224,291.3999996185303L316.9673469387755,291.3999996185303L315.97142857142853,291.3999996185303L314.9755102040816,291.3999996185303L313.9795918367347,291.3999996185303L312.9836734693878,291.3999996185303L311.9877551020408,291.3999996185303L310.99183673469383,291.3999996185303L309.9959183673469,291.3999996185303L309,291.3999996185303L308.0040816326531,291.3999996185303L307.0081632653061,291.3999996185303L306.01224489795914,291.3999996185303L305.0163265306122,291.3999996185303L304.0204081632653,291.3999996185303L303.0244897959184,291.3999996185303L302.0285714285714,291.3999996185303L301.03265306122444,291.3999996185303L300.0367346938775,291.3999996185303L299.0408163265306,291.3999996185303L298.0448979591837,291.3999996185303L297.0489795918367,291.3999996185303L296.0530612244898,291.3999996185303L295.0571428571428,291.3999996185303L294.0612244897959,291.3999996185303L293.065306122449,291.3999996185303L292.06938775510207,291.3999996185303L291.0734693877551,291.3999996185303L290.0775510204081,291.3999996185303L289.0816326530612,291.3999996185303L288.0857142857143,291.3999996185303L287.0897959183674,291.3999996185303L286.0938775510204,291.3999996185303L285.0979591836734,291.3999996185303L284.1020408163265,291.3999996185303L283.1061224489796,291.3999996185303L282.1102040816327,291.3999996185303L281.1142857142857,291.3999996185303L280.1183673469387,291.3999996185303L279.1224489795918,291.3999996185303L278.1265306122449,291.3999996185303L277.130612244898,291.3999996185303L276.134693877551,291.3999996185303L275.1387755102041,291.3999996185303L274.1428571428571,291.3999996185303L273.1469387755102,291.3999996185303L272.1510204081633,291.3999996185303L271.1551020408163,291.3999996185303L270.1591836734694,291.3999996185303L269.1632653061224,291.3999996185303L268.1673469387755,291.3999996185303L267.1714285714286,291.3999996185303L266.17551020408166,291.3999996185303L265.1795918367347,291.3999996185303L264.1836734693877,291.3999996185303L263.1877551020408,291.3999996185303L262.1918367346939,291.3999996185303L261.19591836734696,291.3999996185303L260.2,291.3999996185303L259.204081632653,291.3999996185303L258.2081632653061,291.3999996185303L257.2122448979592,291.3999996185303L256.21632653061226,291.3999996185303L255.2204081632653,291.3999996185303L254.22448979591834,291.3999996185303L253.22857142857143,291.3999996185303L252.23265306122448,291.3999996185303L251.23673469387754,291.3999996185303L250.2408163265306,291.3999996185303L249.24489795918367,291.3999996185303L248.24897959183673,291.3999996185303L247.25306122448978,291.3999996185303L246.25714285714284,291.3999996185303L245.26122448979592,291.3999996185303L244.26530612244898,291.3999996185303L243.26938775510203,291.3999996185303L242.27346938775509,291.3999996185303L241.27755102040817,291.3999996185303L240.28163265306122,291.3999996185303L239.28571428571428,291.3999996185303L238.28979591836733,291.3999996185303L237.2938775510204,291.3999996185303L236.29795918367347,291.3999996185303L235.30204081632652,291.3999996185303L234.30612244897958,291.3999996185303L233.31020408163263,291.3999996185303L232.31428571428572,291.3999996185303L231.31836734693877,291.3999996185303L230.32244897959183,291.3999996185303L229.32653061224488,291.3999996185303L228.33061224489796,291.3999996185303L227.33469387755102,291.3999996185303L226.33877551020407,291.3999996185303L225.34285714285713,291.3999996185303L224.34693877551018,291.3999996185303L223.35102040816327,291.3999996185303L222.35510204081632,291.3999996185303L221.35918367346937,291.3999996185303L220.36326530612243,291.3999996185303L219.3673469387755,291.3999996185303L218.37142857142857,291.3999996185303L217.37551020408162,291.3999996185303L216.37959183673468,291.3999996185303L215.38367346938776,291.3999996185303L214.3877551020408,291.3999996185303L213.39183673469387,291.3999996185303L212.39591836734692,291.3999996185303L211.4,291.3999996185303L210.40408163265306,291.3999996185303L209.40816326530611,291.3999996185303L208.41224489795917,291.3999996185303L207.41632653061222,291.3999996185303L206.4204081632653,291.3999996185303L205.42448979591836,291.3999996185303L204.42857142857142,291.3999996185303L203.43265306122447,291.3999996185303L202.43673469387755,291.3999996185303L201.4408163265306,291.3999996185303L200.44489795918366,291.3999996185303L199.44897959183672,291.3999996185303L198.4530612244898,291.3999996185303L197.45714285714286,291.3999996185303L196.4612244897959,291.3999996185303L195.46530612244896,291.3999996185303L194.46938775510205,291.3999996185303L193.4734693877551,291.3999996185303L192.47755102040816,291.3999996185303L191.4816326530612,291.3999996185303L190.48571428571427,291.3999996185303L189.48979591836735,291.3999996185303L188.4938775510204,291.3999996185303L187.49795918367346,291.3999996185303L186.50204081632654,291.3999996185303L185.50612244897957,291.3999996185303L184.51020408163265,291.3999996185303L183.5142857142857,291.3999996185303L182.51836734693876,291.3999996185303L181.52244897959184,291.3999996185303L180.5265306122449,291.3999996185303L179.53061224489795,291.3999996185303L178.53469387755104,291.3999996185303L177.53877551020406,291.3999996185303L176.54285714285714,291.3999996185303L175.5469387755102,291.3999996185303L174.55102040816325,291.3999996185303L173.55510204081634,291.3999996185303L172.55918367346936,291.3999996185303L171.56326530612245,291.3999996185303L170.5673469387755,291.3999996185303L169.57142857142856,291.3999996185303L168.57551020408164,291.3999996185303L167.5795918367347,291.3999996185303L166.58367346938775,291.3999996185303L165.58775510204083,291.3999996185303L164.59183673469386,291.3999996185303L163.59591836734694,291.3999996185303L162.6,291.3999996185303L161.60408163265305,291.3999996185303L160.60816326530613,291.3999996185303L159.61224489795916,291.3999996185303L158.61632653061224,291.3999996185303L157.6204081632653,291.3999996185303L156.62448979591835,291.3999996185303L155.62857142857143,291.3999996185303L154.6326530612245,291.3999996185303L153.63673469387754,291.3999996185303L152.64081632653063,291.3999996185303L151.64489795918365,291.3999996185303L150.64897959183673,291.3999996185303L149.6530612244898,291.3999996185303L148.65714285714284,291.3999996185303L147.66122448979593,291.3999996185303L146.66530612244898,291.3999996185303L145.66938775510204,291.3999996185303L144.6734693877551,291.3999996185303L143.67755102040815,291.3999996185303L142.68163265306123,291.3999996185303L141.68571428571428,291.3999996185303L140.68979591836734,291.3999996185303L139.69387755102042,291.3999996185303L138.69795918367345,291.3999996185303L137.70204081632653,291.3999996185303L136.70612244897958,291.3999996185303L135.71020408163264,291.3999996185303L134.71428571428572,291.3999996185303L133.71836734693878,291.3999996185303L132.72244897959183,291.3999996185303L131.72653061224491,291.3999996185303L130.73061224489794,291.3999996185303L129.73469387755102,291.3999996185303L128.73877551020408,291.3999996185303L127.74285714285713,291.3999996185303L126.7469387755102,291.3999996185303L125.75102040816327,291.3999996185303L124.75510204081633,291.3999996185303L123.75918367346938,291.3999996185303L122.76326530612245,291.3999996185303L121.76734693877552,291.3999996185303L120.77142857142857,291.3999996185303L119.77551020408163,291.3999996185303L118.77959183673468,291.3999996185303L117.78367346938775,291.3999996185303L116.78775510204082,291.3999996185303L115.79183673469387,291.3999996185303L114.79591836734693,291.3999996185303L113.8,291.3999996185303L112.80408163265307,291.3999996185303L111.80816326530612,291.3999996185303L110.81224489795918,291.3999996185303L109.81632653061224,291.3999996185303L108.82040816326531,291.3999996185303L107.82448979591837,291.3999996185303L106.82857142857142,291.3999996185303L105.83265306122449,291.3999996185303L104.83673469387755,291.3999996185303L103.84081632653061,291.3999996185303L102.84489795918367,291.3999996185303L101.84897959183672,291.3999996185303L100.85306122448979,291.3999996185303L99.85714285714286,291.3999996185303L98.86122448979592,291.3999996185303L97.86530612244897,291.3999996185303L96.86938775510204,291.3999996185303L95.87346938775511,291.3999996185303L94.87755102040816,291.3999996185303L93.88163265306122,291.3999996185303L92.88571428571429,291.3999996185303L91.88979591836734,291.3999996185303L90.89387755102041,291.3999996185303L89.89795918367346,291.3999996185303L88.90204081632653,291.3999996185303L87.90612244897959,291.3999996185303L86.91020408163266,291.3999996185303L85.91428571428571,291.3999996185303L84.91836734693877,291.3999996185303L83.92244897959183,291.3999996185303L82.9265306122449,291.3999996185303L81.93061224489796,291.3999996185303L80.93469387755101,291.3999996185303L79.93877551020408,291.3999996185303L78.94285714285715,291.3999996185303L77.9469387755102,291.3999996185303L76.95102040816326,291.3999996185303L75.95510204081633,291.3999996185303L74.95918367346938,291.3999996185303L73.96326530612245,291.3999996185303L72.9673469387755,291.3999996185303L71.97142857142858,291.3999996185303L70.97551020408163,291.3999996185303L69.9795918367347,291.3999996185303L68.98367346938775,291.3999996185303L67.98775510204082,291.3999996185303L66.99183673469388,291.3999996185303L65.99591836734695,291.3999996185303L65,291.3999996185303Z"></path><path name="Credit Snapshot State Past Due Amount" stroke="#8783d8" fill="none" fill-opacity="0.6" points="[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object]" width="488" height="286.3999996185303" class="recharts-curve recharts-area-curve" type="linear" d="M65,291.3999996185303L65.99591836734695,291.3999996185303L66.99183673469388,291.3999996185303L67.98775510204082,291.3999996185303L68.98367346938775,291.3999996185303L69.9795918367347,291.3999996185303L70.97551020408163,291.3999996185303L71.97142857142858,291.3999996185303L72.9673469387755,291.3999996185303L73.96326530612245,291.3999996185303L74.95918367346938,291.3999996185303L75.95510204081633,291.3999996185303L76.95102040816326,291.3999996185303L77.9469387755102,291.3999996185303L78.94285714285715,291.3999996185303L79.93877551020408,291.3999996185303L80.93469387755101,291.3999996185303L81.93061224489796,291.3999996185303L82.9265306122449,291.3999996185303L83.92244897959183,291.3999996185303L84.91836734693877,291.3999996185303L85.91428571428571,291.3999996185303L86.91020408163266,291.3999996185303L87.90612244897959,291.3999996185303L88.90204081632653,291.3999996185303L89.89795918367346,291.3999996185303L90.89387755102041,291.3999996185303L91.88979591836734,291.3999996185303L92.88571428571429,291.3999996185303L93.88163265306122,291.3999996185303L94.87755102040816,291.3999996185303L95.87346938775511,291.3999996185303L96.86938775510204,291.3999996185303L97.86530612244897,291.3999996185303L98.86122448979592,291.3999996185303L99.85714285714286,291.3999996185303L100.85306122448979,291.3999996185303L101.84897959183672,291.3999996185303L102.84489795918367,291.3999996185303L103.84081632653061,291.3999996185303L104.83673469387755,291.3999996185303L105.83265306122449,291.3999996185303L106.82857142857142,291.3999996185303L107.82448979591837,291.3999996185303L108.82040816326531,291.3999996185303L109.81632653061224,291.3999996185303L110.81224489795918,291.3999996185303L111.80816326530612,291.3999996185303L112.80408163265307,291.3999996185303L113.8,291.3999996185303L114.79591836734693,291.3999996185303L115.79183673469387,291.3999996185303L116.78775510204082,291.3999996185303L117.78367346938775,291.3999996185303L118.77959183673468,291.3999996185303L119.77551020408163,291.3999996185303L120.77142857142857,291.3999996185303L121.76734693877552,291.3999996185303L122.76326530612245,291.3999996185303L123.75918367346938,291.3999996185303L124.75510204081633,291.3999996185303L125.75102040816327,291.3999996185303L126.7469387755102,291.3999996185303L127.74285714285713,283.9883671845033L128.73877551020408,283.9883671845033L129.73469387755102,283.9883671845033L130.73061224489794,283.9883671845033L131.72653061224491,283.9883671845033L132.72244897959183,283.9883671845033L133.71836734693878,283.9883671845033L134.71428571428572,283.9883671845033L135.71020408163264,283.9883671845033L136.70612244897958,283.3992784075536L137.70204081632653,283.3992784075536L138.69795918367345,283.3992784075536L139.69387755102042,283.3992784075536L140.68979591836734,283.3992784075536L141.68571428571428,283.3992784075536L142.68163265306123,283.3992784075536L143.67755102040815,283.3992784075536L144.6734693877551,283.3992784075536L145.66938775510204,283.3992784075536L146.66530612244898,283.3992784075536L147.66122448979593,283.3992784075536L148.65714285714284,283.3992784075536L149.6530612244898,283.3992784075536L150.64897959183673,283.3992784075536L151.64489795918365,283.3992784075536L152.64081632653063,283.3992784075536L153.63673469387754,283.3992784075536L154.6326530612245,283.3992784075536L155.62857142857143,283.3992784075536L156.62448979591835,275.92582708472463L157.6204081632653,275.92582708472463L158.61632653061224,275.92582708472463L159.61224489795916,275.92582708472463L160.60816326530613,275.92582708472463L161.60408163265305,275.92582708472463L162.6,275.92582708472463L163.59591836734694,275.92582708472463L164.59183673469386,275.92582708472463L165.58775510204083,272.7442652003076L166.58367346938775,272.7442652003076L167.5795918367347,272.7442652003076L168.57551020408164,272.7442652003076L169.57142857142856,272.7442652003076L170.5673469387755,272.7442652003076L171.56326530612245,272.7442652003076L172.55918367346936,272.7442652003076L173.55510204081634,272.7442652003076L174.55102040816325,272.7442652003076L175.5469387755102,270.7877727586132L176.54285714285714,270.7877727586132L177.53877551020406,270.7877727586132L178.53469387755104,270.7877727586132L179.53061224489795,270.7877727586132L180.5265306122449,270.7877727586132L181.52244897959184,270.7877727586132L182.51836734693876,270.7877727586132L183.5142857142857,270.7877727586132L184.51020408163265,270.7877727586132L185.50612244897957,270.7877727586132L186.50204081632654,270.7877727586132L187.49795918367346,263.2522009914271L188.4938775510204,263.2522009914271L189.48979591836735,263.2522009914271L190.48571428571427,257.25260244430433L191.4816326530612,257.25260244430433L192.47755102040816,257.25260244430433L193.4734693877551,257.25260244430433L194.46938775510205,257.25260244430433L195.46530612244896,257.25260244430433L196.4612244897959,253.01559611692642L197.45714285714286,253.01559611692642L198.4530612244898,253.01559611692642L199.44897959183672,253.01559611692642L200.44489795918366,253.01559611692642L201.4408163265306,253.01559611692642L202.43673469387755,253.01559611692642L203.43265306122447,253.01559611692642L204.42857142857142,253.01559611692642L205.42448979591836,253.01559611692642L206.4204081632653,251.03950256414836L207.41632653061222,251.03950256414836L208.41224489795917,251.03950256414836L209.40816326530611,251.03950256414836L210.40408163265306,251.03950256414836L211.4,251.03950256414836L212.39591836734692,251.03950256414836L213.39183673469387,251.03950256414836L214.3877551020408,251.03950256414836L215.38367346938776,251.03950256414836L216.37959183673468,251.03950256414836L217.37551020408162,239.56591680249744L218.37142857142857,239.56591680249744L219.3673469387755,239.56591680249744L220.36326530612243,233.51626003322284L221.35918367346937,233.51626003322284L222.35510204081632,233.51626003322284L223.35102040816327,228.59396870680808L224.34693877551018,228.59396870680808L225.34285714285713,228.59396870680808L226.33877551020407,224.31549849059954L227.33469387755102,224.31549849059954L228.33061224489796,224.31549849059954L229.32653061224488,224.31549849059954L230.32244897959183,224.31549849059954L231.31836734693877,224.31549849059954L232.31428571428572,224.31549849059954L233.31020408163263,224.31549849059954L234.30612244897958,224.31549849059954L235.30204081632652,224.31549849059954L236.29795918367347,222.3196530489604L237.2938775510204,222.3196530489604L238.28979591836733,222.3196530489604L239.28571428571428,222.3196530489604L240.28163265306122,222.3196530489604L241.27755102040817,222.3196530489604L242.27346938775509,222.3196530489604L243.26938775510203,222.3196530489604L244.26530612244898,222.3196530489604L245.26122448979592,222.3196530489604L246.25714285714284,222.3196530489604L247.25306122448978,222.3196530489604L248.24897959183673,206.82633173740388L249.24489795918367,206.82633173740388L250.2408163265306,206.82633173740388L251.23673469387754,200.72631519042227L252.23265306122448,198.30512563826983L253.22857142857143,198.30512563826983L254.22448979591834,193.3418227563572L255.2204081632653,193.3418227563572L256.21632653061226,193.3418227563572L257.2122448979592,189.02158709576287L258.2081632653061,189.02158709576287L259.204081632653,189.02158709576287L260.2,189.02158709576287L261.19591836734696,189.02158709576287L262.1918367346939,189.02158709576287L263.1877551020408,189.02158709576287L264.1836734693877,189.02158709576287L265.1795918367347,189.02158709576287L266.17551020408166,189.02158709576287L267.1714285714286,187.00583898748505L268.1673469387755,187.00583898748505L269.1632653061224,187.00583898748505L270.1591836734694,187.00583898748505L271.1551020408163,187.00583898748505L272.1510204081633,187.00583898748505L273.1469387755102,187.00583898748505L274.1428571428571,187.00583898748505L275.1387755102041,187.00583898748505L276.134693877551,187.00583898748505L277.130612244898,187.00583898748505L278.1265306122449,141.02464794100337L279.1224489795918,141.02464794100337L280.1183673469387,141.02464794100337L281.1142857142857,134.87381928298208L282.1102040816327,132.51354395296627L283.1061224489796,132.51354395296627L284.1020408163265,123.92735263170135L285.0979591836734,123.92735263170135L286.0938775510204,123.92735263170135L287.0897959183674,119.56489919338864L288.0857142857143,119.56489919338864L289.0816326530612,119.56489919338864L290.0775510204081,119.56489919338864L291.0734693877551,119.56489919338864L292.06938775510207,119.56489919338864L293.065306122449,119.56489919338864L294.0612244897959,119.56489919338864L295.0571428571428,119.56489919338864L296.0530612244898,119.56489919338864L297.0489795918367,117.52894686291694L298.0448979591837,117.52894686291694L299.0408163265306,117.52894686291694L300.0367346938775,117.52894686291694L301.03265306122444,117.52894686291694L302.0285714285714,117.52894686291694L303.0244897959184,117.52894686291694L304.0204081632653,117.52894686291694L305.0163265306122,117.52894686291694L306.01224489795914,117.52894686291694L307.0081632653061,117.52894686291694L308.0040816326531,119.03672463857544L309,64.94760938126775L309.9959183673469,64.94760938126775L310.99183673469383,64.94760938126775L311.9877551020408,58.74551627887405L312.9836734693878,56.36548905999716L313.9795918367347,56.36548905999716L314.9755102040816,47.493573850244964L315.97142857142853,47.493573850244964L316.9673469387755,38.43032164076166L317.9632653061224,34.025348869175396L318.9591836734694,34.025348869175396L319.9551020408163,34.025348869175396L320.95102040816323,34.025348869175396L321.9469387755102,34.025348869175396L322.9428571428571,34.025348869175396L323.9387755102041,34.025348869175396L324.934693877551,34.025348869175396L325.93061224489793,34.025348869175396L326.9265306122449,34.025348869175396L327.9224489795918,30.678082207213528L328.91836734693874,30.678082207213528L329.9142857142857,30.678082207213528L330.9102040816326,30.678082207213528L331.9061224489796,72.56218870389833L332.9020408163265,88.28800934846134L333.89795918367344,93.32187623027482L334.8938775510204,128.87030051364263L335.8897959183673,128.87030051364263L336.8857142857143,128.87030051364263L337.8816326530612,128.87030051364263L338.87755102040813,170.88950389902647L339.8734693877551,137.85740994545512L340.869387755102,175.897286225321L341.86530612244894,178.0202373334482L342.8612244897959,178.0202373334482L343.85714285714283,178.0202373334482L344.8530612244898,178.0202373334482L345.8489795918367,179.14941210963886L346.84489795918364,264.8086799892394L347.8408163265306,277.18331374962384L348.83673469387753,277.18331374962384L349.83265306122445,277.18331374962384L350.8285714285714,277.18331374962384L351.82448979591834,277.18331374962384L352.8204081632653,277.18331374962384L353.81632653061223,276.88175819449214L354.81224489795915,276.88175819449214L355.8081632653061,276.88175819449214L356.80408163265304,276.88175819449214L357.8,276.88175819449214L358.7959183673469,276.88175819449214L359.79183673469385,276.88175819449214L360.7877551020408,276.88175819449214L361.78367346938774,276.88175819449214L362.77959183673465,276.63041163928983L363.7755102040816,276.63041163928983L364.77142857142854,276.63041163928983L365.7673469387755,276.63041163928983L366.76326530612243,276.63041163928983L367.75918367346935,276.63041163928983L368.7551020408163,276.88175819449214L369.75102040816324,266.75130087539776L370.7469387755102,266.75130087539776L371.74285714285713,266.75130087539776L372.73877551020405,266.75130087539776L373.734693877551,271.2233697580009L374.73061224489794,271.2233697580009L375.72653061224486,271.2233697580009L376.72244897959183,272.90047097786584L377.71836734693875,272.90047097786584L378.7142857142857,267.7497513184389L379.71020408163264,267.7497513184389L380.70612244897956,267.7497513184389L381.70204081632653,267.7497513184389L382.69795918367345,269.98578575974045L383.69387755102036,269.6842302046087L384.68979591836734,269.6842302046087L385.68571428571425,269.6842302046087L386.68163265306123,269.6842302046087L387.67755102040815,269.6842302046087L388.67346938775506,269.6842302046087L389.66938775510204,269.6842302046087L390.66530612244895,269.6842302046087L391.6612244897959,269.6842302046087L392.65714285714284,269.6842302046087L393.65306122448976,269.6842302046087L394.64897959183673,269.6842302046087L395.64489795918365,269.6842302046087L396.64081632653057,269.6842302046087L397.63673469387754,269.6842302046087L398.63265306122446,269.6842302046087L399.62857142857143,269.6842302046087L400.62448979591835,266.73275520875717L401.62040816326527,266.73275520875717L402.61632653061224,266.73275520875717L403.61224489795916,266.73275520875717L404.60816326530613,266.73275520875717L405.60408163265305,266.73275520875717L406.59999999999997,266.73275520875717L407.59591836734694,266.73275520875717L408.59183673469386,266.73275520875717L409.5877551020408,260.7681371060297L410.58367346938775,260.7681371060297L411.57959183673466,260.7681371060297L412.57551020408164,260.7681371060297L413.57142857142856,260.7681371060297L414.5673469387755,260.46658155089807L415.56326530612245,260.12326055138055L416.55918367346936,260.12326055138055L417.55510204081634,260.46658155089807L418.55102040816325,264.43143398976963L419.54693877551017,264.43143398976963L420.54285714285714,264.43143398976963L421.53877551020406,264.43143398976963L422.534693877551,264.43143398976963L423.53061224489795,264.43143398976963L424.52653061224487,262.4610699925391L425.52244897959184,262.4610699925391L426.51836734693876,262.4610699925391L427.5142857142857,262.4610699925391L428.51020408163265,262.4610699925391L429.50612244897957,262.4610699925391L430.5020408163265,258.2812084428586L431.49795918367346,258.30427744282616L432.4938775510204,258.30427744282616L433.48979591836735,258.30427744282616L434.48571428571427,256.2953143345388L435.4816326530612,256.2953143345388L436.47755102040816,256.2953143345388L437.4734693877551,256.2953143345388L438.46938775510205,256.2953143345388L439.46530612244896,254.25740189295877L440.4612244897959,254.25740189295877L441.45714285714286,254.25740189295877L442.4530612244898,254.25740189295877L443.4489795918367,253.62911089384184L444.44489795918366,253.32755533871017L445.4408163265306,252.55391456201977L446.43673469387755,252.55391456201977L447.43265306122447,252.55391456201977L448.4285714285714,252.55391456201977L449.42448979591836,252.55391456201977L450.4204081632653,252.55391456201977L451.41632653061225,252.55391456201977L452.41224489795917,252.55391456201977L453.4081632653061,252.38549578447868L454.40408163265306,252.38549578447868L455.4,252.38549578447868L456.3959183673469,252.38549578447868L457.39183673469387,252.38549578447868L458.3877551020408,252.38549578447868L459.38367346938776,252.38549578447868L460.3795918367347,252.38549578447868L461.3755102040816,248.1620594570817L462.37142857142857,246.1986312376192L463.3673469387755,246.1986312376192L464.36326530612246,246.1986312376192L465.3591836734694,244.17293179602197L466.3551020408163,244.17293179602197L467.35102040816327,244.17293179602197L468.3469387755102,244.17293179602197L469.3428571428571,244.17293179602197L470.3387755102041,242.1146643544706L471.334693877551,242.1146643544706L472.33061224489796,241.94473779915384L473.3265306122449,241.94473779915384L474.3224489795918,241.31644680003697L475.31836734693877,241.01489124490527L476.3142857142857,239.15745980307156L477.3102040816326,239.15745980307156L478.3061224489796,239.15745980307156L479.3020408163265,239.15745980307156L480.29795918367347,239.15745980307156L481.2938775510204,239.15745980307156L482.2897959183673,239.15745980307156L483.2857142857143,239.15745980307156L484.2816326530612,238.90611324786926L485.27755102040817,260.20890232903804L486.2734693877551,260.20890232903804L487.269387755102,260.20890232903804L488.265306122449,260.20890232903804L489.2612244897959,260.20890232903804L490.2571428571428,260.20890232903804L491.2530612244898,260.20890232903804L492.2489795918367,257.75906499914805L493.2448979591837,255.77920200193088L494.2408163265306,255.77920200193088L495.2367346938775,255.77920200193088L496.2326530612245,253.73661544924633L497.2285714285714,253.73661544924633L498.2244897959184,253.85723767129898L499.2204081632653,253.85723767129898L500.2163265306122,253.85723767129898L501.2122448979592,253.03489567245484L502.2081632653061,253.03489567245484L503.204081632653,252.91427345040216L504.2,252.91427345040216L505.1959183673469,265.71138654352615L506.1918367346939,269.22722276080657L507.1877551020408,267.36210165231705L508.1836734693877,271.02901720271853L509.1795918367347,271.02901720271853L510.1755102040816,271.4487825354619L511.1714285714286,271.4487825354619L512.1673469387755,271.4487825354619L513.1632653061224,271.4487825354619L514.1591836734694,271.4487825354619L515.1551020408162,272.79160942246335L516.1510204081633,272.79160942246335L517.1469387755102,274.2993871981218L518.1428571428571,274.2993871981218L519.1387755102041,274.2993871981218L520.134693877551,277.7838616376686L521.130612244898,277.7838616376686L522.1265306122449,277.7838616376686L523.1224489795918,277.7838616376686L524.1183673469387,277.7838616376686L525.1142857142856,277.7838616376686L526.1102040816327,277.7838616376686L527.1061224489796,277.7838616376686L528.1020408163265,277.7838616376686L529.0979591836734,275.6841303072866L530.0938775510203,275.6841303072866L531.0897959183674,275.3905659743659L532.0857142857143,282.02478818726325L533.0816326530612,290.81588650824017L534.0775510204081,290.81588650824017L535.073469387755,290.81588650824017L536.0693877551021,290.81588650824017L537.0653061224489,290.81588650824017L538.0612244897959,290.81588650824017L539.0571428571428,290.81588650824017L540.0530612244897,290.81588650824017L541.0489795918368,290.81588650824017L542.0448979591836,291.3999996185303L543.0408163265306,291.3999996185303L544.0367346938775,291.3999996185303L545.0326530612244,291.3999996185303L546.0285714285715,291.3999996185303L547.0244897959183,291.3999996185303L548.0204081632653,291.3999996185303L549.0163265306122,291.3999996185303L550.0122448979591,291.3999996185303L551.0081632653062,291.3999996185303L552.004081632653,291.3999996185303L553,291.3999996185303"></path></g></g></svg><div class="recharts-legend-wrapper" style="position: absolute; width: 548px; height: auto; left: 5px; bottom: 5px;"><ul class="recharts-default-legend Legend"><li class="recharts-legend-item legend-item-0 Legend__item"><span class="Legend__itemBlock" style="background-color: rgb(135, 131, 216);"></span><span class="recharts-legend-item-text" style="color: rgb(135, 131, 216);">Credit Snapshot State Past Due Amount</span></li></ul></div><div class="recharts-tooltip-wrapper recharts-tooltip-wrapper-right recharts-tooltip-wrapper-bottom" style="pointer-events: none; visibility: hidden; position: absolute; top: 0px; left: 0px; transform: translate(75px, 10px);"><ul class="recharts-default-toolip" style="display: flex; flex-flow: column; justify-content: center; padding: 10px 20px; background-color: white;"></ul></div></div><div></div></div></div></div></div><div class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-lg-6"><div class="MuiPaper-root MuiCard-root MuiPaper-elevation1 MuiPaper-rounded"><div class="MuiCardContent-root"><p class="MuiTypography-root MuiTypography-body1 MuiTypography-colorTextSecondary MuiTypography-gutterBottom">Application Approval Rate</p><div id="undefined" class="recharts-responsive-container" style="width: 100%; height: 350px;"><div class="recharts-wrapper" style="position: relative; cursor: default; width: 558px; height: 350px;"><svg class="recharts-surface" width="558" height="350" viewBox="0 0 558 350" version="1.1"><defs><clipPath id="recharts5-clip"><rect x="65" y="5" height="286.3999996185303" width="488"></rect></clipPath></defs><g class="recharts-layer recharts-cartesian-axis recharts-xAxis xAxis"><line orientation="bottom" width="488" height="30" type="category" x="65" y="291.3999996185303" class="recharts-cartesian-axis-line" stroke="#666" fill="none" x1="65" y1="291.3999996185303" x2="553" y2="291.3999996185303"></line><g class="recharts-cartesian-axis-ticks"><g class="recharts-layer recharts-cartesian-axis-tick"><line orientation="bottom" width="488" height="30" type="category" x="65" y="291.3999996185303" class="recharts-cartesian-axis-tick-line" stroke="#666" fill="none" x1="65" y1="297.3999996185303" x2="65" y2="291.3999996185303"></line><text orientation="bottom" width="488" height="30" type="category" x="65" y="299.3999996185303" stroke="none" fill="#666" class="recharts-text recharts-cartesian-axis-tick-value" text-anchor="middle"><tspan x="65" dy="0.71em">17.08</tspan></text></g><g class="recharts-layer recharts-cartesian-axis-tick"><line orientation="bottom" width="488" height="30" type="category" x="65" y="291.3999996185303" class="recharts-cartesian-axis-tick-line" stroke="#666" fill="none" x1="112.2258064516129" y1="297.3999996185303" x2="112.2258064516129" y2="291.3999996185303"></line><text orientation="bottom" width="488" height="30" type="category" x="112.2258064516129" y="299.3999996185303" stroke="none" fill="#666" class="recharts-text recharts-cartesian-axis-tick-value" text-anchor="middle"><tspan x="112.2258064516129" dy="0.71em">07.09</tspan></text></g><g class="recharts-layer recharts-cartesian-axis-tick"><line orientation="bottom" width="488" height="30" type="category" x="65" y="291.3999996185303" class="recharts-cartesian-axis-tick-line" stroke="#666" fill="none" x1="159.4516129032258" y1="297.3999996185303" x2="159.4516129032258" y2="291.3999996185303"></line><text orientation="bottom" width="488" height="30" type="category" x="159.4516129032258" y="299.3999996185303" stroke="none" fill="#666" class="recharts-text recharts-cartesian-axis-tick-value" text-anchor="middle"><tspan x="159.4516129032258" dy="0.71em">28.09</tspan></text></g><g class="recharts-layer recharts-cartesian-axis-tick"><line orientation="bottom" width="488" height="30" type="category" x="65" y="291.3999996185303" class="recharts-cartesian-axis-tick-line" stroke="#666" fill="none" x1="206.67741935483872" y1="297.3999996185303" x2="206.67741935483872" y2="291.3999996185303"></line><text orientation="bottom" width="488" height="30" type="category" x="206.67741935483872" y="299.3999996185303" stroke="none" fill="#666" class="recharts-text recharts-cartesian-axis-tick-value" text-anchor="middle"><tspan x="206.67741935483872" dy="0.71em">19.10</tspan></text></g><g class="recharts-layer recharts-cartesian-axis-tick"><line orientation="bottom" width="488" height="30" type="category" x="65" y="291.3999996185303" class="recharts-cartesian-axis-tick-line" stroke="#666" fill="none" x1="253.90322580645162" y1="297.3999996185303" x2="253.90322580645162" y2="291.3999996185303"></line><text orientation="bottom" width="488" height="30" type="category" x="253.90322580645162" y="299.3999996185303" stroke="none" fill="#666" class="recharts-text recharts-cartesian-axis-tick-value" text-anchor="middle"><tspan x="253.90322580645162" dy="0.71em">09.11</tspan></text></g><g class="recharts-layer recharts-cartesian-axis-tick"><line orientation="bottom" width="488" height="30" type="category" x="65" y="291.3999996185303" class="recharts-cartesian-axis-tick-line" stroke="#666" fill="none" x1="301.1290322580645" y1="297.3999996185303" x2="301.1290322580645" y2="291.3999996185303"></line><text orientation="bottom" width="488" height="30" type="category" x="301.1290322580645" y="299.3999996185303" stroke="none" fill="#666" class="recharts-text recharts-cartesian-axis-tick-value" text-anchor="middle"><tspan x="301.1290322580645" dy="0.71em">30.11</tspan></text></g><g class="recharts-layer recharts-cartesian-axis-tick"><line orientation="bottom" width="488" height="30" type="category" x="65" y="291.3999996185303" class="recharts-cartesian-axis-tick-line" stroke="#666" fill="none" x1="348.35483870967744" y1="297.3999996185303" x2="348.35483870967744" y2="291.3999996185303"></line><text orientation="bottom" width="488" height="30" type="category" x="348.35483870967744" y="299.3999996185303" stroke="none" fill="#666" class="recharts-text recharts-cartesian-axis-tick-value" text-anchor="middle"><tspan x="348.35483870967744" dy="0.71em">21.12</tspan></text></g><g class="recharts-layer recharts-cartesian-axis-tick"><line orientation="bottom" width="488" height="30" type="category" x="65" y="291.3999996185303" class="recharts-cartesian-axis-tick-line" stroke="#666" fill="none" x1="395.5806451612903" y1="297.3999996185303" x2="395.5806451612903" y2="291.3999996185303"></line><text orientation="bottom" width="488" height="30" type="category" x="395.5806451612903" y="299.3999996185303" stroke="none" fill="#666" class="recharts-text recharts-cartesian-axis-tick-value" text-anchor="middle"><tspan x="395.5806451612903" dy="0.71em">11.01</tspan></text></g><g class="recharts-layer recharts-cartesian-axis-tick"><line orientation="bottom" width="488" height="30" type="category" x="65" y="291.3999996185303" class="recharts-cartesian-axis-tick-line" stroke="#666" fill="none" x1="442.80645161290323" y1="297.3999996185303" x2="442.80645161290323" y2="291.3999996185303"></line><text orientation="bottom" width="488" height="30" type="category" x="442.80645161290323" y="299.3999996185303" stroke="none" fill="#666" class="recharts-text recharts-cartesian-axis-tick-value" text-anchor="middle"><tspan x="442.80645161290323" dy="0.71em">01.02</tspan></text></g><g class="recharts-layer recharts-cartesian-axis-tick"><line orientation="bottom" width="488" height="30" type="category" x="65" y="291.3999996185303" class="recharts-cartesian-axis-tick-line" stroke="#666" fill="none" x1="490.03225806451616" y1="297.3999996185303" x2="490.03225806451616" y2="291.3999996185303"></line><text orientation="bottom" width="488" height="30" type="category" x="490.03225806451616" y="299.3999996185303" stroke="none" fill="#666" class="recharts-text recharts-cartesian-axis-tick-value" text-anchor="middle"><tspan x="490.03225806451616" dy="0.71em">22.02</tspan></text></g><g class="recharts-layer recharts-cartesian-axis-tick"><line orientation="bottom" width="488" height="30" type="category" x="65" y="291.3999996185303" class="recharts-cartesian-axis-tick-line" stroke="#666" fill="none" x1="553" y1="297.3999996185303" x2="553" y2="291.3999996185303"></line><text orientation="bottom" width="488" height="30" type="category" x="541.3999996185303" y="299.3999996185303" stroke="none" fill="#666" class="recharts-text recharts-cartesian-axis-tick-value" text-anchor="middle"><tspan x="541.3999996185303" dy="0.71em">22.03</tspan></text></g></g></g><g class="recharts-layer recharts-cartesian-axis recharts-yAxis yAxis"><line orientation="left" width="60" height="286.3999996185303" type="number" x="5" y="5" class="recharts-cartesian-axis-line" stroke="#666" fill="none" x1="65" y1="5" x2="65" y2="291.3999996185303"></line><g class="recharts-cartesian-axis-ticks"><g class="recharts-layer recharts-cartesian-axis-tick"><line orientation="left" width="60" height="286.3999996185303" type="number" x="5" y="5" class="recharts-cartesian-axis-tick-line" stroke="#666" fill="none" x1="59" y1="291.3999996185303" x2="65" y2="291.3999996185303"></line><text orientation="left" width="60" height="286.3999996185303" type="number" x="57" y="291.3999996185303" stroke="none" fill="#666" class="recharts-text recharts-cartesian-axis-tick-value" text-anchor="end"><tspan x="57" dy="0.355em">0</tspan></text></g><g class="recharts-layer recharts-cartesian-axis-tick"><line orientation="left" width="60" height="286.3999996185303" type="number" x="5" y="5" class="recharts-cartesian-axis-tick-line" stroke="#666" fill="none" x1="59" y1="223.5499997138977" x2="65" y2="223.5499997138977"></line><text orientation="left" width="60" height="286.3999996185303" type="number" x="57" y="223.5499997138977" stroke="none" fill="#666" class="recharts-text recharts-cartesian-axis-tick-value" text-anchor="end"><tspan x="57" dy="0.355em">25</tspan></text></g><g class="recharts-layer recharts-cartesian-axis-tick"><line orientation="left" width="60" height="286.3999996185303" type="number" x="5" y="5" class="recharts-cartesian-axis-tick-line" stroke="#666" fill="none" x1="59" y1="155.69999980926514" x2="65" y2="155.69999980926514"></line><text orientation="left" width="60" height="286.3999996185303" type="number" x="57" y="155.69999980926514" stroke="none" fill="#666" class="recharts-text recharts-cartesian-axis-tick-value" text-anchor="end"><tspan x="57" dy="0.355em">50</tspan></text></g><g class="recharts-layer recharts-cartesian-axis-tick"><line orientation="left" width="60" height="286.3999996185303" type="number" x="5" y="5" class="recharts-cartesian-axis-tick-line" stroke="#666" fill="none" x1="59" y1="87.84999990463257" x2="65" y2="87.84999990463257"></line><text orientation="left" width="60" height="286.3999996185303" type="number" x="57" y="87.84999990463257" stroke="none" fill="#666" class="recharts-text recharts-cartesian-axis-tick-value" text-anchor="end"><tspan x="57" dy="0.355em">75</tspan></text></g><g class="recharts-layer recharts-cartesian-axis-tick"><line orientation="left" width="60" height="286.3999996185303" type="number" x="5" y="5" class="recharts-cartesian-axis-tick-line" stroke="#666" fill="none" x1="59" y1="20" x2="65" y2="20"></line><text orientation="left" width="60" height="286.3999996185303" type="number" x="57" y="20" stroke="none" fill="#666" class="recharts-text recharts-cartesian-axis-tick-value" text-anchor="end"><tspan x="57" dy="0.355em">100</tspan></text></g></g></g><g class="recharts-layer recharts-area"><g class="recharts-layer"><path name="Application Approval Rate" fill="#8783d8" fill-opacity="0.6" points="[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object]" width="488" height="286.3999996185303" type="linear" stroke="none" class="recharts-curve recharts-area-area" d="M65,20L80.74193548387098,60.70999994277955L96.48387096774194,70.5999999288785L112.2258064516129,80.70789465151333L127.96774193548387,80.70789465151333L143.70967741935485,80.70789465151333L159.4516129032258,79.91948043525989L175.19354838709677,78.15714277539935L190.93548387096774,79.27126428450663L206.67741935483872,79.27126428450663L222.4193548387097,79.27126428450663L238.16129032258064,77.93932576125925L253.90322580645162,77.29555547502306L269.64516129032256,75.44731175002232L285.38709677419354,75.44731175002232L301.1290322580645,74.27999992370604L316.8709677419355,85.87378631517724L332.61290322580646,97.18715585481135L348.35483870967744,98.24144133146821L364.0967741935484,98.24144133146821L379.8387096774194,98.24144133146821L395.5806451612903,98.24144133146821L411.3225806451613,97.5428570338658L427.06451612903226,97.5428570338658L442.80645161290323,97.5428570338658L458.5483870967742,101.18803407391934L474.2903225806452,98.79354827634748L490.03225806451616,113.52297284152058L505.7741935483871,107.00382762890683L521.516129032258,105.16736389702828L537.258064516129,104.18938763676856L553,108.83956822045414L553,291.3999996185303L537.258064516129,291.3999996185303L521.516129032258,291.3999996185303L505.7741935483871,291.3999996185303L490.03225806451616,291.3999996185303L474.2903225806452,291.3999996185303L458.5483870967742,291.3999996185303L442.80645161290323,291.3999996185303L427.06451612903226,291.3999996185303L411.3225806451613,291.3999996185303L395.5806451612903,291.3999996185303L379.8387096774194,291.3999996185303L364.0967741935484,291.3999996185303L348.35483870967744,291.3999996185303L332.61290322580646,291.3999996185303L316.8709677419355,291.3999996185303L301.1290322580645,291.3999996185303L285.38709677419354,291.3999996185303L269.64516129032256,291.3999996185303L253.90322580645162,291.3999996185303L238.16129032258064,291.3999996185303L222.4193548387097,291.3999996185303L206.67741935483872,291.3999996185303L190.93548387096774,291.3999996185303L175.19354838709677,291.3999996185303L159.4516129032258,291.3999996185303L143.70967741935485,291.3999996185303L127.96774193548387,291.3999996185303L112.2258064516129,291.3999996185303L96.48387096774194,291.3999996185303L80.74193548387098,291.3999996185303L65,291.3999996185303Z"></path><path name="Application Approval Rate" stroke="#8783d8" fill="none" fill-opacity="0.6" points="[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object]" width="488" height="286.3999996185303" class="recharts-curve recharts-area-curve" type="linear" d="M65,20L80.74193548387098,60.70999994277955L96.48387096774194,70.5999999288785L112.2258064516129,80.70789465151333L127.96774193548387,80.70789465151333L143.70967741935485,80.70789465151333L159.4516129032258,79.91948043525989L175.19354838709677,78.15714277539935L190.93548387096774,79.27126428450663L206.67741935483872,79.27126428450663L222.4193548387097,79.27126428450663L238.16129032258064,77.93932576125925L253.90322580645162,77.29555547502306L269.64516129032256,75.44731175002232L285.38709677419354,75.44731175002232L301.1290322580645,74.27999992370604L316.8709677419355,85.87378631517724L332.61290322580646,97.18715585481135L348.35483870967744,98.24144133146821L364.0967741935484,98.24144133146821L379.8387096774194,98.24144133146821L395.5806451612903,98.24144133146821L411.3225806451613,97.5428570338658L427.06451612903226,97.5428570338658L442.80645161290323,97.5428570338658L458.5483870967742,101.18803407391934L474.2903225806452,98.79354827634748L490.03225806451616,113.52297284152058L505.7741935483871,107.00382762890683L521.516129032258,105.16736389702828L537.258064516129,104.18938763676856L553,108.83956822045414"></path></g></g></svg><div class="recharts-legend-wrapper" style="position: absolute; width: 548px; height: auto; left: 5px; bottom: 5px;"><ul class="recharts-default-legend Legend"><li class="recharts-legend-item legend-item-0 Legend__item"><span class="Legend__itemBlock" style="background-color: rgb(135, 131, 216);"></span><span class="recharts-legend-item-text" style="color: rgb(135, 131, 216);">Application Approval Rate</span></li></ul></div><div class="recharts-tooltip-wrapper recharts-tooltip-wrapper-right recharts-tooltip-wrapper-bottom" style="pointer-events: none; visibility: hidden; position: absolute; top: 0px; left: 0px; transform: translate(75px, 10px);"><ul class="recharts-default-toolip" style="display: flex; flex-flow: column; justify-content: center; padding: 10px 20px; background-color: white;"></ul></div></div><div></div></div></div></div></div></div></div></div></div>
+
+    
+    <script defer="">
+        function onLoadCubeJs(){}
+        function onLoadCubeJsError(){}
+        const apiUrl = null;
+        const TOKEN = null;
+
+        function renderCubeJs({id, view, indexes}) {
+            cubejs.render({apiUrl: apiUrl, TOKEN, view, indexes}, id)
+        }
+    </script>
+    
+
+    <script defer="">
+        function onLoadCubeJs() {
+            renderCubeJs({id: 'cubeJsContainer', indexes: [1, 8, 2, 3]});
+        }
+
+        if (typeof cubejs !== 'undefined') {
+            onLoadCubeJs();
+        }
+        if (typeof (window.pumpkin || {}).dashboardInit !== 'undefined') {
+            window.pumpkin.dashboardInit();
+        }
+    </script>
+
+    
+
+        </div>
+    </div>
+    
+</div>
+
+<div class="rui-toast-container"></div>
+
+
+<div id="campaign-control-panel" style="position: fixed; bottom: 0; z-index: 999999; width: 100%; height: 60px; background-color: #89ff90; display: none; padding-top: 10px; box-shadow: 0 1px 1px -1px rgba(0, 0, 0, 0.34), 0 0 6px 0 rgba(0, 0, 0, 0.14)" data-context="/">
+    <table class="w-100">
+        <tbody><tr>
+            <td class="pull-left pl-10">
+                <button class="btn btn-primary task-action task-action-pause" style="height: 40px" data-action="/campaign/task/pause">
+                    <span class="glyphicon glyphicon-pause"></span> pause
+                </button>
+                <button class="btn btn-primary task-action task-action-start" style="height: 40px" data-action="/campaign/task/start">
+                    <span class="glyphicon glyphicon-play"></span> start
+                </button>
+                <button class="btn btn-primary task-action" style="height: 40px" data-action="/campaign/task/stop">
+                    <span class="glyphicon glyphicon-remove-circle"></span> quit
+                </button>
+            </td>
+            <td style="text-align: center" class="campaign-name"></td>
+            <td style="text-align: center" class="total-progress"></td>
+            <td style="text-align: center" class="campaign-timer timer"></td>
+            <td style="text-align: center; font-size: 15px" class="task-name"></td>
+            <td style="text-align: center; font-size: 15px">on task (
+                <timer class="task-timer timer"></timer>
+                )
+            </td>
+            <td style="text-align: center; font-size: 15px" class="task-status"></td>
+            <td style="padding-right: 10px;" class="pull-right">
+                <button id="completeTask" class="btn btn-primary task-action" style="height: 40px" data-action="/campaign/task/complete">
+                    <span class="glyphicon glyphicon-ok-sign"></span> complete &amp; next
+                </button>
+                <div class="btn-group dropup">
+                    <button style="height: 40px" data-action="/campaign/task/startNext" class="btn btn-primary dropdown-toggle task-action" type="button">
+                        <span class="glyphicon glyphicon-forward" id="startNextTask"></span> skip
+                    </button>
+                </div>
+            </td>
+        </tr>
+    </tbody></table>
+    <div class="overlay-element campaign-overlay"></div>
+
+    <script>
+        const $controlPanel = $('#campaign-control-panel');
+
+        $controlPanel.find('.task-action').click(function () {
+            const taskId = $controlPanel.data('task-id');
+            const url = $(this).data('action');
+            $controlPanel.find('.campaign-overlay').show();
+            $.ajax({
+                data: {taskId: taskId},
+                type: 'POST',
+                url: url,
+                success: handleCampaignAction
+            });
+        });
+    </script>
+</div>
+
+
+
+    <script defer="" src="/assets/static/js/vendor.js"></script>
+    <script defer="" src="/assets/static/js/index.js"></script>
+    <script src="/assets/js/bundle.js" defer=""></script><script src="/assets/static/js/dashboard.js" defer=""></script><script defer="" src="/assets/static/js/rootui.js"></script>
+
+
+
+
+<span id="recharts_measurement_span" style="position: absolute; top: -20000px; left: 0px; padding: 0px; margin: 0px; border: none; white-space: pre;">4500</span></body></html>

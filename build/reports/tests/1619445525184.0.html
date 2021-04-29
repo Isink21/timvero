@@ -1,0 +1,1628 @@
+<html xmlns="http://www.w3.org/1999/xhtml" class="is-desktop" data-theme="day"><head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Dashboard | Mark43 Admin</title>
+    <link rel="shortcut icon" href="/assets/img/favicon.png">
+    
+    <script>/*<![CDATA[*/
+    var homeContext = "/";
+    var sentryKey = "https://44c5dad388d14358819207c685f954c0@sentry.io/3831417";
+    /*]]>*/</script>
+    <script src="/assets/static/vendor/jquery/dist/jquery.min.js"></script>
+
+    
+    <link rel="stylesheet" href="/assets/static/css/fonts.css">
+    <link rel="stylesheet" href="/assets/static/css/vendor.css">
+    <link rel="stylesheet" href="/assets/static/css/rootui.css">
+    <link rel="stylesheet" href="/assets/static/css/rootui-night.css" media="(night)" class="rui-nightmode-link">
+
+<style>.MuiPaper-elevation1{box-shadow:none !important}.Legend{padding:0;margin:0;text-align:center}.Legend__item{display:inline-flex;margin-right:18px;align-items:center}.Legend__itemBlock{display:inline-block;width:8px;height:8px;margin:0 4px 0 0}
+</style><style data-jss="" data-meta="MuiGrid">
+.MuiGrid-container {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+}
+.MuiGrid-item {
+  margin: 0;
+  box-sizing: border-box;
+}
+.MuiGrid-zeroMinWidth {
+  min-width: 0;
+}
+.MuiGrid-direction-xs-column {
+  flex-direction: column;
+}
+.MuiGrid-direction-xs-column-reverse {
+  flex-direction: column-reverse;
+}
+.MuiGrid-direction-xs-row-reverse {
+  flex-direction: row-reverse;
+}
+.MuiGrid-wrap-xs-nowrap {
+  flex-wrap: nowrap;
+}
+.MuiGrid-wrap-xs-wrap-reverse {
+  flex-wrap: wrap-reverse;
+}
+.MuiGrid-align-items-xs-center {
+  align-items: center;
+}
+.MuiGrid-align-items-xs-flex-start {
+  align-items: flex-start;
+}
+.MuiGrid-align-items-xs-flex-end {
+  align-items: flex-end;
+}
+.MuiGrid-align-items-xs-baseline {
+  align-items: baseline;
+}
+.MuiGrid-align-content-xs-center {
+  align-content: center;
+}
+.MuiGrid-align-content-xs-flex-start {
+  align-content: flex-start;
+}
+.MuiGrid-align-content-xs-flex-end {
+  align-content: flex-end;
+}
+.MuiGrid-align-content-xs-space-between {
+  align-content: space-between;
+}
+.MuiGrid-align-content-xs-space-around {
+  align-content: space-around;
+}
+.MuiGrid-justify-xs-center {
+  justify-content: center;
+}
+.MuiGrid-justify-xs-flex-end {
+  justify-content: flex-end;
+}
+.MuiGrid-justify-xs-space-between {
+  justify-content: space-between;
+}
+.MuiGrid-justify-xs-space-around {
+  justify-content: space-around;
+}
+.MuiGrid-justify-xs-space-evenly {
+  justify-content: space-evenly;
+}
+.MuiGrid-spacing-xs-1 {
+  width: calc(100% + 8px);
+  margin: -4px;
+}
+.MuiGrid-spacing-xs-1 > .MuiGrid-item {
+  padding: 4px;
+}
+.MuiGrid-spacing-xs-2 {
+  width: calc(100% + 16px);
+  margin: -8px;
+}
+.MuiGrid-spacing-xs-2 > .MuiGrid-item {
+  padding: 8px;
+}
+.MuiGrid-spacing-xs-3 {
+  width: calc(100% + 24px);
+  margin: -12px;
+}
+.MuiGrid-spacing-xs-3 > .MuiGrid-item {
+  padding: 12px;
+}
+.MuiGrid-spacing-xs-4 {
+  width: calc(100% + 32px);
+  margin: -16px;
+}
+.MuiGrid-spacing-xs-4 > .MuiGrid-item {
+  padding: 16px;
+}
+.MuiGrid-spacing-xs-5 {
+  width: calc(100% + 40px);
+  margin: -20px;
+}
+.MuiGrid-spacing-xs-5 > .MuiGrid-item {
+  padding: 20px;
+}
+.MuiGrid-spacing-xs-6 {
+  width: calc(100% + 48px);
+  margin: -24px;
+}
+.MuiGrid-spacing-xs-6 > .MuiGrid-item {
+  padding: 24px;
+}
+.MuiGrid-spacing-xs-7 {
+  width: calc(100% + 56px);
+  margin: -28px;
+}
+.MuiGrid-spacing-xs-7 > .MuiGrid-item {
+  padding: 28px;
+}
+.MuiGrid-spacing-xs-8 {
+  width: calc(100% + 64px);
+  margin: -32px;
+}
+.MuiGrid-spacing-xs-8 > .MuiGrid-item {
+  padding: 32px;
+}
+.MuiGrid-spacing-xs-9 {
+  width: calc(100% + 72px);
+  margin: -36px;
+}
+.MuiGrid-spacing-xs-9 > .MuiGrid-item {
+  padding: 36px;
+}
+.MuiGrid-spacing-xs-10 {
+  width: calc(100% + 80px);
+  margin: -40px;
+}
+.MuiGrid-spacing-xs-10 > .MuiGrid-item {
+  padding: 40px;
+}
+.MuiGrid-grid-xs-auto {
+  flex-grow: 0;
+  max-width: none;
+  flex-basis: auto;
+}
+.MuiGrid-grid-xs-true {
+  flex-grow: 1;
+  max-width: 100%;
+  flex-basis: 0;
+}
+.MuiGrid-grid-xs-1 {
+  flex-grow: 0;
+  max-width: 8.333333%;
+  flex-basis: 8.333333%;
+}
+.MuiGrid-grid-xs-2 {
+  flex-grow: 0;
+  max-width: 16.666667%;
+  flex-basis: 16.666667%;
+}
+.MuiGrid-grid-xs-3 {
+  flex-grow: 0;
+  max-width: 25%;
+  flex-basis: 25%;
+}
+.MuiGrid-grid-xs-4 {
+  flex-grow: 0;
+  max-width: 33.333333%;
+  flex-basis: 33.333333%;
+}
+.MuiGrid-grid-xs-5 {
+  flex-grow: 0;
+  max-width: 41.666667%;
+  flex-basis: 41.666667%;
+}
+.MuiGrid-grid-xs-6 {
+  flex-grow: 0;
+  max-width: 50%;
+  flex-basis: 50%;
+}
+.MuiGrid-grid-xs-7 {
+  flex-grow: 0;
+  max-width: 58.333333%;
+  flex-basis: 58.333333%;
+}
+.MuiGrid-grid-xs-8 {
+  flex-grow: 0;
+  max-width: 66.666667%;
+  flex-basis: 66.666667%;
+}
+.MuiGrid-grid-xs-9 {
+  flex-grow: 0;
+  max-width: 75%;
+  flex-basis: 75%;
+}
+.MuiGrid-grid-xs-10 {
+  flex-grow: 0;
+  max-width: 83.333333%;
+  flex-basis: 83.333333%;
+}
+.MuiGrid-grid-xs-11 {
+  flex-grow: 0;
+  max-width: 91.666667%;
+  flex-basis: 91.666667%;
+}
+.MuiGrid-grid-xs-12 {
+  flex-grow: 0;
+  max-width: 100%;
+  flex-basis: 100%;
+}
+@media (min-width:600px) {
+  .MuiGrid-grid-sm-auto {
+    flex-grow: 0;
+    max-width: none;
+    flex-basis: auto;
+  }
+  .MuiGrid-grid-sm-true {
+    flex-grow: 1;
+    max-width: 100%;
+    flex-basis: 0;
+  }
+  .MuiGrid-grid-sm-1 {
+    flex-grow: 0;
+    max-width: 8.333333%;
+    flex-basis: 8.333333%;
+  }
+  .MuiGrid-grid-sm-2 {
+    flex-grow: 0;
+    max-width: 16.666667%;
+    flex-basis: 16.666667%;
+  }
+  .MuiGrid-grid-sm-3 {
+    flex-grow: 0;
+    max-width: 25%;
+    flex-basis: 25%;
+  }
+  .MuiGrid-grid-sm-4 {
+    flex-grow: 0;
+    max-width: 33.333333%;
+    flex-basis: 33.333333%;
+  }
+  .MuiGrid-grid-sm-5 {
+    flex-grow: 0;
+    max-width: 41.666667%;
+    flex-basis: 41.666667%;
+  }
+  .MuiGrid-grid-sm-6 {
+    flex-grow: 0;
+    max-width: 50%;
+    flex-basis: 50%;
+  }
+  .MuiGrid-grid-sm-7 {
+    flex-grow: 0;
+    max-width: 58.333333%;
+    flex-basis: 58.333333%;
+  }
+  .MuiGrid-grid-sm-8 {
+    flex-grow: 0;
+    max-width: 66.666667%;
+    flex-basis: 66.666667%;
+  }
+  .MuiGrid-grid-sm-9 {
+    flex-grow: 0;
+    max-width: 75%;
+    flex-basis: 75%;
+  }
+  .MuiGrid-grid-sm-10 {
+    flex-grow: 0;
+    max-width: 83.333333%;
+    flex-basis: 83.333333%;
+  }
+  .MuiGrid-grid-sm-11 {
+    flex-grow: 0;
+    max-width: 91.666667%;
+    flex-basis: 91.666667%;
+  }
+  .MuiGrid-grid-sm-12 {
+    flex-grow: 0;
+    max-width: 100%;
+    flex-basis: 100%;
+  }
+}
+@media (min-width:960px) {
+  .MuiGrid-grid-md-auto {
+    flex-grow: 0;
+    max-width: none;
+    flex-basis: auto;
+  }
+  .MuiGrid-grid-md-true {
+    flex-grow: 1;
+    max-width: 100%;
+    flex-basis: 0;
+  }
+  .MuiGrid-grid-md-1 {
+    flex-grow: 0;
+    max-width: 8.333333%;
+    flex-basis: 8.333333%;
+  }
+  .MuiGrid-grid-md-2 {
+    flex-grow: 0;
+    max-width: 16.666667%;
+    flex-basis: 16.666667%;
+  }
+  .MuiGrid-grid-md-3 {
+    flex-grow: 0;
+    max-width: 25%;
+    flex-basis: 25%;
+  }
+  .MuiGrid-grid-md-4 {
+    flex-grow: 0;
+    max-width: 33.333333%;
+    flex-basis: 33.333333%;
+  }
+  .MuiGrid-grid-md-5 {
+    flex-grow: 0;
+    max-width: 41.666667%;
+    flex-basis: 41.666667%;
+  }
+  .MuiGrid-grid-md-6 {
+    flex-grow: 0;
+    max-width: 50%;
+    flex-basis: 50%;
+  }
+  .MuiGrid-grid-md-7 {
+    flex-grow: 0;
+    max-width: 58.333333%;
+    flex-basis: 58.333333%;
+  }
+  .MuiGrid-grid-md-8 {
+    flex-grow: 0;
+    max-width: 66.666667%;
+    flex-basis: 66.666667%;
+  }
+  .MuiGrid-grid-md-9 {
+    flex-grow: 0;
+    max-width: 75%;
+    flex-basis: 75%;
+  }
+  .MuiGrid-grid-md-10 {
+    flex-grow: 0;
+    max-width: 83.333333%;
+    flex-basis: 83.333333%;
+  }
+  .MuiGrid-grid-md-11 {
+    flex-grow: 0;
+    max-width: 91.666667%;
+    flex-basis: 91.666667%;
+  }
+  .MuiGrid-grid-md-12 {
+    flex-grow: 0;
+    max-width: 100%;
+    flex-basis: 100%;
+  }
+}
+@media (min-width:1280px) {
+  .MuiGrid-grid-lg-auto {
+    flex-grow: 0;
+    max-width: none;
+    flex-basis: auto;
+  }
+  .MuiGrid-grid-lg-true {
+    flex-grow: 1;
+    max-width: 100%;
+    flex-basis: 0;
+  }
+  .MuiGrid-grid-lg-1 {
+    flex-grow: 0;
+    max-width: 8.333333%;
+    flex-basis: 8.333333%;
+  }
+  .MuiGrid-grid-lg-2 {
+    flex-grow: 0;
+    max-width: 16.666667%;
+    flex-basis: 16.666667%;
+  }
+  .MuiGrid-grid-lg-3 {
+    flex-grow: 0;
+    max-width: 25%;
+    flex-basis: 25%;
+  }
+  .MuiGrid-grid-lg-4 {
+    flex-grow: 0;
+    max-width: 33.333333%;
+    flex-basis: 33.333333%;
+  }
+  .MuiGrid-grid-lg-5 {
+    flex-grow: 0;
+    max-width: 41.666667%;
+    flex-basis: 41.666667%;
+  }
+  .MuiGrid-grid-lg-6 {
+    flex-grow: 0;
+    max-width: 50%;
+    flex-basis: 50%;
+  }
+  .MuiGrid-grid-lg-7 {
+    flex-grow: 0;
+    max-width: 58.333333%;
+    flex-basis: 58.333333%;
+  }
+  .MuiGrid-grid-lg-8 {
+    flex-grow: 0;
+    max-width: 66.666667%;
+    flex-basis: 66.666667%;
+  }
+  .MuiGrid-grid-lg-9 {
+    flex-grow: 0;
+    max-width: 75%;
+    flex-basis: 75%;
+  }
+  .MuiGrid-grid-lg-10 {
+    flex-grow: 0;
+    max-width: 83.333333%;
+    flex-basis: 83.333333%;
+  }
+  .MuiGrid-grid-lg-11 {
+    flex-grow: 0;
+    max-width: 91.666667%;
+    flex-basis: 91.666667%;
+  }
+  .MuiGrid-grid-lg-12 {
+    flex-grow: 0;
+    max-width: 100%;
+    flex-basis: 100%;
+  }
+}
+@media (min-width:1920px) {
+  .MuiGrid-grid-xl-auto {
+    flex-grow: 0;
+    max-width: none;
+    flex-basis: auto;
+  }
+  .MuiGrid-grid-xl-true {
+    flex-grow: 1;
+    max-width: 100%;
+    flex-basis: 0;
+  }
+  .MuiGrid-grid-xl-1 {
+    flex-grow: 0;
+    max-width: 8.333333%;
+    flex-basis: 8.333333%;
+  }
+  .MuiGrid-grid-xl-2 {
+    flex-grow: 0;
+    max-width: 16.666667%;
+    flex-basis: 16.666667%;
+  }
+  .MuiGrid-grid-xl-3 {
+    flex-grow: 0;
+    max-width: 25%;
+    flex-basis: 25%;
+  }
+  .MuiGrid-grid-xl-4 {
+    flex-grow: 0;
+    max-width: 33.333333%;
+    flex-basis: 33.333333%;
+  }
+  .MuiGrid-grid-xl-5 {
+    flex-grow: 0;
+    max-width: 41.666667%;
+    flex-basis: 41.666667%;
+  }
+  .MuiGrid-grid-xl-6 {
+    flex-grow: 0;
+    max-width: 50%;
+    flex-basis: 50%;
+  }
+  .MuiGrid-grid-xl-7 {
+    flex-grow: 0;
+    max-width: 58.333333%;
+    flex-basis: 58.333333%;
+  }
+  .MuiGrid-grid-xl-8 {
+    flex-grow: 0;
+    max-width: 66.666667%;
+    flex-basis: 66.666667%;
+  }
+  .MuiGrid-grid-xl-9 {
+    flex-grow: 0;
+    max-width: 75%;
+    flex-basis: 75%;
+  }
+  .MuiGrid-grid-xl-10 {
+    flex-grow: 0;
+    max-width: 83.333333%;
+    flex-basis: 83.333333%;
+  }
+  .MuiGrid-grid-xl-11 {
+    flex-grow: 0;
+    max-width: 91.666667%;
+    flex-basis: 91.666667%;
+  }
+  .MuiGrid-grid-xl-12 {
+    flex-grow: 0;
+    max-width: 100%;
+    flex-basis: 100%;
+  }
+}
+</style><style data-jss="" data-meta="MuiTypography">
+.MuiTypography-root {
+  margin: 0;
+}
+.MuiTypography-body2 {
+  font-size: 0.875rem;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-weight: 400;
+  line-height: 1.43;
+  letter-spacing: 0.01071em;
+}
+.MuiTypography-body1 {
+  font-size: 1rem;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-weight: 400;
+  line-height: 1.5;
+  letter-spacing: 0.00938em;
+}
+.MuiTypography-caption {
+  font-size: 0.75rem;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-weight: 400;
+  line-height: 1.66;
+  letter-spacing: 0.03333em;
+}
+.MuiTypography-button {
+  font-size: 0.875rem;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-weight: 500;
+  line-height: 1.75;
+  letter-spacing: 0.02857em;
+  text-transform: uppercase;
+}
+.MuiTypography-h1 {
+  font-size: 6rem;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-weight: 300;
+  line-height: 1.167;
+  letter-spacing: -0.01562em;
+}
+.MuiTypography-h2 {
+  font-size: 3.75rem;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-weight: 300;
+  line-height: 1.2;
+  letter-spacing: -0.00833em;
+}
+.MuiTypography-h3 {
+  font-size: 3rem;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-weight: 400;
+  line-height: 1.167;
+  letter-spacing: 0em;
+}
+.MuiTypography-h4 {
+  font-size: 2.125rem;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-weight: 400;
+  line-height: 1.235;
+  letter-spacing: 0.00735em;
+}
+.MuiTypography-h5 {
+  font-size: 1.5rem;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-weight: 400;
+  line-height: 1.334;
+  letter-spacing: 0em;
+}
+.MuiTypography-h6 {
+  font-size: 1.25rem;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-weight: 500;
+  line-height: 1.6;
+  letter-spacing: 0.0075em;
+}
+.MuiTypography-subtitle1 {
+  font-size: 1rem;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-weight: 400;
+  line-height: 1.75;
+  letter-spacing: 0.00938em;
+}
+.MuiTypography-subtitle2 {
+  font-size: 0.875rem;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-weight: 500;
+  line-height: 1.57;
+  letter-spacing: 0.00714em;
+}
+.MuiTypography-overline {
+  font-size: 0.75rem;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-weight: 400;
+  line-height: 2.66;
+  letter-spacing: 0.08333em;
+  text-transform: uppercase;
+}
+.MuiTypography-srOnly {
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+}
+.MuiTypography-alignLeft {
+  text-align: left;
+}
+.MuiTypography-alignCenter {
+  text-align: center;
+}
+.MuiTypography-alignRight {
+  text-align: right;
+}
+.MuiTypography-alignJustify {
+  text-align: justify;
+}
+.MuiTypography-noWrap {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.MuiTypography-gutterBottom {
+  margin-bottom: 0.35em;
+}
+.MuiTypography-paragraph {
+  margin-bottom: 16px;
+}
+.MuiTypography-colorInherit {
+  color: inherit;
+}
+.MuiTypography-colorPrimary {
+  color: #3f51b5;
+}
+.MuiTypography-colorSecondary {
+  color: #f50057;
+}
+.MuiTypography-colorTextPrimary {
+  color: rgba(0, 0, 0, 0.87);
+}
+.MuiTypography-colorTextSecondary {
+  color: rgba(0, 0, 0, 0.54);
+}
+.MuiTypography-colorError {
+  color: #f44336;
+}
+.MuiTypography-displayInline {
+  display: inline;
+}
+.MuiTypography-displayBlock {
+  display: block;
+}
+</style><style data-jss="" data-meta="MuiPaper">
+.MuiPaper-root {
+  color: rgba(0, 0, 0, 0.87);
+  transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  background-color: #fff;
+}
+.MuiPaper-rounded {
+  border-radius: 4px;
+}
+.MuiPaper-outlined {
+  border: 1px solid rgba(0, 0, 0, 0.12);
+}
+.MuiPaper-elevation0 {
+  box-shadow: none;
+}
+.MuiPaper-elevation1 {
+  box-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);
+}
+.MuiPaper-elevation2 {
+  box-shadow: 0px 3px 1px -2px rgba(0,0,0,0.2),0px 2px 2px 0px rgba(0,0,0,0.14),0px 1px 5px 0px rgba(0,0,0,0.12);
+}
+.MuiPaper-elevation3 {
+  box-shadow: 0px 3px 3px -2px rgba(0,0,0,0.2),0px 3px 4px 0px rgba(0,0,0,0.14),0px 1px 8px 0px rgba(0,0,0,0.12);
+}
+.MuiPaper-elevation4 {
+  box-shadow: 0px 2px 4px -1px rgba(0,0,0,0.2),0px 4px 5px 0px rgba(0,0,0,0.14),0px 1px 10px 0px rgba(0,0,0,0.12);
+}
+.MuiPaper-elevation5 {
+  box-shadow: 0px 3px 5px -1px rgba(0,0,0,0.2),0px 5px 8px 0px rgba(0,0,0,0.14),0px 1px 14px 0px rgba(0,0,0,0.12);
+}
+.MuiPaper-elevation6 {
+  box-shadow: 0px 3px 5px -1px rgba(0,0,0,0.2),0px 6px 10px 0px rgba(0,0,0,0.14),0px 1px 18px 0px rgba(0,0,0,0.12);
+}
+.MuiPaper-elevation7 {
+  box-shadow: 0px 4px 5px -2px rgba(0,0,0,0.2),0px 7px 10px 1px rgba(0,0,0,0.14),0px 2px 16px 1px rgba(0,0,0,0.12);
+}
+.MuiPaper-elevation8 {
+  box-shadow: 0px 5px 5px -3px rgba(0,0,0,0.2),0px 8px 10px 1px rgba(0,0,0,0.14),0px 3px 14px 2px rgba(0,0,0,0.12);
+}
+.MuiPaper-elevation9 {
+  box-shadow: 0px 5px 6px -3px rgba(0,0,0,0.2),0px 9px 12px 1px rgba(0,0,0,0.14),0px 3px 16px 2px rgba(0,0,0,0.12);
+}
+.MuiPaper-elevation10 {
+  box-shadow: 0px 6px 6px -3px rgba(0,0,0,0.2),0px 10px 14px 1px rgba(0,0,0,0.14),0px 4px 18px 3px rgba(0,0,0,0.12);
+}
+.MuiPaper-elevation11 {
+  box-shadow: 0px 6px 7px -4px rgba(0,0,0,0.2),0px 11px 15px 1px rgba(0,0,0,0.14),0px 4px 20px 3px rgba(0,0,0,0.12);
+}
+.MuiPaper-elevation12 {
+  box-shadow: 0px 7px 8px -4px rgba(0,0,0,0.2),0px 12px 17px 2px rgba(0,0,0,0.14),0px 5px 22px 4px rgba(0,0,0,0.12);
+}
+.MuiPaper-elevation13 {
+  box-shadow: 0px 7px 8px -4px rgba(0,0,0,0.2),0px 13px 19px 2px rgba(0,0,0,0.14),0px 5px 24px 4px rgba(0,0,0,0.12);
+}
+.MuiPaper-elevation14 {
+  box-shadow: 0px 7px 9px -4px rgba(0,0,0,0.2),0px 14px 21px 2px rgba(0,0,0,0.14),0px 5px 26px 4px rgba(0,0,0,0.12);
+}
+.MuiPaper-elevation15 {
+  box-shadow: 0px 8px 9px -5px rgba(0,0,0,0.2),0px 15px 22px 2px rgba(0,0,0,0.14),0px 6px 28px 5px rgba(0,0,0,0.12);
+}
+.MuiPaper-elevation16 {
+  box-shadow: 0px 8px 10px -5px rgba(0,0,0,0.2),0px 16px 24px 2px rgba(0,0,0,0.14),0px 6px 30px 5px rgba(0,0,0,0.12);
+}
+.MuiPaper-elevation17 {
+  box-shadow: 0px 8px 11px -5px rgba(0,0,0,0.2),0px 17px 26px 2px rgba(0,0,0,0.14),0px 6px 32px 5px rgba(0,0,0,0.12);
+}
+.MuiPaper-elevation18 {
+  box-shadow: 0px 9px 11px -5px rgba(0,0,0,0.2),0px 18px 28px 2px rgba(0,0,0,0.14),0px 7px 34px 6px rgba(0,0,0,0.12);
+}
+.MuiPaper-elevation19 {
+  box-shadow: 0px 9px 12px -6px rgba(0,0,0,0.2),0px 19px 29px 2px rgba(0,0,0,0.14),0px 7px 36px 6px rgba(0,0,0,0.12);
+}
+.MuiPaper-elevation20 {
+  box-shadow: 0px 10px 13px -6px rgba(0,0,0,0.2),0px 20px 31px 3px rgba(0,0,0,0.14),0px 8px 38px 7px rgba(0,0,0,0.12);
+}
+.MuiPaper-elevation21 {
+  box-shadow: 0px 10px 13px -6px rgba(0,0,0,0.2),0px 21px 33px 3px rgba(0,0,0,0.14),0px 8px 40px 7px rgba(0,0,0,0.12);
+}
+.MuiPaper-elevation22 {
+  box-shadow: 0px 10px 14px -6px rgba(0,0,0,0.2),0px 22px 35px 3px rgba(0,0,0,0.14),0px 8px 42px 7px rgba(0,0,0,0.12);
+}
+.MuiPaper-elevation23 {
+  box-shadow: 0px 11px 14px -7px rgba(0,0,0,0.2),0px 23px 36px 3px rgba(0,0,0,0.14),0px 9px 44px 8px rgba(0,0,0,0.12);
+}
+.MuiPaper-elevation24 {
+  box-shadow: 0px 11px 15px -7px rgba(0,0,0,0.2),0px 24px 38px 3px rgba(0,0,0,0.14),0px 9px 46px 8px rgba(0,0,0,0.12);
+}
+</style><style data-jss="" data-meta="MuiCard">
+.MuiCard-root {
+  overflow: hidden;
+}
+</style><style data-jss="" data-meta="MuiCardContent">
+.MuiCardContent-root {
+  padding: 16px;
+}
+.MuiCardContent-root:last-child {
+  padding-bottom: 24px;
+}
+</style><style data-jss="" data-meta="makeStyles">
+.jss1 {
+  flex-grow: 1;
+}
+</style></head>
+<body data-application-name="Mark43 Admin" data-spy="scroll" data-target=".rui-page-sidebar" data-offset="140" class="rui-navbar-autohide rui-section-lines yay-hide rui-navbar-show">
+
+<noscript class="text-danger d-flex justify-content-center">
+    You need to enable JavaScript to run this app.
+</noscript>
+<div class="rui-page-preloader" role="status">
+    <div class="rui-page-preloader-inner">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+</div>
+
+
+
+
+    <nav class="rui-navbar rui-navbar-top rui-navbar-sticky align-items-center">
+        <h2 class="pageName">Dashboard</h2>
+
+        <div class="rui-navbar-content justify-content-end">
+            <div class="nav search-form justify-content-end col-4 mr-10">
+                
+
+
+    <div class="input-group search mr-15 align-items-center">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-search rui-icon rui-icon-stroke-1_5"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        <input type="search" class="form-control form-control-clean search-ready" placeholder="Type to search..." data-toggle="input" autocomplete="off" name="search">
+        <button type="button" class="btn btn-outline-secondary handleSearch handleSearch-ready">
+            Search
+        </button>
+    </div>
+
+
+
+            </div>
+            <ul class="nav rui-navbar-right">
+                <li>
+                    <a href="/dashboard">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-bell rui-icon rui-icon-stroke-1_5"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path><path d="M13.73 21a2 2 0 0 1-3.46 0"></path></svg>
+                        <span class="badge badge-danger menu-counter">
+                            <span data-name="menuCounter">184</span>
+                        </span>
+                    </a>
+                </li>
+
+                <li></li>
+                
+    <div class="dropdown dropdown-triangle rui-dropdown-triangle-ready">
+        <a class="dropdown-item rui-navbar-avatar" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <img alt="image" src="/assets/img/no_photo.jpg">
+        </a>
+
+        <ul class="dropdown-menu nav dropdown-menu-left">
+            <li>
+                <div class="d-flex flex-column">
+                    <h6 class="mb-0">test T.</h6>
+                    <span class="badge badge-info">Global Admin</span>
+                </div>
+            </li>
+            <li>
+                <div class="custom-control custom-switch dropdown-item-switch">
+                    <input type="checkbox" class="custom-control-input rui-nightmode-toggle rui-nightmode-toggle-ready" id="toggleNightMode">
+                    <label class="dropdown-item custom-control-label" for="toggleNightMode">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-moon rui-icon rui-icon-stroke-1_5"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+                        <span>Dark Mode</span>
+                        <span class="rui-dropdown-circle"></span>
+                    </label>
+                </div>
+            </li>
+            <li>
+                <a href="/logout" class="nav-link">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-log-out rui-icon rui-icon-stroke-1_5"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path><polyline points="16 17 21 12 16 7"></polyline><line x1="21" y1="12" x2="9" y2="12"></line></svg>
+                    <span>Exit</span>
+                    <span class="rui-nav-circle"></span>
+                </a>
+            </li>
+            <span class="dropdown-menu-triangle"></span>
+        <span class="dropdown-menu-triangle"></span></ul>
+    </div>
+
+                <li></li>
+            </ul>
+        </div>
+    </nav>
+
+
+
+
+
+
+    <div class="yaybar yay-fixed yay-gestures rui-yaybar yay-hide-to-small yay-shrink">
+        <div class="yay-wrap-menu">
+            <div class="yaybar-wrap">
+                <ul>
+                    <li class="yay-item-active">
+                        
+                        <a href="/dashboard">
+                            <span class="yay-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather feather-pie-chart"><path d="M21.21 15.89A10 10 0 1 1 8 2.83"></path><path d="M22 12A10 10 0 0 0 12 2v10z"></path></svg>
+                            </span>
+                            <span data-pagename="Dashboard">Dashboard</span>
+                            <span class="rui-yaybar-circle"></span>
+                        </a>
+                    </li>
+                    <li>
+                        
+                        <a href="/application">
+                            <span class="yay-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather feather-codesandbox"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="7.5 4.21 12 6.81 16.5 4.21"></polyline><polyline points="7.5 19.79 7.5 14.6 3 12"></polyline><polyline points="21 12 16.5 14.6 16.5 19.79"></polyline><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg>
+                            </span>
+                            <span data-pagename="Application">Application</span>
+                            <span class="rui-yaybar-circle"></span>
+                        </a>
+                    </li>
+                    <li>
+                        
+                        <a href="/credit">
+                            <span class="yay-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather feather-briefcase"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg>
+                            </span>
+                            <span data-pagename="Credit">Credit</span>
+                            <span class="rui-yaybar-circle"></span>
+                        </a>
+                    </li>
+                    <li>
+                        
+                        <a href="/borrower">
+                            <span class="yay-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather feather-user"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+                            </span>
+                            <span data-pagename="Borrower">Borrower</span>
+                            <span class="rui-yaybar-circle"></span>
+                        </a>
+                    </li>
+                    <li>
+                        
+                        <a href="/black-list">
+                            <span class="yay-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather feather-slash"><circle cx="12" cy="12" r="10"></circle><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"></line></svg>
+                            </span>
+                            <span data-pagename="Ban list">Ban list</span>
+                            <span class="rui-yaybar-circle"></span>
+                        </a>
+                    </li>
+                    <li>
+                        
+                        <a href="/product">
+                            <span class="yay-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather feather-tag"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7.01" y2="7"></line></svg>
+                            </span>
+                            <span data-pagename="Credit product">Credit product</span>
+                            <span class="rui-yaybar-circle"></span>
+                        </a>
+                    </li>
+                    <li class="dropdown-menu__element">
+                        
+                            <a href="#" class="yay-sub-toggle">
+                              <span class="yay-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather feather-eye"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+                              </span>
+                                                <span data-pagename="Collections">Collections</span>
+                                                <span class="rui-yaybar-circle"></span>
+                                                <span class="yay-icon-collapse">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right rui-icon rui-icon-collapse rui-icon-stroke-1_5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                              </span>
+                            </a>
+                            <ul class="yay-submenu dropdown-triangle">
+                                <li>
+                                    <a href="/campaign">
+                                        <span data-pagename="Call Campaign">Call Campaign</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/collections?type=individual">
+                                        <span data-pagename="Collection Agency">Collection Agency</span>
+                                    </a>
+                                </li>
+                            <span class="dropdown-menu-triangle"></span></ul>
+                        
+                        
+                    </li>
+                    <li class="dropdown-menu__element">
+                        
+                            <a href="#" class="yay-sub-toggle">
+                              <span class="yay-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather feather-package"><line x1="16.5" y1="9.4" x2="7.5" y2="4.21"></line><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg>
+                              </span>
+                                                <span data-pagename="Tools">Tools</span>
+                                                <span class="rui-yaybar-circle"></span>
+                                                <span class="yay-icon-collapse">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right rui-icon rui-icon-collapse rui-icon-stroke-1_5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                              </span>
+                            </a>
+                            <ul class="yay-submenu dropdown-triangle">
+                                <li>
+                                    <a href="/notification-template">
+                                        <span data-pagename="Notification templates">Notification templates</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/marketing">
+                                        <span data-pagename="Marketing Campaign">Marketing Campaign</span>
+                                    </a>
+                                </li>
+                            <span class="dropdown-menu-triangle"></span></ul>
+                        
+                        
+                    </li>
+                    <li class="dropdown-menu__element">
+                        
+                            <a href="#" class="yay-sub-toggle">
+                              <span class="yay-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather feather-globe"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+                              </span>
+                                                <span data-pagename="Business Intelligence">Business Intelligence</span>
+                                                <span class="rui-yaybar-circle"></span>
+                                                <span class="yay-icon-collapse">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right rui-icon rui-icon-collapse rui-icon-stroke-1_5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                              </span>
+                            </a>
+                            <ul class="yay-submenu dropdown-triangle">
+                                <li>
+                                    <a href="/portfolio">
+                                        <span data-pagename="Credit Portfolio">Credit Portfolio</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/bi">
+                                        <span data-pagename="KPIs">KPIs</span>
+                                    </a>
+                                </li>
+                            <span class="dropdown-menu-triangle"></span></ul>
+                        
+                        
+                    </li>
+                    <li class="dropdown-menu__element">
+                        
+                            <a href="#" class="yay-sub-toggle">
+                              <span class="yay-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather feather-shield"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+                              </span>
+                                                <span data-pagename="Security">Security</span>
+                                                <span class="rui-yaybar-circle"></span>
+                                                <span class="yay-icon-collapse">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right rui-icon rui-icon-collapse rui-icon-stroke-1_5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                              </span>
+                            </a>
+                            <ul class="yay-submenu dropdown-triangle">
+                                <li>
+                                    <a href="/role">
+                                        <span data-pagename="Roles">Roles</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/user">
+                                        <span data-pagename="Users">Users</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/audit">
+                                        <span data-pagename="Activity Log">Activity Log</span>
+                                    </a>
+                                </li>
+                            <span class="dropdown-menu-triangle"></span></ul>
+                        
+                        
+                    </li>
+                    <li>
+                        
+                        <a href="/notification">
+                            <span class="yay-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather feather-mail"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                            </span>
+                            <span data-pagename="Notifications">Notifications</span>
+                            <span class="rui-yaybar-circle"></span>
+                        </a>
+                    </li>
+                    <li class="dropdown-menu__element">
+                        
+                            <a href="#" class="yay-sub-toggle">
+                              <span class="yay-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather feather-settings"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
+                              </span>
+                                                <span data-pagename="Settings">Settings</span>
+                                                <span class="rui-yaybar-circle"></span>
+                                                <span class="yay-icon-collapse">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right rui-icon rui-icon-collapse rui-icon-stroke-1_5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                              </span>
+                            </a>
+                            <ul class="yay-submenu dropdown-triangle">
+                                <li>
+                                    <a href="/languagesettings">
+                                        <span data-pagename="Languages settings">Languages settings</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/reference-rate">
+                                        <span data-pagename="Reference Rate">Reference Rate</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/state-rule">
+                                        <span data-pagename="Regulatory and Compliance">Regulatory and Compliance</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/template">
+                                        <span data-pagename="Document templates">Document templates</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/audits">
+                                        <span data-pagename="Company audits">Company audits</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/field-mapping">
+                                        <span data-pagename="Field mapping">Field mapping</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/process-definition">
+                                        <span data-pagename="Decision Tree">Decision Tree</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/dynamic-enum">
+                                        <span data-pagename="Dynamic enumerations">Dynamic enumerations</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/systemSettings">
+                                        <span data-pagename="System Settings">System Settings</span>
+                                    </a>
+                                </li>
+                            <span class="dropdown-menu-triangle"></span></ul>
+                        
+                        
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+    <div class="rui-yaybar-bg"></div>
+    <div class="rui-navbar rui-navbar-mobile">
+        <div class="rui-navbar-head">
+            <div class="d-flex align-items-center">
+                <button class="rui-yaybar-toggle rui-yaybar-toggle-inverse yay-toggle" type="button" aria-label="Toggle side navigation">
+                    <span></span>
+                </button>
+                <h2 class="pageName">Dashboard</h2>
+            </div>
+            <a href="/dashboard" style="margin: 0 10px 0 auto">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-bell rui-icon rui-icon-stroke-1_5"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path><path d="M13.73 21a2 2 0 0 1-3.46 0"></path></svg>
+                <span class="badge badge-danger menu-counter">
+                    <span data-name="menuCounter">184</span>
+                </span>
+            </a>
+            
+    <div class="dropdown dropdown-triangle rui-dropdown-triangle-ready">
+        <a class="dropdown-item rui-navbar-avatar" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <img alt="image" src="/assets/img/no_photo.jpg">
+        </a>
+
+        <ul class="dropdown-menu nav dropdown-menu-left">
+            <li>
+                <div class="d-flex flex-column">
+                    <h6 class="mb-0">test T.</h6>
+                    <span class="badge badge-info">Global Admin</span>
+                </div>
+            </li>
+            <li>
+                <div class="custom-control custom-switch dropdown-item-switch">
+                    <input type="checkbox" class="custom-control-input rui-nightmode-toggle rui-nightmode-toggle-ready" id="toggleNightMode">
+                    <label class="dropdown-item custom-control-label" for="toggleNightMode">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-moon rui-icon rui-icon-stroke-1_5"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+                        <span>Dark Mode</span>
+                        <span class="rui-dropdown-circle"></span>
+                    </label>
+                </div>
+            </li>
+            <li>
+                <a href="/logout" class="nav-link">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-log-out rui-icon rui-icon-stroke-1_5"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path><polyline points="16 17 21 12 16 7"></polyline><line x1="21" y1="12" x2="9" y2="12"></line></svg>
+                    <span>Exit</span>
+                    <span class="rui-nav-circle"></span>
+                </a>
+            </li>
+            <span class="dropdown-menu-triangle"></span>
+        <span class="dropdown-menu-triangle"></span></ul>
+    </div>
+
+        </div>
+    </div>
+
+
+
+
+
+<div class="rui-page content-wrap">
+    <div class="rui-page-content">
+        <div class="pumpkin-container">
+            
+    <div>
+        <h2>Welcome <span>test</span>,&nbsp;your activities for today</h2>
+        <div class="markDashboard__grid">
+            <div class="markDashboard__counterItem">
+                
+    <div class="markDashboard__counterCard">
+        <div class="markDashboard__counterCardTitle">
+            <h4 class="text-1 m-0 d-inline mr-5">All Applications</h4>
+            <span class="badge badge-brand counter counter-ready">
+                <span class="text-light" data-name="allApplication">183</span>
+            </span>
+        </div>
+        <button class="btn border-0 pr-0">
+            <span class="text-1">View All</span>
+        </button>
+    </div>
+
+                <section data-for-counter="allApplication" data-counter-url="/counter/allApplication?count=2" class="fragment-loaded"><section class="table-responsive table-responsive-md_small">
+        <table class="table table-horizontal-border">
+            <thead>
+            <tr role="row">
+                <th class="text-right w-5">Id</th>
+                <th>Date</th>
+                <th>Client</th>
+                <th>Status</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr href="/application/405" role="row" class="clickable">
+                <td>405</td>
+                <td>4/26/21, 9:45:19 AM UTC</td>
+                <td>fkzgv</td>
+                <td>
+                    <span class="badge" style="background-color: #b391b5">
+                        <span>Pending contract signature</span>
+                    </span>
+                </td>
+            </tr>
+            <tr href="/application/216" role="row" class="clickable">
+                <td>216</td>
+                <td>3/4/21, 7:44:10 AM UTC</td>
+                <td>NewApplicationTest</td>
+                <td>
+                    <span class="badge" style="background-color: #f39d40">
+                        <span>Manual approval</span>
+                    </span>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </section></section>
+            </div>
+            <div class="markDashboard__counterItem">
+                
+    <div class="markDashboard__counterCard">
+        <div class="markDashboard__counterCardTitle">
+            <h4 class="text-1 m-0 d-inline mr-5">New applications for manual review</h4>
+            <span class="badge badge-brand counter counter-ready">
+                <span class="text-light" data-name="applicationForManualReview">44</span>
+            </span>
+        </div>
+        <button class="btn border-0 pr-0">
+            <span class="text-1">View All</span>
+        </button>
+    </div>
+
+                <section data-for-counter="applicationForManualReview" data-counter-url="/counter/applicationForManualReview?count=2" class="fragment-loaded"><section class="table-responsive table-responsive-md_small">
+        <table class="table table-horizontal-border">
+            <thead>
+            <tr role="row">
+                <th class="text-right w-5">Id</th>
+                <th>Date</th>
+                <th>Client</th>
+                <th>Status</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr href="/application/216" role="row" class="clickable">
+                <td>216</td>
+                <td>3/4/21, 7:44:10 AM UTC</td>
+                <td>NewApplicationTest</td>
+                <td>
+                    <span class="badge" style="background-color: #f39d40">
+                        <span>Manual approval</span>
+                    </span>
+                </td>
+            </tr>
+            <tr href="/application/375" role="row" class="clickable">
+                <td>375</td>
+                <td>4/19/21, 9:48:29 AM UTC</td>
+                <td>SergeyAlexetovich</td>
+                <td>
+                    <span class="badge" style="background-color: #f39d40">
+                        <span>Manual approval</span>
+                    </span>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </section></section>
+            </div>
+            <div class="markDashboard__counterItem">
+                
+    <div class="markDashboard__counterCard">
+        <div class="markDashboard__counterCardTitle">
+            <h4 class="text-1 m-0 d-inline mr-5">Applications that require an action</h4>
+            <span class="badge badge-brand counter counter-ready">
+                <span class="text-light" data-name="applicationThatRequireAnAction">85</span>
+            </span>
+        </div>
+        <button class="btn border-0 pr-0">
+            <span class="text-1">View All</span>
+        </button>
+    </div>
+
+                <section data-for-counter="applicationThatRequireAnAction" data-counter-url="/counter/applicationThatRequireAnAction?count=2" class="fragment-loaded"><section class="table-responsive table-responsive-md_small">
+        <table class="table table-horizontal-border">
+            <thead>
+            <tr role="row">
+                <th class="text-right w-5">Id</th>
+                <th>Date</th>
+                <th>Client</th>
+                <th>Status</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr href="/application/394" role="row" class="clickable">
+                <td>394</td>
+                <td>4/23/21, 7:42:22 AM UTC</td>
+                <td>fkzgv</td>
+                <td>
+                    <span class="badge" style="background-color: #caba83">
+                        <span>In underwriting</span>
+                    </span>
+                </td>
+            </tr>
+            <tr href="/application/393" role="row" class="clickable">
+                <td>393</td>
+                <td>4/23/21, 7:37:20 AM UTC</td>
+                <td>fkzgv</td>
+                <td>
+                    <span class="badge" style="background-color: #caba83">
+                        <span>In underwriting</span>
+                    </span>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </section></section>
+            </div>
+
+            <div class="markDashboard__counterItem">
+                
+    <div class="markDashboard__counterCard">
+        <div class="markDashboard__counterCardTitle">
+            <h4 class="text-1 m-0 d-inline mr-5">Collaterals awaiting evaluation</h4>
+            <span class="badge badge-brand counter counter-ready">
+                <span class="text-light" data-name="collateralNeedEvaluation">5</span>
+            </span>
+        </div>
+        <button class="btn border-0 pr-0">
+            <span class="text-1">View All</span>
+        </button>
+    </div>
+
+                <section data-for-counter="collateralNeedEvaluation" data-counter-url="/counter/collateralNeedEvaluation?count=2" class="fragment-loaded"><section class="table-responsive table-responsive-md_small">
+        <table class="table table-horizontal-border">
+            <thead>
+            <tr role="row">
+                <th class="w-5">Id</th>
+                <th>Type</th>
+                <th>Value</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr href="/collateral/107" role="row" class="clickable">
+                <td>107</td>
+                <td>
+                    <span class="badge" style="background-color: #caba83">
+                        <span>Property</span>
+                    </span>
+                </td>
+                <td>USD 1000.00</td>
+            </tr>
+            <tr href="/collateral/85" role="row" class="clickable">
+                <td>85</td>
+                <td>
+                    <span class="badge" style="background-color: #b391b5">
+                        <span>Auto</span>
+                    </span>
+                </td>
+                <td>USD 123.00</td>
+            </tr>
+            </tbody>
+        </table>
+    </section></section>
+            </div>
+
+            <div class="markDashboard__counterItem">
+                
+    <div class="markDashboard__counterCard">
+        <div class="markDashboard__counterCardTitle">
+            <h4 class="text-1 m-0 d-inline mr-5">Overpaid loans</h4>
+            <span class="badge badge-brand counter counter-ready">
+                <span class="text-light" data-name="overpaidCredit">1</span>
+            </span>
+        </div>
+        <button class="btn border-0 pr-0">
+            <span class="text-1">View All</span>
+        </button>
+    </div>
+
+                <section data-for-counter="overpaidCredit" data-counter-url="/counter/overpaidCredit?count=2" class="fragment-loaded"><section class="table-responsive table-responsive-md_small">
+        <table class="table table-horizontal-border">
+            <thead>
+            <tr role="row">
+                <th class="text-right w-5">Id</th>
+                <th>Client</th>
+                <th>Credit Product</th>
+                <th>Status</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr href="/credit/295" role="row" class="clickable">
+                <td class="text-right">295</td>
+                <td>Quia quia optio rer</td>
+                <td>Auto Annuity B AutoAnnuB</td>
+                <td>
+                    <span class="badge" style="background-color: PAID">
+                    <span>Paid Off</span>
+                </span>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </section></section>
+            </div>
+            <div class="markDashboard__counterItem">
+                
+    <div class="markDashboard__counterCard">
+        <div class="markDashboard__counterCardTitle">
+            <h4 class="text-1 m-0 d-inline mr-5">Loans This Week</h4>
+            <span class="badge badge-brand counter counter-ready">
+                <span class="text-light" data-name="newLoansWeekly">11</span>
+            </span>
+        </div>
+        <button class="btn border-0 pr-0">
+            <span class="text-1">View All</span>
+        </button>
+    </div>
+
+                <section data-for-counter="newLoansWeekly" data-counter-url="/counter/newLoansWeekly?count=2" class="fragment-loaded"><section class="table-responsive table-responsive-md_small">
+        <table class="table table-horizontal-border">
+            <thead>
+            <tr role="row">
+                <th class="text-right w-5">Id</th>
+                <th>Client</th>
+                <th>Credit Product</th>
+                <th>Status</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr href="/credit/407" role="row" class="clickable">
+                <td class="text-right">407</td>
+                <td>fkzgv</td>
+                <td>Auto Annuity B AutoAnnuB</td>
+                <td>
+                    <span class="badge" style="background-color: ACTIVE">
+                    <span>Active</span>
+                </span>
+                </td>
+            </tr>
+            <tr href="/credit/406" role="row" class="clickable">
+                <td class="text-right">406</td>
+                <td>fkzgv</td>
+                <td>Auto Annuity B AutoAnnuB</td>
+                <td>
+                    <span class="badge" style="background-color: ACTIVE">
+                    <span>Active</span>
+                </span>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </section></section>
+            </div>
+            <div class="markDashboard__counterItem">
+                
+    <div class="markDashboard__counterCard">
+        <div class="markDashboard__counterCardTitle">
+            <h4 class="text-1 m-0 d-inline mr-5">Loans This Month</h4>
+            <span class="badge badge-brand counter counter-ready">
+                <span class="text-light" data-name="newLoansMonthly">28</span>
+            </span>
+        </div>
+        <button class="btn border-0 pr-0">
+            <span class="text-1">View All</span>
+        </button>
+    </div>
+
+                <section data-for-counter="newLoansMonthly" data-counter-url="/counter/newLoansMonthly?count=2" class="fragment-loaded"><section class="table-responsive table-responsive-md_small">
+        <table class="table table-horizontal-border">
+            <thead>
+            <tr role="row">
+                <th class="text-right w-5">Id</th>
+                <th>Client</th>
+                <th>Credit Product</th>
+                <th>Status</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr href="/credit/407" role="row" class="clickable">
+                <td class="text-right">407</td>
+                <td>fkzgv</td>
+                <td>Auto Annuity B AutoAnnuB</td>
+                <td>
+                    <span class="badge" style="background-color: ACTIVE">
+                    <span>Active</span>
+                </span>
+                </td>
+            </tr>
+            <tr href="/credit/406" role="row" class="clickable">
+                <td class="text-right">406</td>
+                <td>fkzgv</td>
+                <td>Auto Annuity B AutoAnnuB</td>
+                <td>
+                    <span class="badge" style="background-color: ACTIVE">
+                    <span>Active</span>
+                </span>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </section></section>
+            </div>
+        </div>
+    </div>
+    <h3 class="mt-30"><u>System Performance at a Glance</u></h3>
+    <div id="cubeJsContainer"><div class="jss1"><div><div class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-3 MuiGrid-align-items-xs-flex-start MuiGrid-justify-xs-space-around" style="padding: 24px;"><div class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-lg-6"><div class="MuiPaper-root MuiCard-root MuiPaper-elevation1 MuiPaper-rounded"><div class="MuiCardContent-root"><p class="MuiTypography-root MuiTypography-body1 MuiTypography-colorTextSecondary MuiTypography-gutterBottom">Product Type Structure</p>SyntaxError: Unexpected token &lt; in JSON at position 0</div></div></div><div class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-lg-6"><div class="MuiPaper-root MuiCard-root MuiPaper-elevation1 MuiPaper-rounded"><div class="MuiCardContent-root"><p class="MuiTypography-root MuiTypography-body1 MuiTypography-colorTextSecondary MuiTypography-gutterBottom">Borrower Type Structure</p>SyntaxError: Unexpected token &lt; in JSON at position 0</div></div></div><div class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-lg-6"><div class="MuiPaper-root MuiCard-root MuiPaper-elevation1 MuiPaper-rounded"><div class="MuiCardContent-root"><p class="MuiTypography-root MuiTypography-body1 MuiTypography-colorTextSecondary MuiTypography-gutterBottom">Overdue Dynamics</p>SyntaxError: Unexpected token &lt; in JSON at position 0</div></div></div><div class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-lg-6"><div class="MuiPaper-root MuiCard-root MuiPaper-elevation1 MuiPaper-rounded"><div class="MuiCardContent-root"><p class="MuiTypography-root MuiTypography-body1 MuiTypography-colorTextSecondary MuiTypography-gutterBottom">Application Approval Rate</p>SyntaxError: Unexpected token &lt; in JSON at position 0</div></div></div></div></div></div></div>
+
+    
+    <script defer="">
+        function onLoadCubeJs(){}
+        function onLoadCubeJsError(){}
+        const apiUrl = null;
+        const TOKEN = null;
+
+        function renderCubeJs({id, view, indexes}) {
+            cubejs.render({apiUrl: apiUrl, TOKEN, view, indexes}, id)
+        }
+    </script>
+    
+
+    <script defer="">
+        function onLoadCubeJs() {
+            renderCubeJs({id: 'cubeJsContainer', indexes: [1, 8, 2, 3]});
+        }
+
+        if (typeof cubejs !== 'undefined') {
+            onLoadCubeJs();
+        }
+        if (typeof (window.pumpkin || {}).dashboardInit !== 'undefined') {
+            window.pumpkin.dashboardInit();
+        }
+    </script>
+
+    
+
+        </div>
+    </div>
+    
+</div>
+
+<div class="rui-toast-container"></div>
+
+
+<div id="campaign-control-panel" style="position: fixed; bottom: 0; z-index: 999999; width: 100%; height: 60px; background-color: #89ff90; display: none; padding-top: 10px; box-shadow: 0 1px 1px -1px rgba(0, 0, 0, 0.34), 0 0 6px 0 rgba(0, 0, 0, 0.14)" data-context="/">
+    <table class="w-100">
+        <tbody><tr>
+            <td class="pull-left pl-10">
+                <button class="btn btn-primary task-action task-action-pause" style="height: 40px" data-action="/campaign/task/pause">
+                    <span class="glyphicon glyphicon-pause"></span> pause
+                </button>
+                <button class="btn btn-primary task-action task-action-start" style="height: 40px" data-action="/campaign/task/start">
+                    <span class="glyphicon glyphicon-play"></span> start
+                </button>
+                <button class="btn btn-primary task-action" style="height: 40px" data-action="/campaign/task/stop">
+                    <span class="glyphicon glyphicon-remove-circle"></span> quit
+                </button>
+            </td>
+            <td style="text-align: center" class="campaign-name"></td>
+            <td style="text-align: center" class="total-progress"></td>
+            <td style="text-align: center" class="campaign-timer timer"></td>
+            <td style="text-align: center; font-size: 15px" class="task-name"></td>
+            <td style="text-align: center; font-size: 15px">on task (
+                <timer class="task-timer timer"></timer>
+                )
+            </td>
+            <td style="text-align: center; font-size: 15px" class="task-status"></td>
+            <td style="padding-right: 10px;" class="pull-right">
+                <button id="completeTask" class="btn btn-primary task-action" style="height: 40px" data-action="/campaign/task/complete">
+                    <span class="glyphicon glyphicon-ok-sign"></span> complete &amp; next
+                </button>
+                <div class="btn-group dropup">
+                    <button style="height: 40px" data-action="/campaign/task/startNext" class="btn btn-primary dropdown-toggle task-action" type="button">
+                        <span class="glyphicon glyphicon-forward" id="startNextTask"></span> skip
+                    </button>
+                </div>
+            </td>
+        </tr>
+    </tbody></table>
+    <div class="overlay-element campaign-overlay"></div>
+
+    <script>
+        const $controlPanel = $('#campaign-control-panel');
+
+        $controlPanel.find('.task-action').click(function () {
+            const taskId = $controlPanel.data('task-id');
+            const url = $(this).data('action');
+            $controlPanel.find('.campaign-overlay').show();
+            $.ajax({
+                data: {taskId: taskId},
+                type: 'POST',
+                url: url,
+                success: handleCampaignAction
+            });
+        });
+    </script>
+</div>
+
+
+
+    <script defer="" src="/assets/static/js/vendor.js"></script>
+    <script defer="" src="/assets/static/js/index.js"></script>
+    <script src="/assets/js/bundle.js" defer=""></script><script src="/assets/static/js/dashboard.js" defer=""></script><script defer="" src="/assets/static/js/rootui.js"></script>
+
+
+
+
+</body></html>
