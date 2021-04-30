@@ -19,7 +19,7 @@ public class LOGIN_and_LOGOUT {
         $(By.cssSelector("[placeholder='Password']")).setValue("1234").pressEnter();
         sleep(2500);
         String currentUrl = url();
-        String expectedUrl = "http://mark43-admin.timvero.xyz/dashboard";
+        String expectedUrl = Config.getUrl1();
         Assert.assertEquals(currentUrl, expectedUrl);
         closeWindow();
     }
@@ -30,10 +30,10 @@ public class LOGIN_and_LOGOUT {
         $(By.xpath("//form[@id='login']//input[@name='username']")).setValue("test");
         $(By.cssSelector("[placeholder='Password']")).setValue("1234").pressEnter();
         sleep(2500);
-        open("http://mark43-admin.timvero.xyz/logout");
+        open("http://mark43-alpha.timvero.xyz/logout");
         refresh();
         String currentUrl = url();
-        String expectedUrl = "http://mark43-admin.timvero.xyz/login?logout";
+        String expectedUrl = "http://mark43-alpha.timvero.xyz/login?logout";
         Assert.assertEquals(currentUrl, expectedUrl);
         closeWindow();
     }
