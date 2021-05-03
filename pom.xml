@@ -14,8 +14,6 @@
         <maven.compiler.target>8</maven.compiler.target>
         <maven-surefire-plugin.version>2.20.1</maven-surefire-plugin.version>
         <aspectj.version>1.8.10</aspectj.version>
-        <allure-testng.version>{latest-allure-version}</allure-testng.version>
-        <aspectj.version>1.8.10</aspectj.version>
     </properties>
     <dependencies>
         <dependency>
@@ -27,6 +25,7 @@
             <groupId>io.qameta.allure</groupId>
             <artifactId>allure-testng</artifactId>
             <version>2.13.8</version>
+            <scope>test</scope>
         </dependency>
         <dependency>
             <groupId>org.testng</groupId>
@@ -55,12 +54,6 @@
             <artifactId>annotations</artifactId>
             <version>20.1.0</version>
             <scope>compile</scope>
-        </dependency>
-        <dependency>
-            <groupId>commons-io</groupId>
-            <artifactId>commons-io</artifactId>
-            <version>1.4</version>
-            <scope>test</scope>
         </dependency>
         <dependency>
             <groupId>org.apache.xbean</groupId>
@@ -110,14 +103,6 @@
                 <configuration>
                     <source>1.7</source>
                     <target>1.7</target>
-                </configuration>
-            </plugin>
-            <plugin>
-                <groupId>io.qameta.allure</groupId>
-                <artifactId>allure-maven</artifactId>
-                <version>2.10.0</version>
-                <configuration>
-                    <reportVersion>2.6.0</reportVersion>
                 </configuration>
             </plugin>
             <plugin>
