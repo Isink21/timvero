@@ -1,4 +1,18 @@
 -------------------------------------------------------------------------------
 Test set: TestSuite
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.718 s - in TestSuite
+Tests run: 3, Failures: 3, Errors: 0, Skipped: 0, Time elapsed: 5.046 s <<< FAILURE! - in TestSuite
+Smoke.HTTPstatus.status  Time elapsed: 0.039 s  <<< FAILURE!
+java.net.MalformedURLException
+	at Smoke.HTTPstatus.status(HTTPstatus.java:44)
+Caused by: java.lang.NullPointerException
+	at Smoke.HTTPstatus.status(HTTPstatus.java:44)
+
+Smoke.LOGIN_and_LOGOUT.login  Time elapsed: 0.144 s  <<< FAILURE!
+java.lang.NullPointerException
+	at Smoke.LOGIN_and_LOGOUT.login(LOGIN_and_LOGOUT.java:17)
+
+Smoke.LOGIN_and_LOGOUT.logout  Time elapsed: 0.004 s  <<< FAILURE!
+java.lang.NullPointerException
+	at Smoke.LOGIN_and_LOGOUT.logout(LOGIN_and_LOGOUT.java:29)
+
