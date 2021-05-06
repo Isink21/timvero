@@ -2,26 +2,26 @@
 <testng-results skipped="0" failed="0" ignored="0" total="3" passed="3">
   <reporter-output>
   </reporter-output>
-  <suite name="All Test Suite" duration-ms="16298" started-at="2021-05-03T11:59:53 MSK" finished-at="2021-05-03T12:00:10 MSK">
+  <suite name="All Test Suite" duration-ms="11547" started-at="2021-05-03T15:01:37 MSK" finished-at="2021-05-03T15:01:48 MSK">
     <groups>
     </groups>
-    <test name="C:/Users/E590-001/IdeaProjects/TestNG/src/test/java/Resources/Environments.java" duration-ms="16298" started-at="2021-05-03T11:59:53 MSK" finished-at="2021-05-03T12:00:10 MSK">
+    <test name="C:/Users/E590-001/IdeaProjects/TestNG/src/test/java/Resources/Environments.java" duration-ms="11547" started-at="2021-05-03T15:01:37 MSK" finished-at="2021-05-03T15:01:48 MSK">
       <class name="Smoke.LOGIN_and_LOGOUT">
-        <test-method status="PASS" signature="login()[pri:0, instance:Smoke.LOGIN_and_LOGOUT@3e2943ab]" name="login" duration-ms="9803" started-at="2021-05-03T11:59:54 MSK" finished-at="2021-05-03T12:00:04 MSK">
+        <test-method status="PASS" signature="login()[pri:0, instance:Smoke.LOGIN_and_LOGOUT@70dd7e15]" name="login" duration-ms="5339" started-at="2021-05-03T15:01:37 MSK" finished-at="2021-05-03T15:01:43 MSK">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- login -->
-        <test-method status="PASS" signature="logout()[pri:0, instance:Smoke.LOGIN_and_LOGOUT@3e2943ab]" name="logout" duration-ms="5912" started-at="2021-05-03T12:00:04 MSK" finished-at="2021-05-03T12:00:10 MSK">
+        <test-method status="PASS" signature="logout()[pri:0, instance:Smoke.LOGIN_and_LOGOUT@70dd7e15]" name="logout" duration-ms="5821" started-at="2021-05-03T15:01:43 MSK" finished-at="2021-05-03T15:01:48 MSK">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- logout -->
       </class> <!-- Smoke.LOGIN_and_LOGOUT -->
       <class name="Smoke.HTTPstatus">
-        <test-method status="PASS" signature="BrowserTestRule()[pri:0, instance:Smoke.HTTPstatus@26fb628]" name="BrowserTestRule" is-config="true" duration-ms="3116" started-at="2021-05-03T11:59:50 MSK" finished-at="2021-05-03T11:59:53 MSK">
+        <test-method status="PASS" signature="BrowserTestRule()[pri:0, instance:Smoke.HTTPstatus@3e2943ab]" name="BrowserTestRule" is-config="true" duration-ms="3109" started-at="2021-05-03T15:01:34 MSK" finished-at="2021-05-03T15:01:37 MSK">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- BrowserTestRule -->
-        <test-method status="PASS" signature="status()[pri:0, instance:Smoke.HTTPstatus@26fb628]" name="status" duration-ms="448" started-at="2021-05-03T11:59:53 MSK" finished-at="2021-05-03T11:59:54 MSK">
+        <test-method status="PASS" signature="status()[pri:0, instance:Smoke.HTTPstatus@3e2943ab]" name="status" duration-ms="219" started-at="2021-05-03T15:01:37 MSK" finished-at="2021-05-03T15:01:37 MSK">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- status -->
